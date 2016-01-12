@@ -23,6 +23,7 @@ folders:
 	mkdir md/imgs/ ; \
 	mkdir icml/ ; \
 	mkdir lib/ ; \
+	mkdir html/ ; \
 	mkdir scribus_html/ ;
 
 markdowns:$(alldocx) # convert docx to md
@@ -63,7 +64,7 @@ scribus: $(allmarkdown)
 	done
 
 html: book.md
-	cd md && pandoc -s --section-divs --from markdown --to html -o ../book.html book.md
+	cd md && pandoc -s --section-divs --include-in-header=../html/scripts.html.js --include-in-header=../html/style.html.css --from markdown --to html -o ../book.html book.md
 
 book.md: clean $(allmarkdown)
 	for i in $(allmarkdown) ; \
