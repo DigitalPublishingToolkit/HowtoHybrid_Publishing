@@ -1,0 +1,314 @@
+@font-face{
+    font-family: 'OpenSans-Light';
+    font-weight: lighter;
+    font-style: normal;
+    src:url('OpenSans-Light.otf')format("opentype");
+}
+
+@font-face{
+    font-family: 'OpenSans-LightItalic';
+    font-weight: lighter;
+    font-style: italic;
+    src:url('OpenSans-LightItalic.otf')format("opentype");
+}
+
+@font-face{
+    font-family: 'OpenSans-Semibold';
+    font-weight: bold;
+    font-style: normal;
+    src:url('OpenSans-Semibold.otf')format("opentype");
+}
+
+@font-face{
+    font-family: 'VAGRoundedStd-Bold';
+    font-weight: bold;
+    font-style: normal;
+    src:url('VAGRoundedStd-Bold.otf')format("opentype");
+}
+
+
+@font-face{
+    font-family: 'VAGRoundedStd-Black';
+    font-weight: normal;
+    font-style: normal;
+    src:url('VAGRoundedStd-Black.otf')format("opentype");
+}
+
+
+
+body{
+    font-size: 10pt;
+    font-family: 'OpenSans-Light';
+    hyphens: none
+    -webkit-hyphens:none;
+}
+
+
+p {
+    font-size:1em;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+    hyphenate-after: 3;
+    hyphenate-before: 3;
+    hyphenate-lines: 2;
+    -webkit-hyphenate-after: 3;
+    -webkit-hyphenate-before: 3;
+    -webkit-hyphenate-lines: 2;
+    orphans: 2;
+    widows: 2;
+}
+
+
+h1,h2,h3,h4{     
+    font-family: 'VAGRoundedStd-Bold';
+    text-transform:uppercase;
+    hyphens: none !important;
+    -moz-hyphens: none !important;
+    -webkit-hyphens: none !important;
+    adobe-hyphenate: none !important;
+    /*page-break-before: always;*/
+    page-break-after: avoid;
+    page-break-inside: avoid;
+    margin: 0;
+}
+
+h1{
+    font-size:1.8em;
+    margin-bottom: 0.5em;
+    color: #d2a8d4;
+    border-bottom:5px dotted #d2a8d4;
+    padding-bottom:6px;
+    page-break-before: always;
+}
+
+h2{
+    font-size: 1.2em;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+
+b,strong{
+    font-family: 'OpenSans-Semibold';
+}
+
+p.italic {
+    font-family: 'OpenSans-LightItalic';
+    font-style: italic;
+}
+
+figcaption{
+        font-family: VAGRoundedStd-Bold;
+    font-size:0.8em;
+}
+
+p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+ul, ol, dl {
+    margin: 1em 0 1em 0;
+    text-align: left;
+}
+
+section.footnotes{
+    font-size:0.8em;
+    text-align: left;
+}
+
+
+div.cover, div.halftitle, div.title, div.publications, div#cover-image {
+    text-align:center;
+}
+
+div#cover-image img, img#title, img#end{
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+
+img{
+    max-width:900px;
+}
+
+
+a.footnoteRef {
+vertical-align: super;
+line-height: normal;
+font-size: 0.5em;
+}
+
+
+blockquote{
+    padding-left: 1.5em;
+    margin-left: 0px;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+a { color: #d2a8d4;
+    text-decoration: none;
+  }
+
+a:hover { color: #d2a8d4;
+      text-decoration: underline;
+  }
+
+    div.streams{
+    font-family: VAGRoundedStd-Bold;
+    width: 70%;
+    min-width: 10em;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1em;
+    color: #d2a8d4;
+    -webkit-hyphens:none;
+    hyphens: none;
+    page-break-inside: avoid;
+    }
+
+    .streams p {
+        text-align: center;
+    }
+
+hr {
+    height: 0;
+    color: #d2a8d4;
+    width: 100%;
+    border: dotted 5px;
+    border-bottom: none;
+    font-size: 3em;
+    border-left: none;
+    border-right: none;
+    margin-top:10px;
+}
+
+hr.streams {
+    width: 15%;
+}
+
+
+ul {
+ list-style-type: circle;
+ list-style: circle; 
+}
+
+
+section#colophon h2, section#the-volkskrant-building-manufacturing-difference-in-amsterdams-creative-city h2, section#contents h2, section#acknowledgements h2 {  
+    font-size:1.8em;
+    color: #d2a8d4;
+}
+
+/* Images with pink backgorund at the start of chapters:
+
+* add them now below the chapter title
+* in the epub move them above the title
+* wrap them <section class="figure">
+
+ */
+
+section.level2#empty{
+    page-break-inside: avoid;
+}
+
+section.figure{
+    background: #ffdbd7;
+    padding: 10px;
+}
+
+body.references{
+    background: #ffdbd7;
+}
+
+/*  */
+body.end, section.end{
+    text-align: center;
+    font-size:1.8em;
+    color: #f23f4e;
+    background: #ffdbd7;
+}
+
+figcaption {
+    /* Captions are displayed twice - hide for now */
+    display: none;
+}
+
+section.footnotes li a {
+    /* move the word "back" a little bit to the right */
+    margin-left: 0.3em;
+}
+
+#endnotes {
+    display: none;
+}
+
+table {
+    border: 1px #d2a8d4 solid;
+    border-collapse: collapse;
+    vertical-align: top;
+    font-size: 0.5em;
+    page-break-inside: avoid;
+}
+
+table th {
+    border-bottom: 1px #d2a8d4 solid;
+}
+
+table th, td {
+    border-left: 1px #d2a8d4 solid;
+    border-right: 1px #d2a8d4 solid;
+}
+
+th, td {
+    padding: 0.5em;
+}
+table .header {
+    color: #d2a8d4;
+    font-family: 'VAGRoundedStd-Bold';
+}
+
+table+p, figure+p {
+    text-align: right;
+    font-size: 0.5em;
+    font-family: 'VAGRoundedStd-Bold';
+}
+
+#colophon p:last-of-type {
+    /* logos are last in the colophon, make them centered */
+    text-align: center;
+    margin-top: 2em;
+}
+
+#colophon img {
+    /* limit the logo's height */
+    height: 3em;
+}
+
+figure {
+    /* remove (default) margin for figures */
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.RQ::first-line {
+    color: #d2a8d4;
+    font-family: 'VAGRoundedStd-Bold';
+    text-decoration: underline;
+    margin-top: 0.8em;
+}
+
+.RQ p {
+    font-size: 1em;
+    margin-top: 0em;
+    color: #d2a8d4;
+    }
+
+span {
+    color: #d2a8d4 !important
+}
