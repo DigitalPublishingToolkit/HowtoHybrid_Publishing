@@ -1,4 +1,8 @@
-# Test markdown document
+# How to Template
+
+This is the template for the Publishig Lab How To's!  
+Below you'll find options for this template and custom html-injections that you can use.
+
 
 # This is a H1 Header
 ## This is a H2 Sub-header
@@ -13,10 +17,59 @@ Footnotes look like this: \[^fn-sample_footnote]
 
 Clicking this number[^fn-sample_footnote] will lead you to a footnote.
 
-
 Images are inserted like this:
-\!\[](example.jpg)
+\!\[](./lib/placeholder.jpg)
+See example to the right:
+
+![](./lib/placeholder.jpg)
 
 You can find more markdown syntax on the <a href="https://daringfireball.net/projects/markdown/syntax">daringfireball site</a>.
 
-[^fn-sample_footnote]: Handy! Now click the return link to go back.
+# Expert options
+
+## Markup for expert:
+
+	<div class="difficulty-level expert"></div>
+
+Result: <div class="difficulty-level expert"></div>
+
+## Markup for moderate:
+
+	<div class="difficulty-level moderate"></div>
+
+Result: <div class="difficulty-level moderate"></div>
+
+## Markup for easy:
+
+	<div class="difficulty-level easy"></div>
+
+Result: <div class="difficulty-level easy"></div>
+
+<div class="links">
+
+# This is a H1 Header
+
+Markup for Link/Resources (blue background).
+The Link/Resources lists will always appear outside any block/section.
+Wrap the area in a 'div' with the class 'links'.
+Example below:
+
+	<div class='links'>
+		# Your link/resource header
+		Your link/resource content
+	</div>
+</div>
+
+
+# Custom Header title
+
+To add a your how to title to the header you have to add following div with content anywhere to your markdown file.
+Example below:
+
+	<div class='htmlTitle'>
+		Your How To Title
+	</div>
+	
+<div class='htmlTitle'>
+	Your How To Title
+</div>
