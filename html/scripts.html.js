@@ -1,4 +1,3 @@
-
   <script>
   	$(document).ready(function(){
     	console.log('jquery initiated')
@@ -6,8 +5,10 @@
       // resizeable stuff
 
       $(function() {
-        $( ".level1, .links, #header" ).resizable({
+        $(".level1, .links, #header" ).resizable({
           handles: 'e',
+          cancel: '.fullWidth',
+          // grid: [ $('#header').outerWidth()/8, 0 ],
           resize: function( event, ui ) {
             $(".figure:in-viewport").removeClass('figureInside')
             $(".figure:right-of-screen").each(function(){
@@ -17,12 +18,16 @@
           }
 
         });
+
       });
 
       // generate header and chapters
 
       $( "body" ).prepend(`<div id="header">
         <h1>Publishing Lab:</h1> 
+        <button id="toggleWidth" type="button">⟷</button>
+        <button id="toggleTheme" type="button"> </button>
+        <button id="toggleMode" type="button">Aa</button>
         <ul class="navWrap">
             <li>
                 <a href="#" class="navFirst">Chapters</a>
@@ -98,10 +103,45 @@
         $(this).children().not('h1, .ui-resizable-handle').wrapAll('<div class="level2"></div>');
       })
 
+      // toggle full div width
+
+      $(document).on('click', '#toggleWidth', function(){
+
+        if ($('.level1').hasClass('fullWidth')) {
+          $('#header, .level1, .links').removeClass('fullWidth').addClass('initWidth')
+          $('#toggleWidth').text('⟷')
+            
+            window.setTimeout(function(){  
+              $(".figure:in-viewport").removeClass('figureInside')
+              $(".figure:right-of-screen").each(function(){
+                $(this).addClass('figureInside')
+              })
+
+          },200)
+
+            window.setTimeout(function(){  
+          $('#header, .level1, .links').removeClass('initWidth')
+
+          },600)
+
+
+        } else {
+          $('#header, .level1, .links').css({'width':''})
+          $('#header, .level1, .links').addClass('fullWidth')
+          $('#toggleWidth').text('⟺')
+          $('.figure').addClass('figureInside')
+        }
+
+      });
+
+
+    var classes = ["figureLeft", "figureRight", "figureCenter"];
+
+    $(".figure").each(function(){
+        $(this).addClass(classes[~~(Math.random()*classes.length)]);
+    });
+
 
     })
-
-     
-
 
   </script>

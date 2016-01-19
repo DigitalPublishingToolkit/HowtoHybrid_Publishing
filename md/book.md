@@ -1,8 +1,23 @@
+<div class="links">
+
+# This is a H1 Header
+
+Markup for Link/Resources (blue background).
+The Link/Resources lists will always appear outside any block/section.
+Wrap the area in a 'div' with the class 'links'.
+Example below:
+
+	<div class='links'>
+		# Your link/resource header
+		Your link/resource content
+	</div>
+</div>
+
 # How to Template
 
-This is the template for the Publishig Lab How To's!  
-Below you'll find options for this template and custom html-injections that you can use.
+Hoi, this .md explains everything re: the Template Template. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel lacus et dolor maximus vulputate vitae sit amet massa. Curabitur scelerisque magna vel neque elementum iaculis. 
 
+![](./lib/placeholder.png)
 
 # This is a H1 Header
 ## This is a H2 Sub-header
@@ -25,6 +40,22 @@ See example to the right:
 
 You can find more markdown syntax on the <a href="https://daringfireball.net/projects/markdown/syntax">daringfireball site</a>.
 
+<div class="links">
+
+# This is a H1 Header
+
+Markup for Link/Resources (blue background).
+The Link/Resources lists will always appear outside any block/section.
+Wrap the area in a 'div' with the class 'links'.
+Example below:
+
+	<div class='links'>
+		# Your link/resource header
+		Your link/resource content
+	</div>
+</div>
+
+
 # Expert options
 
 ## Markup for expert:
@@ -45,20 +76,8 @@ Result: <div class="difficulty-level moderate"></div>
 
 Result: <div class="difficulty-level easy"></div>
 
-<div class="links">
 
-# This is a H1 Header
-
-Markup for Link/Resources (blue background).
-The Link/Resources lists will always appear outside any block/section.
-Wrap the area in a 'div' with the class 'links'.
-Example below:
-
-	<div class='links'>
-		# Your link/resource header
-		Your link/resource content
-	</div>
-</div>
+![](./lib/placeholder.png)
 
 
 # Custom Header title
