@@ -5,7 +5,7 @@
       // resizeable stuff
 
       $(function() {
-        $(".level1, .links, #header" ).resizable({
+        $(".level1, .linkBox, .infoBox, #header" ).resizable({
           handles: 'e',
           cancel: '.fullWidth',
           // grid: [ $('#header').outerWidth()/8, 0 ],
@@ -26,7 +26,6 @@
       $( "body" ).prepend(`<div id="header">
         <h1>Publishing Lab:</h1> 
         <button id="toggleWidth" type="button">⟷</button>
-        <button id="toggleTheme" type="button"> </button>
         <button id="toggleMode" type="button">Aa</button>
         <ul class="navWrap">
             <li>
@@ -61,23 +60,48 @@
 
       // generate figure+lightbox
 
+      // $('img').each(function(){
+      //   $(this).unwrap()
+      //   thisSrc = $(this).attr('src')
+      //   figureWrap = `
+      //     <div class="figure">
+      //       <div class="thumbnail">`+thisSrc.split('/').pop()+`</div>
+      //       <a href="#_">
+      //         <img class="bigImage" src=`+thisSrc+` alt="" />
+      //       </a> 
+      //       <a href="#_">
+      //         <img class="lightbox" src=`+thisSrc+` alt="" />
+      //       </a>
+      //     </div>
+      //   `;
+      //   $(figureWrap).insertAfter( $(this) );
+      //   $(this).remove()
+      // })
+
+
+      i=0
+
       $('img').each(function(){
+        i=i+1
         $(this).unwrap()
         thisSrc = $(this).attr('src')
         figureWrap = `
           <div class="figure">
             <div class="thumbnail">`+thisSrc.split('/').pop()+`</div>
-            <a href="#img1">
+            <a href="#img`+i+`">
               <img class="bigImage" src=`+thisSrc+` alt="" />
             </a> 
             <a href="#_">
-              <img id="img1" class="lightbox" src=`+thisSrc+` alt="" />
+              <div id="img`+i+`" class="lightbox">
+                <img src=`+thisSrc+` alt="" />
+              </div>
             </a>
           </div>
         `;
         $(figureWrap).insertAfter( $(this) );
         $(this).remove()
       })
+
 
       // initial check of figures right off
 
@@ -89,17 +113,17 @@
       $('#header').find('h1').html("<h1>"+$('#header').find('h1').text()+"</br>"+$('.htmlTitle').text()+"</h1>")
     
 
-      // move 'links' out
-      $('.links').each(function() {
+      // move 'linkBox' out
+      $('.linkBox, .infoBox').each(function() {
         $(this).insertAfter($(this).parents('.level1'));
       })
-      $('.links').each(function() {
+      $('.linkBox, .infoBox').each(function() {
         $(this).insertAfter($(this).parents('.level2'));
       })
 
-      // edit links appearance
+      // edit linkBox appearance
 
-      $('.links').each(function() {
+      $('.linkBox, .infoBox').each(function() {
         $(this).children().not('h1, .ui-resizable-handle').wrapAll('<div class="level2"></div>');
       })
 
@@ -108,7 +132,7 @@
       $(document).on('click', '#toggleWidth', function(){
 
         if ($('.level1').hasClass('fullWidth')) {
-          $('#header, .level1, .links').removeClass('fullWidth').addClass('initWidth')
+          $('#header, .level1, .linkBox, .infoBox').removeClass('fullWidth').addClass('initWidth')
           $('#toggleWidth').text('⟷')
             
             window.setTimeout(function(){  
@@ -120,14 +144,14 @@
           },200)
 
             window.setTimeout(function(){  
-          $('#header, .level1, .links').removeClass('initWidth')
+          $('#header, .level1, .linkBox, .infoBox').removeClass('initWidth')
 
           },600)
 
 
         } else {
-          $('#header, .level1, .links').css({'width':''})
-          $('#header, .level1, .links').addClass('fullWidth')
+          $('#header, .level1, .linkBox, .infoBox').css({'width':''})
+          $('#header, .level1, .linkBox, .infoBox').addClass('fullWidth')
           $('#toggleWidth').text('⟺')
           $('.figure').addClass('figureInside')
         }
@@ -135,13 +159,54 @@
       });
 
 
-    var classes = ["figureLeft", "figureRight", "figureCenter"];
+// random image float
 
-    $(".figure").each(function(){
-        $(this).addClass(classes[~~(Math.random()*classes.length)]);
-    });
+    function floatImageRandom(){
+
+      var classes = ["figureLeft", "figureRight"];
+
+      $(".figure").each(function(){
+          $(this).addClass(classes[~~(Math.random()*classes.length)]);
+      });
+
+    }
+
+  // toggle between stylesheets
+
+  styleA = $("#a")
+  styleB = $("#b")
+  $('#b').remove()
+  $('body').addClass('activeStyleA')
 
 
-    })
+  function toggleStyleSheets(){
+
+    if($('body').hasClass('activeStyleA')){
+      $('head').append(styleB)
+      $('#a').remove()
+      $('body').removeClass('activeStyleA')
+      $('#toggleMode').addClass('aActive')
+      $('#toggleMode').removeClass('bActive')
+    }else{
+      $('head').append(styleA)
+      $('body').addClass('activeStyleA')
+      $('#b').remove()
+      $('#toggleMode').addClass('bActive')
+      $('#toggleMode').removeClass('aActive')    }
+
+  }
+
+  // Toggle Mode
+
+
+  $(document).on('click', '#toggleMode', function(){
+
+    // our toggle functions
+    toggleStyleSheets()
+    // floatImageRandom()
+
+  })
+
+})
 
   </script>

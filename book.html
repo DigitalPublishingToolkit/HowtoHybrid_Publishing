@@ -8,6 +8,7 @@
   <style type="text/css">code{white-space: pre;}</style>
   <link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,700italic,700,500italic,500,400italic,300italic,300,100,100italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700italic,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic' rel='stylesheet' type='text/css'>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
@@ -20,7 +21,7 @@
         // resizeable stuff
   
         $(function() {
-          $(".level1, .links, #header" ).resizable({
+          $(".level1, .linkBox, .infoBox, #header" ).resizable({
             handles: 'e',
             cancel: '.fullWidth',
             // grid: [ $('#header').outerWidth()/8, 0 ],
@@ -41,7 +42,6 @@
         $( "body" ).prepend(`<div id="header">
           <h1>Publishing Lab:</h1> 
           <button id="toggleWidth" type="button">⟷</button>
-          <button id="toggleTheme" type="button"> </button>
           <button id="toggleMode" type="button">Aa</button>
           <ul class="navWrap">
               <li>
@@ -76,23 +76,48 @@
   
         // generate figure+lightbox
   
+        // $('img').each(function(){
+        //   $(this).unwrap()
+        //   thisSrc = $(this).attr('src')
+        //   figureWrap = `
+        //     <div class="figure">
+        //       <div class="thumbnail">`+thisSrc.split('/').pop()+`</div>
+        //       <a href="#_">
+        //         <img class="bigImage" src=`+thisSrc+` alt="" />
+        //       </a> 
+        //       <a href="#_">
+        //         <img class="lightbox" src=`+thisSrc+` alt="" />
+        //       </a>
+        //     </div>
+        //   `;
+        //   $(figureWrap).insertAfter( $(this) );
+        //   $(this).remove()
+        // })
+  
+  
+        i=0
+  
         $('img').each(function(){
+          i=i+1
           $(this).unwrap()
           thisSrc = $(this).attr('src')
           figureWrap = `
             <div class="figure">
               <div class="thumbnail">`+thisSrc.split('/').pop()+`</div>
-              <a href="#img1">
+              <a href="#img`+i+`">
                 <img class="bigImage" src=`+thisSrc+` alt="" />
               </a> 
               <a href="#_">
-                <img id="img1" class="lightbox" src=`+thisSrc+` alt="" />
+                <div id="img`+i+`" class="lightbox">
+                  <img src=`+thisSrc+` alt="" />
+                </div>
               </a>
             </div>
           `;
           $(figureWrap).insertAfter( $(this) );
           $(this).remove()
         })
+  
   
         // initial check of figures right off
   
@@ -104,17 +129,17 @@
         $('#header').find('h1').html("<h1>"+$('#header').find('h1').text()+"</br>"+$('.htmlTitle').text()+"</h1>")
       
   
-        // move 'links' out
-        $('.links').each(function() {
+        // move 'linkBox' out
+        $('.linkBox, .infoBox').each(function() {
           $(this).insertAfter($(this).parents('.level1'));
         })
-        $('.links').each(function() {
+        $('.linkBox, .infoBox').each(function() {
           $(this).insertAfter($(this).parents('.level2'));
         })
   
-        // edit links appearance
+        // edit linkBox appearance
   
-        $('.links').each(function() {
+        $('.linkBox, .infoBox').each(function() {
           $(this).children().not('h1, .ui-resizable-handle').wrapAll('<div class="level2"></div>');
         })
   
@@ -123,7 +148,7 @@
         $(document).on('click', '#toggleWidth', function(){
   
           if ($('.level1').hasClass('fullWidth')) {
-            $('#header, .level1, .links').removeClass('fullWidth').addClass('initWidth')
+            $('#header, .level1, .linkBox, .infoBox').removeClass('fullWidth').addClass('initWidth')
             $('#toggleWidth').text('⟷')
               
               window.setTimeout(function(){  
@@ -135,14 +160,14 @@
             },200)
   
               window.setTimeout(function(){  
-            $('#header, .level1, .links').removeClass('initWidth')
+            $('#header, .level1, .linkBox, .infoBox').removeClass('initWidth')
   
             },600)
   
   
           } else {
-            $('#header, .level1, .links').css({'width':''})
-            $('#header, .level1, .links').addClass('fullWidth')
+            $('#header, .level1, .linkBox, .infoBox').css({'width':''})
+            $('#header, .level1, .linkBox, .infoBox').addClass('fullWidth')
             $('#toggleWidth').text('⟺')
             $('.figure').addClass('figureInside')
           }
@@ -150,20 +175,98 @@
         });
   
   
-      var classes = ["figureLeft", "figureRight", "figureCenter"];
+  // random image float
   
-      $(".figure").each(function(){
-          $(this).addClass(classes[~~(Math.random()*classes.length)]);
-      });
+      function floatImageRandom(){
+  
+        var classes = ["figureLeft", "figureRight"];
+  
+        $(".figure").each(function(){
+            $(this).addClass(classes[~~(Math.random()*classes.length)]);
+        });
+  
+      }
+  
+    // toggle between stylesheets
+  
+    styleA = $("#a")
+    styleB = $("#b")
+    $('#b').remove()
+    $('body').addClass('activeStyleA')
   
   
-      })
+    function toggleStyleSheets(){
+  
+      if($('body').hasClass('activeStyleA')){
+        $('head').append(styleB)
+        $('#a').remove()
+        $('body').removeClass('activeStyleA')
+        $('#toggleMode').addClass('aActive')
+        $('#toggleMode').removeClass('bActive')
+      }else{
+        $('head').append(styleA)
+        $('body').addClass('activeStyleA')
+        $('#b').remove()
+        $('#toggleMode').addClass('bActive')
+        $('#toggleMode').removeClass('aActive')    }
+  
+    }
+  
+    // Toggle Mode
+  
+  
+    $(document).on('click', '#toggleMode', function(){
+  
+      // our toggle functions
+      toggleStyleSheets()
+      // floatImageRandom()
+  
+    })
+  
+  })
   
     </script>
-    <style>
+    <style id='a'>
+  
+  .figureInside{
+    margin-right: 8px !important; 
+  }
+  
+  .highlightThis{
+    background-color: rgba(255,255,150,1) !important;
+    transition: background-color 0.3s ease-in-out;
+    -moz-transition: background-color 0.3s ease-in-out; /* FF 4 */
+    -webkit-transition: background-color 0.3s ease-in-out; /* Safari & Chrome */
+    -o-transition: background-color 0.3s ease-in-out; /* Opera */
+  }
+  
+  .removeHighlightThis{
+    transition: background-color 0.3s ease-in-out;
+    -moz-transition: background-color 0.3s ease-in-out; /* FF 4 */
+    -webkit-transition: background-color 0.3s ease-in-out; /* Safari & Chrome */
+    -o-transition: background-color 0.3s ease-in-out; /* Opera */
+  }
+  
+  .marginTop {
+    background: red;
+  }
+  
+  .level1:hover .ui-resizable-e,
+  .linkBox:hover .ui-resizable-e,
+  .infoBox:hover .ui-resizable-e {
+    background: rgba(255,255,150,1);
+  }
+  
+  .color {
+    background-color: lemonchiffon;
+  }
+  
+  .htmlTitle{
+    display: none;
+  }
   
   html {
-    background: #FBF5EC;
+    background: #E6E6E6;
   }
   
   body {
@@ -173,14 +276,21 @@
   }
   
   body, html {
-    font-family: 'Libre Baskerville', serif;
-    font-size: 18px;
-    color: #545454;
+    font-family: 'Roboto Condensed', monospace;
+    font-size: 20px;
+    color: black;
+    font-weight: 300;
   }
   
   div {
     padding: 10px;
-    margin: 10px 15px;
+    margin: 10px 20px;
+    float: left;
+    border: 1px solid  black;
+    -webkit-box-shadow: 2px 2px 0px 0px black;
+    -moz-box-shadow: 2px 2px 0px 0px black;
+    box-shadow: 2px 2px 0px 0px black;
+    background: white;
     position: initial;
   }
   
@@ -189,26 +299,20 @@
   }
   
   #header {
-    border: 1px solid gainsboro;
-    -webkit-box-shadow: 2px 2px 0px 0px gainsboro;
-    -moz-box-shadow: 2px 2px 0px 0px gainsboro;
-    box-shadow: 2px 2px 0px 0px gainsboro;
+    /*background: #E6E6E6;*/
+    background: lightcyan;  
     position: fixed;
     width: calc(100% - 64px);
     padding: 10px;
-    z-index: 10;
-    background: #FBF5EC;
+    max-width: calc(100% - 64px);
+    min-width: 600px;
+    z-index: 5;
     margin-top: -100px;
   }
   
   #header h1 {
     float: left;
-    font-weight: 600;
-    padding: 0;
-    margin: 0;
-    /*letter-spacing: 1px;*/
   }
-  
   
   #header p {
     float: left;
@@ -216,52 +320,59 @@
     width: 50%;
   }
   
+  .level1 ~ .level1 {
+    margin-top: 10px;
+  }
+  
   h1, h2, h3{
     margin: 0;
-    font-family: 'Roboto Condensed', monospace;
     padding: 0;
-    font-weight: 600;
-    /*letter-spacing: 1px;*/
   }
   
   h1 {
-    font-size: 22px;
+    font-size: 26px;
   }
   
   h2 {
-    font-size: 20px;
+    font-size: 24px;
+    margin-bottom: -5px;
   }
   
   h3 {
     font-size: 20px;
-    font-weight: 500;
+    margin-bottom: -10px;
   }
   
   p, li, code {
     line-height: 1.5;
   }
   
+  strong, b {
+    font-weight: 400;
+  }
+  
   code {
     font-family: 'Roboto Mono', monospace;
-    color: gray;
+    color: black;
     font-size: 15px;
     font-weight: 400;
     word-wrap: break-word;
   }
   
   pre {
-    margin: 10px 10px 0 20px;
+    margin-left: 20px;
   }
   
   a {
-    border-bottom: 1px solid #545454 ;
-    color: #545454 ;
+    border-bottom: 1px solid black;
+    padding: 1px 0px;
+    color: black;
     text-decoration: none;
   }
   
   a:hover {
     border: 0;
-    background-color: #545454 ;
+    background-color: black;
     color: white;
   }
   
@@ -270,73 +381,72 @@
     border: 0;
   }
   
-  .links {
-    width: 25%;
-    float: right;
-    border: 1px solid gainsboro;
-    -webkit-box-shadow: 2px 2px 0px 0px gainsboro;
-    -moz-box-shadow: 2px 2px 0px 0px gainsboro;
-    box-shadow: 2px 2px 0px 0px gainsboro;
-    z-index: 7;
-    background: #FBF5EC;
-    margin-right: 27px;
-    padding: 15px 15px 0 15px;
+  .linkBox {
+    width: calc(25%);
+    max-width: calc(100% - 64px);
+    min-width: calc(25% - 64px);
+    background: lightcyan;
+    position: relative;
+    right: 0;
+    /*z-index: 7;*/
   }
   
-  .links p,
-  .links h1 {
-    word-wrap: break-word;
-    font-size: 15px;
-    font-family: 'Roboto Mono', monospace;
+  .infoBox {
+    width: calc(15%);
+    max-width: calc(100% - 64px);
+    min-width: calc(15% - 64px);
+    background: #D8F3D1;
+    position: relative;
+    right: 0;
+    /*z-index: 7;*/
   }
   
-  .links>.level2>p:first-of-type {
-    margin: 0;
-    padding: 0;
+  .infoBox .level2 {
+    background: #D8F3D1;
   }
   
-  .links a {
-    border: 1px solid #545454 ;
-    padding: 0 3px;
-    background-color: #545454 ;
-    color: beige;
-  }
-  
-  .links a:hover::before {
-    content:"→ ";
+  .linkBox>.level2 {
+    background: lightcyan;
+    position: relative;
   }
   
   .difficulty-level {
     width: auto;
     padding: 10px;
     display: inline-block;
-    margin: 0;
+    margin: 5px;
     margin-left: 20px;
-    /*float: right;*/
+    float: right;
     font-weight: 400; 
     font-family: 'Roboto Mono', monospace;
     font-size: 15px;
   }
   
   .difficulty-level.easy {
-    border: 1px solid gainsboro;
-    -webkit-box-shadow: 2px 2px 0px 0px gainsboro;
-    -moz-box-shadow: 2px 2px 0px 0px gainsboro;
-    box-shadow: 2px 2px 0px 0px gainsboro;
+    border: 1px solid black;
+    color: black;
+    -webkit-box-shadow: 2px 2px 0px 0px black;
+    -moz-box-shadow: 2px 2px 0px 0px black;
+    box-shadow: 2px 2px 0px 0px black;
+    background: Chartreuse;
   }
   
   .difficulty-level.moderate {
-    border: 1px solid gainsboro;
-    -webkit-box-shadow: 2px 2px 0px 0px gainsboro;
-    -moz-box-shadow: 2px 2px 0px 0px gainsboro;
-    box-shadow: 2px 2px 0px 0px gainsboro;
+    border: 1px solid black;
+    color: black;
+    -webkit-box-shadow: 2px 2px 0px 0px black;
+    -moz-box-shadow: 2px 2px 0px 0px black;
+    box-shadow: 2px 2px 0px 0px black;
+    background: yellow;
   }
   
   .difficulty-level.expert {
-    border: 1px solid gainsboro;
-    -webkit-box-shadow: 2px 2px 0px 0px gainsboro;
-    -moz-box-shadow: 2px 2px 0px 0px gainsboro;
-    box-shadow: 2px 2px 0px 0px gainsboro;
+    border: 1px solid black;
+    color: black;
+    -webkit-box-shadow: 2px 2px 0px 0px black;
+    -moz-box-shadow: 2px 2px 0px 0px black;
+    box-shadow: 2px 2px 0px 0px black;
+    background:  red;
   }
   
   .expert::after {
@@ -352,23 +462,16 @@
   }
   
   .level1 {
-    width: 60%;
-    float: left;
-  }
-  
-  .level1 p {
-    width: 75%;
-  }
-  
-  .level2 {
-    margin: 5px -10px;
+    width: calc(50%);
+    max-width: calc(100% - 64px);
+    min-width: calc(25% - 64px);
   }
   
   .level1:hover,
-  .links:hover {
-    /*padding-right: 20px !important;*/
-    /*-webkit-animation: mymove 0.5s ease-in; /* Chrome, Safari, Opera */*/
-    /*animation: mymove 0.5s ease-in;*/
+  .linkBox:hover,
+  .infoBox:hover {
+    -webkit-animation: mymove 0.5s ease-in; /* Chrome, Safari, Opera */
+    animation: mymove 0.5s ease-in;
   }
   
   /* Chrome, Safari, Opera */
@@ -387,13 +490,24 @@
       100% {padding-right: 10px;}
   }
   
+  .level2 {
+    width: calc(100% - 42px);
+    color: black;
+    margin: 10px;
+  }
+  
   .level3{
-    padding: 0;
+    width: calc(100% - 42px);
+    color: black;
+    border: 0;
+    box-shadow: none;
+    padding: 10px 0;
     margin: 0;
     margin-top: 10px;
     width: 100%;
+    line-height: 1.5;
+    /*border-top: 2px solid black;*/
   }
-  
   
   /* DROPDOWN */
   
@@ -403,9 +517,8 @@
     margin: 0;
     padding: 0;
     float: right;
-    background: #545454;
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 18px;
+    background: black;
+    font-size: 20px;
   }
   
   .navWrap {
@@ -424,8 +537,8 @@
   #header ul > li {
     float:left;
     position:relative;
-    width: 320px;
-    background: #545454 ;
+    width: 450px;
+    background: black;
   }
   
   #header a {
@@ -443,7 +556,7 @@
   }
   
   #header li ul {
-    background: #FBF5EC;  
+    background: white;  
   }
   
   #header li ul li {
@@ -489,78 +602,68 @@
     content:"→ ";
   }
   
-  /* FOOTER */
-  
-  #footer {
-    /*float: right;*/
-    background: azure;
-    width: 25%;
-    z-index: 0;
-  }
-  
-  #colofon {
-    background: azure;
-  }
-  
   /* IMAGES */
   
   .figure {
-    padding: 0;
-    margin: 10px 0;
-    z-index: 10;
-    overflow: hidden;
-    width: 25%;
-    border: 1px solid gainsboro;
-    -webkit-box-shadow: 2px 2px 0px 0px gainsboro;
-    -moz-box-shadow: 2px 2px 0px 0px gainsboro;
-    box-shadow: 2px 2px 0px 0px gainsboro;
-  }
-  
-  .figureLeft {
-    float: left;
-    margin-right: 30px;
-  }
-  
-  .figureRight {
     float: right;
-    margin-left: 30px;
-    margin-bottom: -10%;
+    width: 200px;
+    padding: 0;
+    margin: 0;
+    background: white;
+    margin-bottom: -320px;
+    position: relative;
+    z-index: 10;
+    font-weight: 400; 
+    font-family: 'Roboto Mono', monospace;
+    font-size: 15px;
   }
   
-  .figureCenter {
-    margin-left: 35%;
+  .level1 .figure {
+      margin-right: -238px;
+  }
+  
+  .level2 .figure {
+      margin-right: -258px;
   }
   
   img {
-    width: 100%;
+    width: 50px;
+    margin: 0;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
   }
   
   .figure .thumbnail{
-    display: none;
+    word-break: break-all;
+    padding: 10px;
+    max-width: 150px;
+    height: auto;
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+    background: none;
   }
   
-  /*.figure:hover {
+  .figure:hover {
     height: 300px;
     height: auto;
     width: auto;
-  }*/
+  }
   
-  /*.figure:hover .thumbnail {
+  .figure:hover .thumbnail {
     display: none;
   }
-  */
+  
   .figure .bigImage {
-    /*display: none;*/
+    display: none;
     cursor: zoom-in;
   }
   
-  /*.figure:hover .bigImage {
+  .figure:hover .bigImage {
     display: initial;
     height: 300px;
     width: auto;
-  }*/
+  }
   
   .lightbox {
     display: none;
@@ -596,11 +699,50 @@
   [id*="intro"] {
   }
   
+  /* RESIZE FEATURE */
+  
+  .ui-resizable-e {
+    cursor: e-resize;
+    cursor: col-resize;
+    width: 5px;
+    right: 0;
+    top: 0;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: lightgray;
+    box-shadow: none;
+    z-index: 1 !important;
+  }
+  
+  .ui-resizable-w {
+    cursor: e-resize;
+    cursor: col-resize;
+    width: 5px;
+    left: 0;
+    top: 0;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: lightgray;
+    box-shadow: none;
+    z-index: 1 !important;
+  }
+  
+  .firstAfterHeader {
+    margin-top: 125px !important;
+  }
+  
   /* toggle options */
   
-  button {
+    button {
     background: white;
-    border: 1px solid gainsboro;
+    border: 1px solid black;
+    -webkit-box-shadow: 2px 2px 0px 0px black;
+    -moz-box-shadow: 2px 2px 0px 0px black;
+    box-shadow: 2px 2px 0px 0px black;
     padding: 10px;
     font-family: 'Roboto Mono', monospace;
     font-size: 15px;
@@ -608,11 +750,10 @@
     float: right;
     width: 43px;
     height: 43px;
-    color: #545454;
   }
   
   #toggleTheme {
-    background: gainsboro;
+    background: white;
   }
   
   #toggleMode {
@@ -625,6 +766,15 @@
     background: rgba(255,255,150,1);
   }
   
+  .fullWidth .ui-resizable-e {
+    display: none;
+  }
+  
+  .fullWidth:hover {
+    animation: none;
+  }
+  
+  
   .fullWidth {
     width: calc(100% - 64px);
     transition: width 0.3s;
@@ -636,87 +786,873 @@
   }
   
   </style>
+    <style id='b'>
+  
+  html {
+    background: #FAF8F4;
+  }
+  
+  body {
+    margin: 0;
+    overflow-x: hidden;
+    margin-top: 125px;  
+  }
+  
+  body, html {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 20px;
+    color: #545454;
+  }
+  
+  div {
+    padding: 10px;
+    padding-bottom: 0;
+    margin: 10px 15px;
+    position: initial;
+  }
+  
+  .level3 {
+    z-index: 1000000;
+  }
+  
+  #header {
+    border: 1px solid #545454;
+    -webkit-box-shadow: 2px 2px 0px 0px #545454;
+    -moz-box-shadow: 2px 2px 0px 0px #545454;
+    box-shadow: 2px 2px 0px 0px #545454;
+    position: fixed;
+    width: calc(100% - 64px);
+    padding: 10px;
+    z-index: 10;
+    background: #FAF8F4;
+    margin-top: -100px;
+  }
+  
+  #header h1 {
+    float: left;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #header p {
+    float: left;
+    margin: 10px 0 0 0;
+    width: 50%;
+  }
+  
+  h1, h2, h3{
+    margin: 25px 0 0 0;
+    font-family: 'Roboto Condensed', monospace;
+    padding: 0;
+    font-weight: 300;
+    font-size: 26px;
+  }
+  
+  .level1 h1 {
+    font-size: 25px;
+    font-family: 'Libre Baskerville', serif;
+    text-align: center;
+        -webkit-transform:scale(1,1.2); /* Safari and Chrome */
+      -moz-transform:scale(1,1.2); /* Firefox */
+      -ms-transform:scale(1,1.2); /* IE 9 */
+      -o-transform:scale(1,1.2); /* Opera */
+      transform:scale(1,1.2); /* W3C */
+  }
+  
+  h2 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 24px;
+    text-align: center;
+    font-style: italic;
+  }
+  
+  h3 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 17px;
+    margin-bottom: -10px;
+    text-decoration: underline;
+  }
+  
+  p, li, code {
+    line-height: 1.7;
+  }
+  
+  code {
+    font-family: 'Roboto Mono', monospace;
+    color: gray;
+    font-size: 15px;
+    font-weight: 400;
+    word-wrap: break-word;
+  }
+  
+  pre {
+    margin: 10px 10px 0 20px;
+  }
+  
+  p>a,
+  li>a {
+    border-bottom: 1px solid #545454 ;
+    color: #545454 ;
+    text-decoration: none;
+  }
+  
+  p>a:hover,
+  li>a:hover {
+    border: 0;
+    background-color: #545454;
+    color: white;
+  }
+  
+  .figure a,
+  .figure a:hover {
+    border: 0;
+  }
+  
+  .linkBox,
+  .infoBox,
+  blockquote {
+    width: calc(50% - 13px);
+    float: none;
+    border: 1px solid #545454;
+    -webkit-box-shadow: 2px 2px 0px 0px #545454;
+    -moz-box-shadow: 2px 2px 0px 0px #545454;
+    box-shadow: 2px 2px 0px 0px #545454;
+    z-index: 7;
+    margin: 20px 0;
+    margin-left: calc(24% + 13px);
+    padding: 25px;
+    font-family: 'Libre Baskerville', serif;
+  }
+  
+  .linkBox p,
+  .linkBox h1,
+  .linkBox h2,
+  .linkBox h3 {
+    word-wrap: break-word;
+  /*  font-family: 'Roboto Mono', monospace;
+    font-size: 17px;
+    font-weight: 400;*/
+  }
+  
+  .infoBox {
+    background: #545454;
+    color: #FAF8F4;
+  }
+  
+  .linkBox h3,
+  .infoBox h3 {
+    margin: 0;
+    margin-bottom: -10px;
+  }
+  
+  blockquote {
+    line-height: 1.6;
+    letter-spacing: 2px;
+    font-size: 17px;
+    background: #FAF8F4; 
+  }
+  
+  blockquote p {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+  
+  .difficulty-level {
+    width: auto;
+    padding: 10px;
+    display: inline-block;
+    margin: 5px 5px 5px 24%;
+    font-weight: 400; 
+    /*font-family: 'Roboto Mono', monospace;*/
+    font-size: 17px;
+    letter-spacing: 2px;
+  }
+  
+  .difficulty-level.easy {
+    border: 1px solid #545454;
+    -webkit-box-shadow: 2px 2px 0px 0px #545454;
+    -moz-box-shadow: 2px 2px 0px 0px #545454;
+    box-shadow: 2px 2px 0px 0px #545454;
+  }
+  
+  .difficulty-level.moderate {
+    border: 1px solid #545454;
+    -webkit-box-shadow: 2px 2px 0px 0px #545454;
+    -moz-box-shadow: 2px 2px 0px 0px #545454;
+    box-shadow: 2px 2px 0px 0px #545454;
+  }
+  
+  .difficulty-level.expert {
+    border: 1px solid #545454;
+    -webkit-box-shadow: 2px 2px 0px 0px #545454;
+    -moz-box-shadow: 2px 2px 0px 0px #545454;
+    box-shadow: 2px 2px 0px 0px #545454;
+  }
+  
+  .expert::after {
+    content: "expert";
+  }
+  
+  .moderate::after {
+    content: "moderate";
+  }
+  
+  .easy::after {
+    content: "easy";
+  }
+  
+  .level1 {
+  /*  width: calc(100% - 40px);
+    float: left;
+    padding: 0;
+    margin: 0;
+    margin-left: 10px;*/
+    /*margin-top: 20px;*/
+    /*border-top: 1px solid #545454;*/
+  }
+  
+  .level2 {
+    margin: 5px -10px;
+  }
+  
+  .level1 p,
+  .level1 pre,
+  .level1 h1,
+  .level1 ul,
+  .level2 h2,
+  .level3 h3 {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+  
+  /* in text lists */
+  
+  .level1 ul p {
+    margin: initial;
+    line-height: 1.8;
+  }
+  
+  .level1 ul li {
+    margin-bottom: 10px;
+  }
+  
+  /* Chrome, Safari, Opera */
+  @-webkit-keyframes mymove {
+      0% {padding-right:10px;}
+      20% {padding-right:13px;}
+      80% {padding-right:13px;}
+      100% {padding-right: 10px;}
+  }
+  
+  /* Standard syntax */
+  @keyframes mymove {
+      0% {padding-right:10px;}
+      20% {padding-right:13px;}
+      80% {padding-right:13px;}    
+      100% {padding-right: 10px;}
+  }
+  
+  .level3{
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+    width: 100%;
+  }
+  
+  
+  /* DROPDOWN */
+  
+  #header ul {
+    *zoom:1;
+    list-style:none;
+    margin: 0;
+    padding: 0;
+    float: right;
+    background: #545454;
+    font-size: 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+  
+  .navWrap {
+    margin: 10px !important;
+  }
+  
+  #header ul:before,#header ul:after {
+    content:"";
+    display:table;
+  }
+  
+  #header ul:after {
+    clear:both;
+  }
+  
+  #header ul > li {
+    float:left;
+    position:relative;
+    width: 450px;
+    background: #545454;
+  }
+  
+  #header a {
+    display:block;
+    padding: 10px;
+    line-height:1.2em;
+    background: none;
+    border: 0;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  
+  #header a:hover {
+    text-decoration:none;
+  }
+  
+  #header li ul {
+    background: #FBF5EC;  
+  }
+  
+  #header li ul li {
+  }
+  
+  #header li ul a {
+    border: 0;
+  }
+  
+  #header li ul a:hover {
+  
+  }
+  
+  #header li ul {
+    position:absolute;
+    left: 0;
+    z-index:1;
+  }
+  
+  #header li ul li {
+    overflow:hidden;
+    height: 0;
+    -webkit-transition:height 200ms ease-in;
+    -moz-transition:height 200ms ease-in;
+    -o-transition:height 200ms ease-in;
+    transition:height 200ms ease-in;
+  }
+  
+  #header ul > li:hover ul li {
+    height: 41px;
+  }
+  
+  .navFirst::after {
+    content:" ↓";
+    font-size: 21px;
+    float: right;
+    font-family: 'Roboto Condensed', monospace;
+  }
+  
+  .navFirst:hover::after {
+    content:"  ↑";
+    font-family: 'Roboto Condensed', monospace;
+  }
+  
+  .navOptions a:hover::before {
+    content:"→ ";
+  
+    font-family: 'Roboto Condensed', monospace;
+  }
+  
+  /* FOOTER */
+  
+  #footer {
+    /*float: right;*/
+    background: azure;
+    width: 25%;
+    z-index: 0;
+  }
+  
+  #colofon {
+    background: azure;
+  }
+  
+  /* IMAGES * video */
+  
+  .figure {
+    padding: 0;
+    margin: 10px 0;
+    z-index: 5;
+    /*overflow: hidden;*/
+    width: 20%;
+    height: 0;
+  }
+  
+  .figureLeft {
+    float: left;
+    margin-right: 30px;
+    margin-bottom: -20%;
+  }
+  
+  .figureRight {
+    float: right;
+    margin-left: 30px;
+    margin-bottom: -20%;
+  }
+  
+  img {
+    width: 100%;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }
+  
+  .figure .thumbnail{
+    display: none;
+  }
+  
+  .figure .bigImage {
+    cursor: zoom-in;
+    z-index: 3;
+    position:relative;
+      border: 1px solid #545454;
+    -webkit-box-shadow: 2px 2px 0px 0px #545454;
+    -moz-box-shadow: 2px 2px 0px 0px #545454;
+    box-shadow: 2px 2px 0px 0px #545454;
+  }
+  
+  .lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999999 !important;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    padding: 20px;
+    padding-bottom: 5000%;
+    padding-top: 5000%;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    overflow: hidden;
+    background: #545454;
+  }
+  
+  .lightbox img {
+    max-width: 75%;
+    /*max-height: 90%;*/
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    margin: auto;
+  }
+  
+  .lightbox:target {
+    outline: none;
+    display: block;
+  }
+  
+  video {
+    width: 30%;
+    margin-left: 35%;
+    -webkit-box-shadow: 2px 2px 0px 0px #545454;
+    -moz-box-shadow: 2px 2px 0px 0px #545454;
+    box-shadow: 2px 2px 0px 0px #545454;
+  }
+  
+  /**/
+  
+  [id*="intro"] {
+  }
+  
+  /* toggle options */
+  
+  
+  
+  button {
+    background: #FAF8F4;
+    border: 1px solid #545454;
+    padding: 10px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 15px;
+    margin: 10px;
+    float: right;
+    width: 43px;
+    height: 43px;
+    color: #545454;
+        -webkit-box-shadow: 2px 2px 0px 0px #545454;
+    -moz-box-shadow: 2px 2px 0px 0px #545454;
+    box-shadow: 2px 2px 0px 0px #545454;
+  }
+  
+  #toggleTheme {
+    background: #545454;
+  }
+  
+  #toggleMode {
+    font-family: serif;
+    font-style: italic;
+    font-size: 20px;
+  }
+  
+  #toggleMode:hover {
+    background: rgba(255,255,150,1);
+  }
+  
+  .aActive {
+    font-family: 'Roboto Mono', monospace !important;
+    font-size: 17px !important;
+  }
+  
+  /* change width */
+  
+  .fullWidth {
+    width: calc(100% - 64px);
+    transition: width 0.3s;
+  }
+  
+  .fullWidth .figureLeft,
+  .fullWidth .figureRight {
+    width: 15%;
+    float: none;
+    margin: 5px 20px 5px 0;
+  }
+  
+  .level1.fullWidth {
+    padding: 10px;
+    margin: 10px 20px;
+  }
+  
+  .fullWidth.linkBox,
+  .fullWidth.infoBox,
+  .fullWidth.level1 ul {
+    margin: 15px 15px;
+    padding: 0 20px 10px 20px;
+    width: calc(100% - 84px);
+  }
+  
+  .fullWidth blockquote {
+    margin: 10px -15px;
+    width: calc(100% - 30px);
+  }
+  
+  .fullWidth p,
+  .fullWidth h1,
+  .fullWidth h2,
+  .fullWidth h3 {
+    margin: 20px 0;
+    text-align: left;
+  }
+  
+  .fullWidth.level1 h1 {
+    width: calc(100% - 84px);
+  }
+  
+  .fullWidth p {
+    width: inherit;
+  }
+  
+  .fullWidth.level1 pre {
+    margin: 10px 10px 0 20px;
+  }
+  
+  .fullWidth .difficulty-level {
+    margin-left: -15px;
+  }
+  
+  .initWidth {
+    width: ;
+    transition: width 0.3s;
+  }
+  
+  .fullWidth .figure {
+    height: auto;
+  }
+  
+  </style>
 </head>
 <body>
-<div class="links">
-<h1>This is a H1 Header</h1>
-<p>Markup for Link/Resources (blue background). The Link/Resources lists will always appear outside any block/section. Wrap the area in a 'div' with the class 'links'. Example below:</p>
-<pre><code>&lt;div class=&#39;links&#39;&gt;
-    # Your link/resource header
-    Your link/resource content
-&lt;/div&gt;</code></pre>
+<div id="how-to-design-solutions-for-digital-publishing" class="section level1">
+<h1>How to: Design Solutions for Digital Publishing</h1>
+<div id="introduction" class="section level2">
+<h2>Introduction</h2>
+<p>What are the visual options for artistic digital publications?</p>
+<div id="what-can-you-find-in-this-how-to" class="section level3">
+<h3>What can you find in this How To?</h3>
+<p>This site introduces the Hybrid Publishing Workflow for creating multiple publications from one source file (including eBooks as ePub3 files).</p>
+<p>You will find instructions &amp; a template for making an ePub3, use css styles to modify your layout, and learn about the pros &amp; cons of a fixed layout ePub. Finally, we look at what some other current options are for digital publishing.</p>
+<p>Sections:</p>
+<p>1. Intro to the HPToolkit Workflow<br />2. Styling ePubs<br />3. Fixed layout ePubs<br />4. Other digital publishing options</p>
+<div class="infoBox">
+<h3>Who is this How To for?</h3>
+<p>Small publishers, arts publishers, designers and developers creating digital publications.</p>
 </div>
-<div id="how-to-template" class="section level1">
-<h1>How to Template</h1>
-<p>Hoi, this .md explains everything re: the Template Template. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel lacus et dolor maximus vulputate vitae sit amet massa. Curabitur scelerisque magna vel neque elementum iaculis.</p>
-<div class="figure">
-<img src="./lib/placeholder.png" />
-</div>
-</div>
-<div id="this-is-a-h1-header-1" class="section level1">
-<h1>This is a H1 Header</h1>
-<div id="this-is-a-h2-sub-header" class="section level2">
-<h2>This is a H2 Sub-header</h2>
-<div id="this-is-a-h3-paragraph-header" class="section level3">
-<h3>This is a H3 Paragraph header</h3>
-<p>Headers are created using the pound symbol (#). A single # will create a header 1 (H1), 2 ## will create a header 2 (H2) and so on until H6.</p>
-<p>This is a paragraph in markdown, it is simply text. Unlike html it has no tags like &lt;p&gt; to show it is a paragraph. By adding * characters I can make this word <em>italic</em> and this <strong>bold</strong>. Markdown is a simple language that is easily converted to different outputs, which is why we use it in the hybrid publishing workflow.</p>
-<p>Footnotes look like this: [^fn-sample_footnote]</p>
-<p>Clicking this number[^fn-sample_footnote] will lead you to a footnote.</p>
-<p>Images are inserted like this: ![](./lib/placeholder.jpg) See example to the right:</p>
-<div class="figure">
-<img src="./lib/placeholder.jpg" />
-</div>
-<p>You can find more markdown syntax on the <a href="https://daringfireball.net/projects/markdown/syntax">daringfireball site</a>.</p>
-<div class="links">
-<h1>This is a H1 Header</h1>
-<p>Markup for Link/Resources (blue background). The Link/Resources lists will always appear outside any block/section. Wrap the area in a 'div' with the class 'links'. Example below:</p>
-<pre><code>&lt;div class=&#39;links&#39;&gt;
-    # Your link/resource header
-    Your link/resource content
-&lt;/div&gt;</code></pre>
+<div class="linkBox">
+<h3>Colophon</h3>
+<p><strong>Author:</strong> Jess van Zyl<br /><strong>Editorial support:</strong> Miriam Rasch<br /><strong>Design:</strong> Lasse van den Bosch &amp; Marlon Harder (<a
+href="http://template01.info">Template</a>)<br /><strong>With thanks to:</strong> Hackers&amp;Designers, INC, Torque, Silvio Lorusso, Andre Castro, Gottfried Haider, Michael Murtaugh and the DPT collective.</p>
 </div>
 </div>
 </div>
 </div>
-<div id="expert-options" class="section level1">
-<h1>Expert options</h1>
-<div id="markup-for-expert" class="section level2">
-<h2>Markup for expert:</h2>
-<pre><code>&lt;div class=&quot;difficulty-level expert&quot;&gt;&lt;/div&gt;</code></pre>
-Result:
-<div class="difficulty-level expert">
-
+<div id="intro-to-the-hptoolkit-workflow-14" class="section level1">
+<h1>Intro to the HPToolkit Workflow 1/4</h1>
+<div id="intro" class="section level2">
+<h2>Intro</h2>
+<p>The Hybrid Publishing Toolkit provides two methods of creating an ePub:</p>
+<p>1. Using Pandoc &amp; command line you can convert Word documents to epub relatively quickly. If you’d like to try this method, see the instructions below. 2. The latest option is to use our platform created by Gottfried Haider, this eliminates the need for command line and simplifies the setup on GitHub. You can find it <a
+href="http://hpt.publishinglab.org/">here</a>. ### Example</p>
+<p>The workflow below is a compilation of efforts from the Hybrid Publishing Toolkit, Andre Castro, Michael Murtaugh and others from the DPT collective.</p>
+<p>example: <a
+href="http://networkcultures.org/blog/publication/from-print-to-ebooks-a-hybrid-publishing-toolkit-for-the-arts/">From Print to eBooks: A Hybrid Publishing Toolkit for the Arts</a></p>
+<div id="technical-considerations" class="section level3">
+<h3>Technical considerations</h3>
+<p>Before you begin:</p>
+<ul>
+<li>install GitHub Desktop</li>
+<li>your text (these should be in Word .docx format) and image files (jpg or png).</li>
+<li>MacDown (to edit with markdown, XCode is also fine)</li>
+<li>install Calibre (to view/edit ebooks) <a href="http://calibre-ebook.com/download">here</a></li>
+</ul>
+<p>*There are a few additional things you will need if you use the command line method (listed above as option 1):</p>
+<ul>
+<li>install Pandoc</li>
+<li>you will need to familiarise yourself with the command line (terminal on Mac or go to the Start menu on Windows and type cmd into search/run - more <a href="http://www.computerhope.com/issues/chusedos.htm">here</a>)</li>
+</ul>
+<p>You can find the makefile here on GitHub.</p>
 </div>
 </div>
-<div id="markup-for-moderate" class="section level2">
-<h2>Markup for moderate:</h2>
-<pre><code>&lt;div class=&quot;difficulty-level moderate&quot;&gt;&lt;/div&gt;</code></pre>
-Result:
+<div id="how-instructions-for-creating-an-epub" class="section level2">
+<h2>How: Instructions for Creating an ePub</h2>
+<div id="method-1" class="section level3">
+<h3>Method 1</h3>
+<p>Andre Castro prepared an excellent workshop, based on an updated version of the Hybrid Publishing Toolkit Workflow <a
+href="https://github.com/DigitalPublishingToolkit/workshop-going\_hybrid/wiki">here</a>.</p>
+<p>See the notes under *Day 2* for resource files and a description of the designer, developer and editor roles.</p>
 <div class="difficulty-level moderate">
 
 </div>
 </div>
-<div id="markup-for-easy" class="section level2">
-<h2>Markup for easy:</h2>
-<pre><code>&lt;div class=&quot;difficulty-level easy&quot;&gt;&lt;/div&gt;</code></pre>
-Result:
+<div id="method-2" class="section level3">
+<h3>Method 2</h3>
+<p>Here's a quick video of how *the Sausage Machine* turns a Word document into an ePub:</p>
+<video width="100%" height="80%" controls="controls" loop="loop">
+<source autoplay="false" src="lib/samplevid.mp4" type="video/mp4"/>
+</video>
+
+<p>Using *the Sausage Machine* platform, first you drag and drop your text files <a href="http://hpt.publishinglab.org/">here</a></p>
+<p>then you can choose an output: markdown, html or ePub from the drop down menu and click 'Update'</p>
+<p>Create your book project on GitHub (click 'Continue on GitHub) to keep track of your versions and work collaboratively with an editor or designer.</p>
+<p>Once you make changes to your source file, make sure to commit your changes on GitHub and then sync. After a few minutes *the Sausage Machine* will generate a new ePub/html file with the latest changes.</p>
 <div class="difficulty-level easy">
 
 </div>
+<p><strong>Remember</strong></p>
+<p>Make sure there are no spaces in file names, if you want to change just one file using Pandoc you can run this command in command line pandoc file.md -o file.epub</p>
+<p>this will convert just that file to a new format.</p>
+<p>Use the makefile we provide to combine your files and images into one ePub book file.</p>
+<p>Formats: ePub3, html, icmls (for InDesign)</p>
+</div>
+<div id="validating-your-epub-file" class="section level3">
+<h3>Validating your ePub file</h3>
+<p>Make sure you validate the ePub file before you send it out into the world. If it isn't valid Google Play Books and other ePub readers may not be able to open your new book, causing reader frustration!</p>
+<p>You can use the <a href="http://validator.idpf.org/">online validator</a> for smaller ePubs</p>
+<p>or install the validator on your Desktop from <a
+href="https://github.com/idpf/epubcheck">GitHub</a>.</p>
+<p>The idpf includes a useful wiki to help you understand</p>
+<p><a
+href="https://github.com/IDPF/epubcheck/wiki/Errors">errors</a>.</p>
+<p>when validating your ePub on your desktop, navigate to the folder with the .jar file and copy this in your commandline:</p>
+<p>java -jar epubcheck.jar file.epub</p>
+<p>(Make sure to replace the generic file.epub with the location + name of your own epub.)</p>
+</div>
+<div id="sources-list-of-inspiration" class="section level3">
+<h3>Sources / list of inspiration</h3>
+<p><a
+href="http://networkcultures.org/digitalpublishing/2014/10/21/hybrid-workflow-how-to-making-automated-workflows-part-2/">Hybrid Workflow</a> is a workflow developed to help art publishers create digital versions of their publications, focused on an ePub3 output.</p>
+<p><a href="http://hpt.publishinglab.org/index.php?about">The Sausage Machine platform</a> is based on Pandoc and designed to complement and simplify the Hybrid Publishing workflow by ouputting the desired formats and setting up a repository for you.</p>
+<p><a
+href="http://en.flossmanuals.net/command-line/getting-started/"> A good resource </a> for getting started with command line.</p>
+</div>
+</div>
+</div>
+<div id="styling-reflowable-epubs-24" class="section level1">
+<h1>Styling Reflowable ePubs 2/4</h1>
+<div id="intro-1" class="section level2">
+<h2>Intro</h2>
+<p>Once you've created your ePub3 using the Hybrid Publishing Toolkit method [link to page 1/4] or *the Sausage Machine* <a
+href="http://hpt.publishinglab.org/index.php?about">platform</a>, you can add your own style to it. This can be done with some changes to the markdown file and mostly through the css stylesheet.</p>
+<div id="example" class="section level3">
+<h3>Example</h3>
+<p>PublishingLab template file with test cover.</p>
+</div>
+<div id="technical-considerations-1" class="section level3">
+<h3>technical considerations</h3>
+<p>To create and distribute your ePub you will need at least a basic knowledge of css and some knowledge of the specifications of the idpf to validate your book. Test the ePub on different ereader devices to know which features are supported. Note: The control you have with css on websites is much more limited in eBooks as of this writing (2016).</p>
+</div>
+</div>
+<div id="how" class="section level2">
+<h2>How</h2>
+<p>Using <a href="http://hpt.publishinglab.org/index.php?about">*the Sausage Machine*</a> method to create a book project, you will need to open the ePub folder to access the css.</p>
+<p><strong>Remember</strong></p>
+<p>Though you may take time choosing fonts and colors for your ePubs, they can and will be changed by the human readers or by the devices.</p>
+<p>As an example, this is the same book as seen on a mobile phone (Android OS with Gitden reader):</p>
 <div class="figure">
-<img src="./lib/placeholder.png" />
+<img src="lib/Screenshot_Gitden-reader-android.png" />
+</div>
+<p>and on a Nook e-reader:</p>
+<p>Test the ebook on the device(s) your readers most commonly use, keeping in mind that you do not have as much control in the ebook format as you do in print or web.</p>
+<div id="sources-list-of-inspiration-1" class="section level3">
+<h3>sources / list of inspiration</h3>
+<p>These publications were all created using the Hybrid Publishing method:</p>
+<p>The publications series of the INC <a
+href="http://networkcultures.org/publications/#epub">here</a>.</p>
+<p>Knowledge Mile <a
+href="http://www.publishinglab.nl/blog/publication/the-hackable-city-a-research-manifesto-and-design-toolkit/">series</a></p>
 </div>
 </div>
 </div>
-<div id="custom-header-title" class="section level1">
-<h1>Custom Header title</h1>
-<p>To add a your how to title to the header you have to add following div with content anywhere to your markdown file. Example below:</p>
-<pre><code>&lt;div class=&#39;htmlTitle&#39;&gt;
-    Your How To Title
-&lt;/div&gt;</code></pre>
-<div class="htmlTitle">
-<pre><code>Your How To Title</code></pre>
+<div id="fixed-layout-epub-34" class="section level1">
+<h1>Fixed Layout ePub 3/4</h1>
+<div id="intro-2" class="section level2">
+<h2>Intro</h2>
+<p>A fixed layout epub (FXL) can be described as a hybrid of pdf &amp; ePub; combining the design control of a pdf with ePub’s searchability and the ability to be sold on Amazon. A main disadvantage is the lack of distribution opportunities (meaning not many ereaders will display them). The other disadvantage is the format is not responsive - like a .pdf it requires a lot of zooming to read on a mobile. You can see examples <a
+href="http://www.publishinglab.nl/blog/2015/11/09/fixed-layout-epubs-useful-or-backward/">here</a>.</p>
+<div id="the-pros" class="section level3">
+<h3>The pros</h3>
+<p>Distribution: while you can't currently sell .pdfs, you can sell ePubs in iBookstore and on Amazon</p>
+<p>Live text: all written content is searchable (for example, captions over photos do not have to be part of the image)</p>
+<p>Control over page design</p>
+<p>Full-bleed images and backgrounds</p>
+<p>The cons</p>
+<p>Labor intensive: InDD CS5.5 and earlier do not support exporting fixed layouts, so that means coding it by hand. Each page of a FXL has it's own .xhtml file, unlike reflowable ePubs which have one .xhtml per chapter</p>
+<p>Limited distribution opportunities: very few readers support it at the moment. Apple is the main re-seller and this may result in needing to design 2 layouts (i.e. a tweaked version for Kobo)</p>
+<p>The format doesn't scale for mobile reading.</p>
+</div>
+<div id="the-controversy" class="section level3">
+<h3>The controversy</h3>
+<blockquote>
+
+<p>&quot;I think they sound like a pointless step backward – a filetype with all the rigidity of PDF but with none of the cross-platform support.&quot; - Ben Hollingum</p>
+</blockquote>
+
+<p>The quote above epitomises the Digital Reader article's list of problems with fixed layout books. Digital Reader proposes that eBook designers should move away from trying to keep the printed book format as a template for digital publishing. Craig Mod argues that the bond between reader and text can be strengthened or broken by the container, I see this as an affirmation that it needs serious consideration by designers and developers. He sums up his concern below:</p>
+<p>Amazon and Apple are the paper‑makers, the typographers, the printers, the binders and the distributors: if they don’t make a style of paper you like, too bad. The boundaries of digital book design are beholden to their whim. - Craig Mod</p>
+<p>Fixed layout books are often children's books, photography or cookbooks. To decide whether using fixed layout is right for a project, the publisher needs a clear idea of what their reader's devices are - it takes too much effort to create a layout that might work well in i-Books and not at all on other readers. This problem of limited implementation affects fixed layout ePubs as well as reflowable ePubs which often support only a very few styling options. The IDPF cautions eBook developers to be aware that reading systems typically restrict the ability to modify body margins indicates this limitation. Which essentially means designers are bound by the choices of distributors and e-reader makers.</p>
+</div>
+<div id="the-experiments" class="section level3">
+<h3>The experiment(s)</h3>
+<p>To demonstrate, I created a fixed layout epub in InDD CC 2015. It didn't take much time to file &gt; export fixed layout, and the pros are that it retains my weird text wrap, and the caption over the video. Since I wrote about the display in the cons section above, I thought I'd also show what it looks like - not just tell. When viewed in iBooks, changing the width of the viewport (screen) does not change the size of the text and it is only suitable for viewing on an ipad.</p>
+<div class="figure">
+<img src="lib/iphone4s-300x230.jpg" />
+</div>
+<p>Fixed layout viewed on iPhone4s</p>
+</div>
+<div id="reflowable-vs-fixed-format" class="section level3">
+<h3>Reflowable vs Fixed Format</h3>
+<p>It's obvious that the reading experience is just as difficult on a mobile where you have to zoom to read as it is reading pdfs. Another difference between fixed and reflowable ePubs is shown below, see that there are 3 pages in this book - and 3 corresponding xhtml files, imagine if it had been 130 pages.</p>
+</div>
+<div id="examples" class="section level3">
+<h3>Examples</h3>
+<p>Now that you've seen the rough-and ready test, here is an exciting example of a hand-coded ePub3, <a
+href="https://vimeo.com/25185473">Kadath</a>, by Walrus Studio, which includes columns and an interactive map. This book is really inspiring, but it's also custom-made - requiring a skilled developer and robust budget.</p>
+</div>
+<div id="additional-reading" class="section level3">
+<h3>Additional Reading</h3>
+<p>For a really clear distinction between ePubs, PDFs and Apps see this excellent article from Indesignsecrets</p>
+</div>
+</div>
+</div>
+<div id="other-digital-publishing-options-44" class="section level1">
+<h1>Other Digital Publishing Options 4/4</h1>
+<div id="intro-3" class="section level2">
+<h2>Intro</h2>
+<p>eBooks come in many forms, from native Apps to online reading experiences that cross-over to print with the use of MediaWiki and the newly developed htmltoprint workflow. The PublishingLab has spent part of 2015 working on a custom App and an online reading reading experience. Unlike creating ePubs, which can be done with the help of Pandoc, both of these workflows required skilled developers.</p>
+<div id="examples-1" class="section level3">
+<h3>Examples</h3>
+<p>example 1:</p>
+<p>Knowledge Matters - custom built App</p>
+<p>The PublishingLab worked together with UNStudio to prototype a custom App, in the form of an enhanced digital book that complemented their print edition.</p>
+<p>Read more about the project <a
+href="http://www.publishinglab.nl/unstudio/">here</a>.</p>
+<p>The team created a custom menu for the book:</p>
+<div class="figure">
+<img src="lib/menu-UNStudio.jpg" />
+</div>
+<p>With rich media eBooks like this, it is possible to include more interactive features. This chapter starts with a video scroll introduction that the user controls by swiping down on the app.</p>
+<div class="figure">
+<img src="lib/video-scroll.gif" />
+</div>
+<p>Since this App was specifically designed for an iPad, it could capitalise on the built-in functions of the iPad, like swiping to the next chapter.</p>
+<video width="100%" height="80%" controls="controls" autoplay="autoplay" loop="loop">
+<source src="lib/video-app-transition.mp4" type="video/mp4" />
+</video>
+
+<p>Format: Web App</p>
+<div class="difficulty-level expert">
+
+</div>
+<p>example 2:</p>
+<p>TOD17 GrayZones - online reading experience</p>
+<p>The INC &amp; PublishingLab collaborated to create web platform for reading the latest Theory on Demand publication. The usual output for Theory on Demand has been print on demand and ePub formats, but the PublishingLab team saw an opportunity in the online format to take improve the accessibility of the content and improve navigation design.</p>
+<p>Read more about the project <a
+href="http://www.publishinglab.nl/navigating-tod/">here</a>.</p>
+<p>Format: Online reading, ePub3 &amp; Print on Demand (POD)</p>
+<div class="difficulty-level expert">
+
+</div>
+</div>
+<div id="technical-considerations-2" class="section level3">
+<h3>technical considerations</h3>
+<p>The UNStudio App project was built as a WebApp and then bundled as a native App for IOS with the client specifying just one platform: the iPad.</p>
+<p>The INC TOD project required a hybrid output - in the form of html, ePub and for print.</p>
+</div>
+</div>
+<div id="how-app-online-reading-experience" class="section level2">
+<h2>How: App &amp; online reading experience</h2>
+<p>The UNStudio App was built with html, css and javascript by a team of 4 interns + developer.</p>
+<p>The INC project involved conversion of the author texts using part of the HPT workflow to create html files from the Word documents. However, from there the team had developer help to build custom search functions using javascript.</p>
+<div id="sources-list-of-inspiration-2" class="section level3">
+<h3>sources / list of inspiration</h3>
+<p>PublishingLab spoke to other makers and publishers about their digital publications. This is a short inventory of what we've found so far...</p>
+<p><a href="http://torquetorque.net/">Torque</a>, a UK based publisher created ePubs as well as developing a speed reading App for their first book.</p>
+<p>Format: App &amp; ePub</p>
+<p><a
+href="http://hackersanddesigners.nl/#/">Hackers&amp;Designers</a> use MediaWiki and <a href="http://beyond-social.org/">Andre Castro</a> used MediaWiki as well as css to create a printed version of the design magazine in partnership with studio <a
+href="http://template01.info/">Template</a>.</p>
+<p>Format: Online reading &amp; print</p>
+<p><a href="http://beta.thepeoplesebook.net/">The People's E-Book</a></p>
+<p>The People’s E-book is a super-simple online tool with an intuitive visual interface to allow anyone to make e-books quickly and for free. You can find out more <a
+href="http://networkcultures.org/outofink/2013/02/11/the-peoples-e-book/">here</a>.</p>
+<p>Format: Platform &amp; ePub3</p>
+<p>...</p>
+</div>
+<div id="the-other-possibilities..." class="section level3">
+<h3>The other possibilities...</h3>
+<p>What can be done about visual layouts in digital publications? The IDPF is writing standards, however it is unclear whether these will be viable because the e-reader market is so varied in its adoption of standards. The financial imperative may not arise to accommodate visual publications in ePub format.</p>
+<p>To see what is happening, here are some interesting experiments and standards, starting with an example and how-to:</p>
+<p>Adaptive layout how-to by Sorotokin</p>
+<p>Paged Media Module, which has been a working draft since 2013 from the W3</p>
+<p>Media Queries, which help text display on different devices by linking to a stylesheet relevant to the targeted device's capabilities. Liz Castro shows how she used media queries to better display poetry across devices</p>
+<p>The IDPF brought out a specification for ePub Adaptive Layout here</p>
+</div>
+<div id="future" class="section level3">
+<h3>Future</h3>
+<blockquote>
+&quot;With a proper API (an application programming interface, which allows one authorised application to read and manipulate data in another), entrepreneurs outside of Amazon or Apple could step in and offer more beautiful, efficient, or innovative reading containers for our books, leaving the bigger companies to do what they do best: payments and infrastructure.&quot; - Craig Mod
+</blockquote>
+
+<p>Ideally, artist books could incorporate the interactivity made possible with ePub3 with custom layouts which really reflect the unique visual quality of the work. It's not necessarily about mirroring the beautiful print spreads of art publishers, or following the highly-customised methods of an App, but looking for ways digital publishing visual books can be improved with what we have. For now, the PublishingLab plans to keep experimenting and looking at what others are doing in the digital publishing realm. We hope to post successful visual experiments and inspire publishers and eBook developers to find ways of creating better reading experiences.</p>
+<ul id="nav">
+    <li>
+<a href="#" rel="/path/to/style1.css">Default CSS</a>
+</li>
+    <li>
+<a href="#" rel="/path/to/style2.css">Larger Text</a>
+</li>
+    <li>
+<a href="#" rel="/path/to/style3.css">Something Different</a>
+</li>
+</ul>
+
+
+</div>
 </div>
 </div>
 </body>

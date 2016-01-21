@@ -1,4 +1,4 @@
-  <style>
+  <style id='a'>
 
 .figureInside{
   margin-right: 8px !important; 
@@ -24,7 +24,8 @@
 }
 
 .level1:hover .ui-resizable-e,
-.links:hover .ui-resizable-e {
+.linkBox:hover .ui-resizable-e,
+.infoBox:hover .ui-resizable-e {
   background: rgba(255,255,150,1);
 }
 
@@ -101,20 +102,25 @@ h1, h2, h3{
 }
 
 h1 {
-  font-size: 22px;
+  font-size: 26px;
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 24px;
+  margin-bottom: -5px;
 }
 
 h3 {
   font-size: 20px;
-  font-weight: 500;
+  margin-bottom: -10px;
 }
 
 p, li, code {
   line-height: 1.5;
+}
+
+strong, b {
+  font-weight: 400;
 }
 
 code {
@@ -130,7 +136,7 @@ pre {
 }
 
 a {
-  border-bottom: 2px solid black;
+  border-bottom: 1px solid black;
   padding: 1px 0px;
   color: black;
   text-decoration: none;
@@ -147,34 +153,33 @@ a:hover {
   border: 0;
 }
 
-.links {
+.linkBox {
   width: calc(25%);
   max-width: calc(100% - 64px);
   min-width: calc(25% - 64px);
   background: lightcyan;
   position: relative;
   right: 0;
-  z-index: 7;
+  /*z-index: 7;*/
 }
 
-.links>.level2>p:first-of-type {
-  margin-top: 0;
+.infoBox {
+  width: calc(15%);
+  max-width: calc(100% - 64px);
+  min-width: calc(15% - 64px);
+  background: #D8F3D1;
+  position: relative;
+  right: 0;
+  /*z-index: 7;*/
 }
 
-.links>.level2 {
+.infoBox .level2 {
+  background: #D8F3D1;
+}
+
+.linkBox>.level2 {
   background: lightcyan;
   position: relative;
-}
-
-.links a {
-  border: 1px solid black;
-  padding: 0 3px;
-  background-color: black;
-  color: lightcyan;
-}
-
-.links a:hover::before {
-  content:"→ ";
 }
 
 .difficulty-level {
@@ -235,8 +240,8 @@ a:hover {
 }
 
 .level1:hover,
-.links:hover {
-  /*padding-right: 20px !important;*/
+.linkBox:hover,
+.infoBox:hover {
   -webkit-animation: mymove 0.5s ease-in; /* Chrome, Safari, Opera */
   animation: mymove 0.5s ease-in;
 }
@@ -257,7 +262,6 @@ a:hover {
     100% {padding-right: 10px;}
 }
 
-
 .level2 {
   width: calc(100% - 42px);
   color: black;
@@ -274,9 +278,8 @@ a:hover {
   margin-top: 10px;
   width: 100%;
   line-height: 1.5;
-  border-top: 2px solid black;
+  /*border-top: 2px solid black;*/
 }
-
 
 /* DROPDOWN */
 
@@ -287,6 +290,7 @@ a:hover {
   padding: 0;
   float: right;
   background: black;
+  font-size: 20px;
 }
 
 .navWrap {
@@ -305,7 +309,7 @@ a:hover {
 #header ul > li {
   float:left;
   position:relative;
-  width: 320px;
+  width: 450px;
   background: black;
 }
 
@@ -368,19 +372,6 @@ a:hover {
 
 .navOptions a:hover::before {
   content:"→ ";
-}
-
-/* FOOTER */
-
-#footer {
-  /*float: right;*/
-  background: azure;
-  width: 25%;
-  z-index: 0;
-}
-
-#colofon {
-  background: azure;
 }
 
 /* IMAGES */
@@ -480,29 +471,6 @@ img {
 [id*="intro"] {
 }
 
-/* GRID = TABLE */
-
-table {
-  width: 100%;
-  height: 100%;
-  background: ghostwhite;
-  position: fixed;
-  z-index: -10;
-  border: 1px solid white;
-}
-
-td {
-  border: 1px solid white;
-}
-
-tr:nth-child(even) td:nth-child(even)  {
- 
-}
-
-tr:nth-child(odd) td:nth-child(2n+1)  {
-}
-
-
 /* RESIZE FEATURE */
 
 .ui-resizable-e {
@@ -535,20 +503,16 @@ tr:nth-child(odd) td:nth-child(2n+1)  {
   z-index: 1 !important;
 }
 
-/*.ui-resizable-w:hover {
-  background: yellow;
-}*/
-
 .firstAfterHeader {
   margin-top: 125px !important;
 }
 
 /* toggle options */
 
-button {
+  button {
   background: white;
   border: 1px solid black;
-    -webkit-box-shadow: 2px 2px 0px 0px black;
+  -webkit-box-shadow: 2px 2px 0px 0px black;
   -moz-box-shadow: 2px 2px 0px 0px black;
   box-shadow: 2px 2px 0px 0px black;
   padding: 10px;
@@ -560,9 +524,8 @@ button {
   height: 43px;
 }
 
-
 #toggleTheme {
-  background: gainsboro;
+  background: white;
 }
 
 #toggleMode {
