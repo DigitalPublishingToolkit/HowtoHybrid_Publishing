@@ -64,7 +64,7 @@ scribus: $(allmarkdown)
 	done
 
 html: book.md
-	cd md && pandoc --include-in-header=../html/ext-scripts-and-styles.html --include-in-header=../html/scripts.html.js --include-in-header=../html/style.html.css -s --include-in-header=../html/style2.html.css -s --section-divs --from markdown --to html -o ../book.html book.md
+	cd md && pandoc --include-in-header=../html/ext-scripts-and-styles.html --include-in-header=../html/scripts.html.js --include-in-header=../html/style.html.css -s --section-divs --from markdown --to html -o ../book.html book.md
 
 book.md: clean $(allmarkdown)
 	for i in $(allmarkdown) ; \
