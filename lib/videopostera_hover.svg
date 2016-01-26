@@ -60,30 +60,26 @@
      id="layer1"
      transform="translate(885.00006,1048.352)">
     <rect
-       style="color:#000000;fill:#ffee96;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       style="color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        id="rect3778"
        width="506.64288"
        height="352.89288"
        x="-885.7323"
        y="-1049.0485" />
-    <g
-       id="g2985"
-       transform="matrix(1.2510212,0,0,1.2510212,159.39848,219.22987)">
-      <path
-         transform="matrix(-0.30627033,-1.0721957,1.0721957,-0.30627033,-739.4036,-557.08812)"
-         d="m 268.5,167.92859 c 0,11.87412 -9.62588,21.5 -21.5,21.5 -11.87412,0 -21.5,-9.62588 -21.5,-21.5 0,-11.87412 9.62588,-21.5 21.5,-21.5 11.87412,0 21.5,9.62588 21.5,21.5 z"
-         sodipodi:ry="21.5"
-         sodipodi:rx="21.5"
-         sodipodi:cy="167.92859"
-         sodipodi:cx="247"
-         id="path3783"
-         style="color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-         sodipodi:type="arc" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path3779"
-         d="m -640.91972,-883.22201 0,20.44712 15.3749,-10.70114 z"
-         style="fill:#ffffff;fill-opacity:1;stroke:none" />
-    </g>
+    <path
+       sodipodi:type="arc"
+       style="color:#000000;fill:#ffee96;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="path3783"
+       sodipodi:cx="247"
+       sodipodi:cy="167.92859"
+       sodipodi:rx="21.5"
+       sodipodi:ry="21.5"
+       d="m 268.5,167.92859 a 21.5,21.5 0 1 1 -43,0 21.5,21.5 0 1 1 43,0 z"
+       transform="matrix(-0.38315068,-1.3413396,1.3413396,-0.38315068,-765.6111,-477.69918)" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:none"
+       d="m -642.40568,-885.69959 0,25.57978 19.23433,-13.38735 z"
+       id="path3779"
+       inkscape:connector-curvature="0" />
   </g>
 </svg>
