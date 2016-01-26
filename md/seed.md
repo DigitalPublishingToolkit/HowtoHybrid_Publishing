@@ -1,3 +1,5 @@
+<div class="pagetitle">How To Standard Title</div>
+
 # How to: Design Solutions for Digital Publishing
 
 ## Introduction
