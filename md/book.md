@@ -113,7 +113,10 @@ the designer, developer and editor roles.
 Here's a quick video of how \*the Sausage Machine\* turns a Word
 document into an ePub:
 
-<video width="100%" height="80%" poster="lib/videoposter.gif"><source autoplay="false" src="lib/samplevid.mp4" type="video/mp4"/></video>
+<video width="100%" height="80%" poster="lib/videoposter.gif">
+<source src="lib/samplevid.mp4" type="video/mp4"/>
+<source src="lib/samplevid.ogg" type="video/ogg"/>
+</video>
 
 Using \*the Sausage Machine\* platform, first you drag and drop your
 text files <a href="http://hpt.publishinglab.org/">here</a>

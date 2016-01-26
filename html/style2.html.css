@@ -117,8 +117,8 @@ li>a:hover {
   border: 0;
 }
 
-.linkBox,
-.infoBox,
+.linkbox,
+.infobox,
 blockquote {
   width: calc(50% - 13px);
   float: none;
@@ -133,20 +133,20 @@ blockquote {
   font-family: 'Libre Baskerville', serif;
 }
 
-.linkBox p,
-.linkBox h1,
-.linkBox h2,
-.linkBox h3 {
+.linkbox p,
+.linkbox h1,
+.linkbox h2,
+.linkbox h3 {
   word-wrap: break-word;
 }
 
-.infoBox {
+.infobox {
   background: #545454;
   color: #FAF8F4;
 }
 
-.linkBox h3,
-.infoBox h3 {
+.linkbox h3,
+.infobox h3 {
   margin: 0;
   margin-bottom: -10px;
 }
@@ -515,8 +515,8 @@ button:hover {
   margin: 10px 20px;
 }
 
-.fullWidth.linkBox,
-.fullWidth.infoBox,
+.fullWidth.linkbox,
+.fullWidth.infobox,
 .fullWidth.level1 ul {
   margin: 15px 15px;
   padding: 0 20px 10px 20px;
@@ -568,8 +568,8 @@ button:hover {
     font-size: 18px;
   }
 
-  .linkBox,
-  .infoBox {
+  .linkbox,
+  .infobox {
     padding: 15px;
   }
 
@@ -609,8 +609,8 @@ button:hover {
     /*margin: initial;*/
   }
 /*
-  .linkBox,
-  .infoBox {
+  .linkbox,
+  .infobox {
     padding: 15px;
   }*/
 
@@ -635,8 +635,8 @@ body,
 }
 
 .level1 p,
-.infoBox,
-.linkBox,
+.infobox,
+.linkbox,
 .level1 ol,
 .level1 ul,
 blockquote {

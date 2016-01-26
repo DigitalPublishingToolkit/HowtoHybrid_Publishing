@@ -931,7 +931,7 @@
     }
   
     .navWrap {
-      margin: 0;
+      margin: 0 !important;
     }
   
     #header ul {
@@ -953,7 +953,8 @@
     button {
       width: 35px;
       height: 35px;
-      padding: 10px;
+      padding: 5px;
+      margin: 0 0 10px 0;
     }
   
     /*levels*/
@@ -983,7 +984,7 @@
       font-size: 20px;
     }
   
-    /* images */
+    /* images + video */
   
     .figure {
       font-size: 12px;
@@ -1003,6 +1004,14 @@
   
     .navWrap {
       float: left;
+    }
+  
+    video:hover {
+      background: transparent;
+    }
+  
+    video {
+      background: transparent;
     }
   
   }
@@ -1749,7 +1758,7 @@ href="https://github.com/DigitalPublishingToolkit/workshop-going\_hybrid/wiki">h
 <h3>Method 2</h3>
 <p>Here's a quick video of how *the Sausage Machine* turns a Word document into an ePub:</p>
 <video width="100%" height="80%" poster="lib/videoposter.gif">
-<source autoplay="false" src="lib/samplevid.mp4" type="video/mp4"/>
+<source src="lib/samplevid.mp4" type="video/mp4"/> <source src="lib/samplevid.ogg" type="video/ogg"/>
 </video>
 
 <p>Using *the Sausage Machine* platform, first you drag and drop your text files <a href="http://hpt.publishinglab.org/">here</a></p>
