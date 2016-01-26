@@ -1,6 +1,9 @@
   <script>
-  	$(document).ready(function(){
-    	console.log('jquery initiated')
+    $(document).ready(function(){
+
+      $('body').show()
+
+      console.log('jquery initiated')
 
       // resizeable stuff
 
@@ -24,7 +27,7 @@
       // generate header and chapters
 
       $( "body" ).prepend(`<div id="header">
-        <h1>Publishing Lab:</h1> 
+        <h1><a href="http://localhost/html/open/template01All/template01/clients/inc/howTo/test04/iframeGetFinal/index.html">Publishing Lab:</a></h1> 
         <button id="toggleWidth" type="button">⟷</button>
         <button id="toggleMode" type="button">Aa</button>
         <ul class="navWrap">
@@ -58,27 +61,6 @@
         },600)
       })
 
-      // generate figure+lightbox
-
-      // $('img').each(function(){
-      //   $(this).unwrap()
-      //   thisSrc = $(this).attr('src')
-      //   figureWrap = `
-      //     <div class="figure">
-      //       <div class="thumbnail">`+thisSrc.split('/').pop()+`</div>
-      //       <a href="#_">
-      //         <img class="bigImage" src=`+thisSrc+` alt="" />
-      //       </a> 
-      //       <a href="#_">
-      //         <img class="lightbox" src=`+thisSrc+` alt="" />
-      //       </a>
-      //     </div>
-      //   `;
-      //   $(figureWrap).insertAfter( $(this) );
-      //   $(this).remove()
-      // })
-
-
       i=0
 
       $('img').each(function(){
@@ -101,7 +83,6 @@
         $(figureWrap).insertAfter( $(this) );
         $(this).remove()
       })
-
 
       // initial check of figures right off
 
@@ -173,10 +154,28 @@
 
   // toggle between stylesheets
 
-  styleA = $("#a")
-  styleB = $("#b")
-  $('#b').remove()
-  $('body').addClass('activeStyleA')
+
+  function initialStyle(){
+
+      styleA = $("#a")
+      styleB = $("#b")
+
+      if (window.location.hash == '#stylea' || window.location.hash == '' ){
+      $('#b').remove()
+      $('body').addClass('activeStyleA')
+    }else{
+        $('head').append(styleB)
+        $('#a').remove()
+        $('body').removeClass('activeStyleA')
+        $('#toggleMode').addClass('aActive')
+        $('#toggleMode').removeClass('bActive')
+      window.location.hash = 'styleb'
+    }
+
+  }
+
+
+  initialStyle()
 
 
   function toggleStyleSheets(){
@@ -187,25 +186,30 @@
       $('body').removeClass('activeStyleA')
       $('#toggleMode').addClass('aActive')
       $('#toggleMode').removeClass('bActive')
+      window.location.hash = 'styleb'
+
     }else{
       $('head').append(styleA)
       $('body').addClass('activeStyleA')
       $('#b').remove()
       $('#toggleMode').addClass('bActive')
-      $('#toggleMode').removeClass('aActive')    }
+      $('#toggleMode').removeClass('aActive')
+      window.location.hash = 'stylea'
+
+    }
 
   }
 
   // Toggle Mode
 
-
   $(document).on('click', '#toggleMode', function(){
 
     // our toggle functions
     toggleStyleSheets()
-    floatImageRandom()
+    // floatImageRandom()
 
   })
+
 
   // Make video play on click
     $("video").click(function(e){
@@ -223,15 +227,18 @@
         this.paused ? this.play() : this.pause();
     });
 
-    // Argh images
+    // click image
+    $('.figure .bigImage').on('click', function(){
+      $(this).parents('.figure').clone().prependTo('body')
+      $('.figure:not(:first)').hide()
+      $('body').find('.figure .lightbox').first().css({'display':'block'})
+    })
 
-    // $('.figure .bigImage').on('click', function(){
-    //   $('body').css({'overflow':'hidden'})
-    // })
+    $(document).on('click','.figure .lightbox', function(){
+      $('.figure:not(:first)').show()
+      $('body').find('.figure').first().remove()
+    })
 
-    // $('.figure .lightbox img').on('click', function(){
-    //   $('body').css({'overflow':'initial'})
-    // })
 
 })
 

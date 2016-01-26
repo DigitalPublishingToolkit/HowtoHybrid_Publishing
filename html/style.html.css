@@ -477,10 +477,10 @@ img {
   border: 1px solid black;
 }
 
-.lightbox:target {
+/*.lightbox:target {
   outline: none;
   display: block;
-}
+}*/
 
 /**/
 
