@@ -1,7 +1,7 @@
   <style id='a'>
 
 .figureInside{
-  margin-right: 8px !important; 
+  margin: 8px !important;
 }
 
 .highlightThis{
@@ -25,7 +25,8 @@
 
 .level1:hover .ui-resizable-e,
 .linkBox:hover .ui-resizable-e,
-.infoBox:hover .ui-resizable-e {
+.infoBox:hover .ui-resizable-e,
+#header:hover .ui-resizable-e {
   background: rgba(255,255,150,1);
 }
 
@@ -54,7 +55,8 @@ body, html {
   font-weight: 300;
 }
 
-div {
+div,
+blockquote {
   padding: 10px;
   margin: 10px 20px;
   float: left;
@@ -66,12 +68,11 @@ div {
   position: initial;
 }
 
-.level3 {
-  /*z-index: 1000000;*/
+blockquote {
+  margin: 20px 10px;
 }
 
 #header {
-  /*background: #E6E6E6;*/
   background: lightcyan;  
   position: fixed;
   width: calc(100% - 64px);
@@ -237,7 +238,8 @@ a:hover {
 
 .level1:hover,
 .linkBox:hover,
-.infoBox:hover {
+.infoBox:hover,
+#header:hover {
   -webkit-animation: mymove 0.5s ease-in; /* Chrome, Safari, Opera */
   animation: mymove 0.5s ease-in;
 }
@@ -373,7 +375,7 @@ a:hover {
 /* IMAGES */
 
 video {
-  width: 40%;
+  width: 50%;
   margin-left: 10px;
   -webkit-box-shadow: 2px 2px 0px 0px black;
   -moz-box-shadow: 2px 2px 0px 0px black;
@@ -383,7 +385,7 @@ video {
 }
 
 video:hover {
-  background: transparent url('./lib/videopostera_hover.svg') 50% 50% / cover no-repeat ;
+  background: transparent url('./lib/videopostera_hover.svg') 50% 50% / cover no-repeat;
 }
 
 .figure {
@@ -624,20 +626,130 @@ button:hover {
   }
 
  .figure .thumbnail {
-  float: initial;
+    float: initial;
  }
 
  .figure:hover {
-  width: calc(100% - 22px);
+    width: calc(100% - 22px);
+ }
+
+ .fullWidth .figure:hover {
+    width: calc(50%);
+ }
+
+ .fullWidth video {
+    width: 35%;
+    margin-left: 32%;
  }
 
 .figure:hover .bigImage {
   display: initial;
   width: 100%;
   height: auto;
-}
+  }
+
+  .fullWidth video {
+    margin-left: 0;
+  }
 
 }
 
+
+@media only screen and (max-width: 1024px) and (min-resolution: 192dpi) {
+
+  .level1,
+  .infoBox,
+  .linkBox,
+  blockquote {
+    width: 100%;
+  }
+
+  ul, ol {
+    width: auto;
+  }
+
+  /*header*/
+
+  #header {
+    max-width: 100%;
+    min-width: initial; 
+  }
+
+  .navWrap {
+    margin: 0;
+  }
+
+  #header ul {
+    width: 100%;
+  }
+
+  #header ul > li {
+    width: 100%;
+  }
+
+  #header ul, p, body {
+    font-size: 15px;
+  }
+
+  #toggleWidth {
+    display: none;
+  }
+
+  button {
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+  }
+
+  /*levels*/
+
+  .level3 {
+    margin-top: initial;
+  }
+
+  /* fonts */
+
+  .difficulty-level {
+    font-size: 12px;
+  }
+
+  h3,
+  .level3 h3 {
+    font-size: 15px;
+  }
+
+  h2,
+  .level2 h2 {
+    font-size: 18px;
+  }
+
+  h1,
+  .level1 h1 {
+    font-size: 20px;
+  }
+
+  /* images */
+
+  .figure {
+    font-size: 12px;
+    width: 150px;
+  }
+
+
+  .ui-resizable-e,
+  .ui-resizable-handle {
+    display: none !important;
+  }
+
+  .level1:hover,
+  #header1:hover {
+    animation: none;
+  }
+
+  .navWrap {
+    float: left;
+  }
+
+}
 
 </style>

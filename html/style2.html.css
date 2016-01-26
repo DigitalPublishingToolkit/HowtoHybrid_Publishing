@@ -53,14 +53,6 @@ div {
   width: 50%;
 }
 
-h1, h2, h3{
-  margin: 50px 0 0 0;
-  font-family: 'Roboto Condensed', monospace;
-  padding: 0;
-  font-weight: 300;
-  font-size: 26px;
-}
-
 .level1 h1 {
   font-size: 25px;
   font-family: 'Libre Baskerville', serif;
@@ -495,7 +487,7 @@ button {
   font-size: 20px;
 }
 
-#toggleMode:hover {
+button:hover {
   background: rgba(255,255,150,1);
 }
 
@@ -567,6 +559,107 @@ button {
 
 .fullWidth .figure {
   height: auto;
+}
+
+@media only screen and (max-width : 1600px) {
+
+  p,
+  body {
+    font-size: 18px;
+  }
+
+  .linkBox,
+  .infoBox {
+    padding: 15px;
+  }
+
+    video {
+    width: 25%;
+    margin-left: 37%;
+  }
+
+}
+
+@media only screen and (max-width : 1280px) {
+
+  #header ul > li {
+    width: 400px;
+  }
+
+  p,
+  body {
+    font-size: 16px;
+  }
+
+  #header ul {
+    font-size: 18px;
+  }
+
+  h1,
+  .level1 h1 {
+    font-size: 23px;
+  }
+
+  h2 {
+    font-size: 21px;
+  }
+
+  h3 {
+    font-size: 14px;
+    /*margin: initial;*/
+  }
+/*
+  .linkBox,
+  .infoBox {
+    padding: 15px;
+  }*/
+
+  blockquote,
+    .difficulty-level {
+    letter-spacing: 1px;
+    font-size: 15px;
+  }
+
+  video {
+    width: 35%;
+    margin-left: 32%;
+  }
+
+}
+
+@media only screen and (max-width: 1024px) and (min-resolution: 192dpi) {
+
+body,
+.level1 p {
+  font-size: 15px;
+}
+
+.level1 p,
+.infoBox,
+.linkBox,
+.level1 ol,
+.level1 ul,
+blockquote {
+  width: initial;
+  margin: 5px;
+}
+
+h3,
+.level3 h3 {
+  font-size: 15px;
+}
+
+h2,
+.level2 h2 {
+  /*font-size: 18px;*/
+}
+
+h1,
+.level1 h1 {
+  /*font-size: 201px;*/
+  color:red ;
+}
+
 }
 
 </style>
