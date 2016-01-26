@@ -67,7 +67,7 @@ div {
 }
 
 .level3 {
-  z-index: 1000000;
+  /*z-index: 1000000;*/
 }
 
 #header {
@@ -151,6 +151,7 @@ a:hover {
 .figure a,
 .figure a:hover {
   border: 0;
+  background: none;
 }
 
 .linkBox {
@@ -192,33 +193,28 @@ a:hover {
   font-weight: 400; 
   font-family: 'Roboto Mono', monospace;
   font-size: 15px;
+  border: 0;
 }
 
 .difficulty-level.easy {
-  border: 1px solid black;
   color: black;
   -webkit-box-shadow: 2px 2px 0px 0px black;
   -moz-box-shadow: 2px 2px 0px 0px black;
   box-shadow: 2px 2px 0px 0px black;
-  background: Chartreuse;
 }
 
 .difficulty-level.moderate {
-  border: 1px solid black;
   color: black;
   -webkit-box-shadow: 2px 2px 0px 0px black;
   -moz-box-shadow: 2px 2px 0px 0px black;
   box-shadow: 2px 2px 0px 0px black;
-  background: yellow;
 }
 
 .difficulty-level.expert {
-  border: 1px solid black;
   color: black;
   -webkit-box-shadow: 2px 2px 0px 0px black;
   -moz-box-shadow: 2px 2px 0px 0px black;
   box-shadow: 2px 2px 0px 0px black;
-  background:  red;
 }
 
 .expert::after {
@@ -309,7 +305,7 @@ a:hover {
 #header ul > li {
   float:left;
   position:relative;
-  width: 450px;
+  width: 500px;
   background: black;
 }
 
@@ -376,6 +372,20 @@ a:hover {
 
 /* IMAGES */
 
+video {
+  width: 40%;
+  margin-left: 10px;
+  -webkit-box-shadow: 2px 2px 0px 0px black;
+  -moz-box-shadow: 2px 2px 0px 0px black;
+  box-shadow: 2px 2px 0px 0px black;
+  border: 1px solid black;
+  background: transparent url('./lib/videopostera.svg') 50% 50% / cover no-repeat ;
+}
+
+video:hover {
+  background: transparent url('./lib/videopostera_hover.svg') 50% 50% / cover no-repeat ;
+}
+
 .figure {
   float: right;
   width: 200px;
@@ -384,10 +394,10 @@ a:hover {
   background: white;
   margin-bottom: -320px;
   position: relative;
-  z-index: 10;
   font-weight: 400; 
   font-family: 'Roboto Mono', monospace;
   font-size: 15px;
+  z-index: 10;
 }
 
 .level1 .figure {
@@ -399,7 +409,7 @@ a:hover {
 }
 
 img {
-  width: 50px;
+  /*width: 50px;*/
   margin: 0;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
@@ -414,15 +424,19 @@ img {
   box-shadow: none;
   padding: 0;
   background: none;
+  z-index: 15;
 }
 
 .figure:hover {
-  height: 300px;
   height: auto;
   width: auto;
 }
 
 .figure:hover .thumbnail {
+  display: none;
+}
+
+.thumbHideTemp {
   display: none;
 }
 
@@ -440,7 +454,7 @@ img {
 .lightbox {
   display: none;
   position: fixed;
-  z-index:9999999 !important;
+  z-index: 9999999 !important;
   width: calc(100% - 40px);
   margin: 0 auto;
   padding: 20px;
@@ -485,22 +499,8 @@ img {
   border: 0;
   background: lightgray;
   box-shadow: none;
-  z-index: 1 !important;
-}
+  z-index: inherit !important;
 
-.ui-resizable-w {
-  cursor: e-resize;
-  cursor: col-resize;
-  width: 5px;
-  left: 0;
-  top: 0;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  background: lightgray;
-  box-shadow: none;
-  z-index: 1 !important;
 }
 
 .firstAfterHeader {
@@ -546,7 +546,6 @@ button:hover {
   animation: none;
 }
 
-
 .fullWidth {
   width: calc(100% - 64px);
   transition: width 0.3s;
@@ -556,5 +555,89 @@ button:hover {
   width: ;
   transition: width 0.3s;
 }
+
+@media only screen and (max-width : 1600px) {
+
+  .linkBox {
+    width: calc(40% - 5px);
+  }
+
+  .infoBox {
+    width: calc(25%);
+  }
+
+  .fullWidth {
+    width: calc(100% - 64px);
+    transition: width 0.3s;
+  }
+}
+
+@media only screen and (max-width : 1280px) {
+
+  .level1 {
+    width: calc(55%);
+  }
+
+  .linkBox,
+  .infoBox {
+    width: calc(30% - 5px);
+  }
+
+  .fullWidth {
+    width: calc(100% - 64px);
+    transition: width 0.3s;
+  }
+
+  #header ul > li {
+    width: 400px;
+  }
+
+  #header ul,
+  p,
+  body {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 23px;
+  }
+
+  h2 {
+    font-size: 21px;
+  }
+
+  h3 {
+    font-size: 18px;
+    margin: initial;
+  }
+
+  video {
+    width: calc(100% - 22px);
+  }
+
+  .level1 .figure,
+  .level2 .figure {
+    float: none;
+    margin: 0;
+  margin-left: 10px;
+
+  }
+
+ .figure .thumbnail {
+  float: initial;
+ }
+
+ .figure:hover {
+  width: calc(100% - 22px);
+ }
+
+.figure:hover .bigImage {
+  display: initial;
+  width: 100%;
+  height: auto;
+}
+
+}
+
 
 </style>

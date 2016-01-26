@@ -203,9 +203,35 @@
 
     // our toggle functions
     toggleStyleSheets()
-    // floatImageRandom()
+    floatImageRandom()
 
   })
+
+  // Make video play on click
+    $("video").click(function(e){
+
+        $(this).attr("controls","controls")
+
+        // get click position 
+        var clickY = (e.pageY - $(this).offset().top);
+        var height = parseFloat( $(this).height() );
+
+        // avoids interference with controls
+        if(clickY > 0.82*height) return;
+
+        // toggles play / pause
+        this.paused ? this.play() : this.pause();
+    });
+
+    // Argh images
+
+    // $('.figure .bigImage').on('click', function(){
+    //   $('body').css({'overflow':'hidden'})
+    // })
+
+    // $('.figure .lightbox img').on('click', function(){
+    //   $('body').css({'overflow':'initial'})
+    // })
 
 })
 

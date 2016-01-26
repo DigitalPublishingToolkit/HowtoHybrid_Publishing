@@ -1,4 +1,4 @@
-  <style id='b'>
+<style id='b'>
 
 html {
   background: #FAF8F4;
@@ -54,7 +54,7 @@ div {
 }
 
 h1, h2, h3{
-  margin: 25px 0 0 0;
+  margin: 50px 0 0 0;
   font-family: 'Roboto Condensed', monospace;
   padding: 0;
   font-weight: 300;
@@ -65,11 +65,15 @@ h1, h2, h3{
   font-size: 25px;
   font-family: 'Libre Baskerville', serif;
   text-align: center;
-      -webkit-transform:scale(1,1.2); /* Safari and Chrome */
-    -moz-transform:scale(1,1.2); /* Firefox */
-    -ms-transform:scale(1,1.2); /* IE 9 */
-    -o-transform:scale(1,1.2); /* Opera */
-    transform:scale(1,1.2); /* W3C */
+  -webkit-transform:scale(1,1.2); /* Safari and Chrome */
+  -moz-transform:scale(1,1.2); /* Firefox */
+  -ms-transform:scale(1,1.2); /* IE 9 */
+  -o-transform:scale(1,1.2); /* Opera */
+  transform:scale(1,1.2); /* W3C */
+}
+
+.level1 {
+  margin-top: 50px;
 }
 
 h2 {
@@ -142,9 +146,6 @@ blockquote {
 .linkBox h2,
 .linkBox h3 {
   word-wrap: break-word;
-/*  font-family: 'Roboto Mono', monospace;
-  font-size: 17px;
-  font-weight: 400;*/
 }
 
 .infoBox {
@@ -178,50 +179,37 @@ blockquote p {
   font-weight: 400; 
   /*font-family: 'Roboto Mono', monospace;*/
   font-size: 17px;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
 .difficulty-level.easy {
-  border: 1px solid #545454;
   -webkit-box-shadow: 2px 2px 0px 0px #545454;
   -moz-box-shadow: 2px 2px 0px 0px #545454;
   box-shadow: 2px 2px 0px 0px #545454;
 }
 
 .difficulty-level.moderate {
-  border: 1px solid #545454;
   -webkit-box-shadow: 2px 2px 0px 0px #545454;
   -moz-box-shadow: 2px 2px 0px 0px #545454;
   box-shadow: 2px 2px 0px 0px #545454;
 }
 
 .difficulty-level.expert {
-  border: 1px solid #545454;
   -webkit-box-shadow: 2px 2px 0px 0px #545454;
   -moz-box-shadow: 2px 2px 0px 0px #545454;
   box-shadow: 2px 2px 0px 0px #545454;
 }
 
 .expert::after {
-  content: "expert";
+  content: "difficulty level: expert";
 }
 
 .moderate::after {
-  content: "moderate";
+  content: "difficulty level: moderate";
 }
 
 .easy::after {
-  content: "easy";
-}
-
-.level1 {
-/*  width: calc(100% - 40px);
-  float: left;
-  padding: 0;
-  margin: 0;
-  margin-left: 10px;*/
-  /*margin-top: 20px;*/
-  /*border-top: 1px solid #545454;*/
+  content: "difficulty level: easy";
 }
 
 .level2 {
@@ -303,7 +291,7 @@ blockquote p {
 #header ul > li {
   float:left;
   position:relative;
-  width: 450px;
+  width: 500px;
   background: #545454;
 }
 
@@ -461,11 +449,17 @@ img {
 }
 
 video {
-  width: 30%;
-  margin-left: 35%;
+  width: 20%;
+  margin-left: 40%;
   -webkit-box-shadow: 2px 2px 0px 0px #545454;
   -moz-box-shadow: 2px 2px 0px 0px #545454;
   box-shadow: 2px 2px 0px 0px #545454;
+  background: transparent url('./lib/videoposterb.svg') 50% 50% / cover no-repeat ;
+}
+
+video:hover {
+  background: transparent url('./lib/videoposterb_hover.svg') 50% 50% / cover no-repeat ;
+
 }
 
 /**/
@@ -474,8 +468,6 @@ video {
 }
 
 /* toggle options */
-
-
 
 button {
   background: #FAF8F4;

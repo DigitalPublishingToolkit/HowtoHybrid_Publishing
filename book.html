@@ -219,9 +219,35 @@
   
       // our toggle functions
       toggleStyleSheets()
-      // floatImageRandom()
+      floatImageRandom()
   
     })
+  
+    // Make video play on click
+      $("video").click(function(e){
+  
+          $(this).attr("controls","controls")
+  
+          // get click position 
+          var clickY = (e.pageY - $(this).offset().top);
+          var height = parseFloat( $(this).height() );
+  
+          // avoids interference with controls
+          if(clickY > 0.82*height) return;
+  
+          // toggles play / pause
+          this.paused ? this.play() : this.pause();
+      });
+  
+      // Argh images
+  
+      // $('.figure .bigImage').on('click', function(){
+      //   $('body').css({'overflow':'hidden'})
+      // })
+  
+      // $('.figure .lightbox img').on('click', function(){
+      //   $('body').css({'overflow':'initial'})
+      // })
   
   })
   
@@ -295,7 +321,7 @@
   }
   
   .level3 {
-    z-index: 1000000;
+    /*z-index: 1000000;*/
   }
   
   #header {
@@ -379,6 +405,7 @@
   .figure a,
   .figure a:hover {
     border: 0;
+    background: none;
   }
   
   .linkBox {
@@ -420,33 +447,28 @@
     font-weight: 400; 
     font-family: 'Roboto Mono', monospace;
     font-size: 15px;
+    border: 0;
   }
   
   .difficulty-level.easy {
-    border: 1px solid black;
     color: black;
     -webkit-box-shadow: 2px 2px 0px 0px black;
     -moz-box-shadow: 2px 2px 0px 0px black;
     box-shadow: 2px 2px 0px 0px black;
-    background: Chartreuse;
   }
   
   .difficulty-level.moderate {
-    border: 1px solid black;
     color: black;
     -webkit-box-shadow: 2px 2px 0px 0px black;
     -moz-box-shadow: 2px 2px 0px 0px black;
     box-shadow: 2px 2px 0px 0px black;
-    background: yellow;
   }
   
   .difficulty-level.expert {
-    border: 1px solid black;
     color: black;
     -webkit-box-shadow: 2px 2px 0px 0px black;
     -moz-box-shadow: 2px 2px 0px 0px black;
     box-shadow: 2px 2px 0px 0px black;
-    background:  red;
   }
   
   .expert::after {
@@ -537,7 +559,7 @@
   #header ul > li {
     float:left;
     position:relative;
-    width: 450px;
+    width: 500px;
     background: black;
   }
   
@@ -604,6 +626,20 @@
   
   /* IMAGES */
   
+  video {
+    width: 40%;
+    margin-left: 10px;
+    -webkit-box-shadow: 2px 2px 0px 0px black;
+    -moz-box-shadow: 2px 2px 0px 0px black;
+    box-shadow: 2px 2px 0px 0px black;
+    border: 1px solid black;
+    background: transparent url('./lib/videopostera.svg') 50% 50% / cover no-repeat ;
+  }
+  
+  video:hover {
+    background: transparent url('./lib/videopostera_hover.svg') 50% 50% / cover no-repeat ;
+  }
+  
   .figure {
     float: right;
     width: 200px;
@@ -612,10 +648,10 @@
     background: white;
     margin-bottom: -320px;
     position: relative;
-    z-index: 10;
     font-weight: 400; 
     font-family: 'Roboto Mono', monospace;
     font-size: 15px;
+    z-index: 10;
   }
   
   .level1 .figure {
@@ -627,7 +663,7 @@
   }
   
   img {
-    width: 50px;
+    /*width: 50px;*/
     margin: 0;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
@@ -642,15 +678,19 @@
     box-shadow: none;
     padding: 0;
     background: none;
+    z-index: 15;
   }
   
   .figure:hover {
-    height: 300px;
     height: auto;
     width: auto;
   }
   
   .figure:hover .thumbnail {
+    display: none;
+  }
+  
+  .thumbHideTemp {
     display: none;
   }
   
@@ -668,7 +708,7 @@
   .lightbox {
     display: none;
     position: fixed;
-    z-index:9999999 !important;
+    z-index: 9999999 !important;
     width: calc(100% - 40px);
     margin: 0 auto;
     padding: 20px;
@@ -713,22 +753,8 @@
     border: 0;
     background: lightgray;
     box-shadow: none;
-    z-index: 1 !important;
-  }
+    z-index: inherit !important;
   
-  .ui-resizable-w {
-    cursor: e-resize;
-    cursor: col-resize;
-    width: 5px;
-    left: 0;
-    top: 0;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    background: lightgray;
-    box-shadow: none;
-    z-index: 1 !important;
   }
   
   .firstAfterHeader {
@@ -774,7 +800,6 @@
     animation: none;
   }
   
-  
   .fullWidth {
     width: calc(100% - 64px);
     transition: width 0.3s;
@@ -783,6 +808,662 @@
   .initWidth {
     width: ;
     transition: width 0.3s;
+  }
+  
+  @media only screen and (max-width : 1600px) {
+  
+    .linkBox {
+      width: calc(40% - 5px);
+    }
+  
+    .infoBox {
+      width: calc(25%);
+    }
+  
+    .fullWidth {
+      width: calc(100% - 64px);
+      transition: width 0.3s;
+    }
+  }
+  
+  @media only screen and (max-width : 1280px) {
+  
+    .level1 {
+      width: calc(55%);
+    }
+  
+    .linkBox,
+    .infoBox {
+      width: calc(30% - 5px);
+    }
+  
+    .fullWidth {
+      width: calc(100% - 64px);
+      transition: width 0.3s;
+    }
+  
+    #header ul > li {
+      width: 400px;
+    }
+  
+    #header ul,
+    p,
+    body {
+      font-size: 18px;
+    }
+  
+    h1 {
+      font-size: 23px;
+    }
+  
+    h2 {
+      font-size: 21px;
+    }
+  
+    h3 {
+      font-size: 18px;
+      margin: initial;
+    }
+  
+    video {
+      width: calc(100% - 22px);
+    }
+  
+    .level1 .figure,
+    .level2 .figure {
+      float: none;
+      margin: 0;
+    margin-left: 10px;
+  
+    }
+  
+   .figure .thumbnail {
+    float: initial;
+   }
+  
+   .figure:hover {
+    width: calc(100% - 22px);
+   }
+  
+  .figure:hover .bigImage {
+    display: initial;
+    width: 100%;
+    height: auto;
+  }
+  
+  }
+  
+  
+  </style>
+  <style id='b'>
+  
+  html {
+    background: #FAF8F4;
+  }
+  
+  body {
+    margin: 0;
+    overflow-x: hidden;
+    margin-top: 125px;  
+  }
+  
+  body, html {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 20px;
+    color: #545454;
+  }
+  
+  div {
+    padding: 10px;
+    padding-bottom: 0;
+    margin: 10px 15px;
+    position: initial;
+  }
+  
+  .level3 {
+    z-index: 1000000;
+  }
+  
+  #header {
+    border: 1px solid #545454;
+    -webkit-box-shadow: 2px 2px 0px 0px #545454;
+    -moz-box-shadow: 2px 2px 0px 0px #545454;
+    box-shadow: 2px 2px 0px 0px #545454;
+    position: fixed;
+    width: calc(100% - 64px);
+    padding: 10px;
+    z-index: 10;
+    background: #FAF8F4;
+    margin-top: -100px;
+  }
+  
+  #header h1 {
+    float: left;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #header p {
+    float: left;
+    margin: 10px 0 0 0;
+    width: 50%;
+  }
+  
+  h1, h2, h3{
+    margin: 50px 0 0 0;
+    font-family: 'Roboto Condensed', monospace;
+    padding: 0;
+    font-weight: 300;
+    font-size: 26px;
+  }
+  
+  .level1 h1 {
+    font-size: 25px;
+    font-family: 'Libre Baskerville', serif;
+    text-align: center;
+    -webkit-transform:scale(1,1.2); /* Safari and Chrome */
+    -moz-transform:scale(1,1.2); /* Firefox */
+    -ms-transform:scale(1,1.2); /* IE 9 */
+    -o-transform:scale(1,1.2); /* Opera */
+    transform:scale(1,1.2); /* W3C */
+  }
+  
+  .level1 {
+    margin-top: 50px;
+  }
+  
+  h2 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 24px;
+    text-align: center;
+    font-style: italic;
+  }
+  
+  h3 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 17px;
+    margin-bottom: -10px;
+    text-decoration: underline;
+  }
+  
+  p, li, code {
+    line-height: 1.7;
+  }
+  
+  code {
+    font-family: 'Roboto Mono', monospace;
+    color: gray;
+    font-size: 15px;
+    font-weight: 400;
+    word-wrap: break-word;
+  }
+  
+  pre {
+    margin: 10px 10px 0 20px;
+  }
+  
+  p>a,
+  li>a {
+    border-bottom: 1px solid #545454 ;
+    color: #545454 ;
+    text-decoration: none;
+  }
+  
+  p>a:hover,
+  li>a:hover {
+    border: 0;
+    background-color: #545454;
+    color: white;
+  }
+  
+  .figure a,
+  .figure a:hover {
+    border: 0;
+  }
+  
+  .linkBox,
+  .infoBox,
+  blockquote {
+    width: calc(50% - 13px);
+    float: none;
+    border: 1px solid #545454;
+    -webkit-box-shadow: 2px 2px 0px 0px #545454;
+    -moz-box-shadow: 2px 2px 0px 0px #545454;
+    box-shadow: 2px 2px 0px 0px #545454;
+    z-index: 7;
+    margin: 20px 0;
+    margin-left: calc(24% + 13px);
+    padding: 25px;
+    font-family: 'Libre Baskerville', serif;
+  }
+  
+  .linkBox p,
+  .linkBox h1,
+  .linkBox h2,
+  .linkBox h3 {
+    word-wrap: break-word;
+  }
+  
+  .infoBox {
+    background: #545454;
+    color: #FAF8F4;
+  }
+  
+  .linkBox h3,
+  .infoBox h3 {
+    margin: 0;
+    margin-bottom: -10px;
+  }
+  
+  blockquote {
+    line-height: 1.6;
+    letter-spacing: 2px;
+    font-size: 17px;
+    background: #FAF8F4; 
+  }
+  
+  blockquote p {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+  
+  .difficulty-level {
+    width: auto;
+    padding: 10px;
+    display: inline-block;
+    margin: 5px 5px 5px 24%;
+    font-weight: 400; 
+    /*font-family: 'Roboto Mono', monospace;*/
+    font-size: 17px;
+    letter-spacing: 1px;
+  }
+  
+  .difficulty-level.easy {
+    -webkit-box-shadow: 2px 2px 0px 0px #545454;
+    -moz-box-shadow: 2px 2px 0px 0px #545454;
+    box-shadow: 2px 2px 0px 0px #545454;
+  }
+  
+  .difficulty-level.moderate {
+    -webkit-box-shadow: 2px 2px 0px 0px #545454;
+    -moz-box-shadow: 2px 2px 0px 0px #545454;
+    box-shadow: 2px 2px 0px 0px #545454;
+  }
+  
+  .difficulty-level.expert {
+    -webkit-box-shadow: 2px 2px 0px 0px #545454;
+    -moz-box-shadow: 2px 2px 0px 0px #545454;
+    box-shadow: 2px 2px 0px 0px #545454;
+  }
+  
+  .expert::after {
+    content: "difficulty level: expert";
+  }
+  
+  .moderate::after {
+    content: "difficulty level: moderate";
+  }
+  
+  .easy::after {
+    content: "difficulty level: easy";
+  }
+  
+  .level2 {
+    margin: 5px -10px;
+  }
+  
+  .level1 p,
+  .level1 pre,
+  .level1 h1,
+  .level1 ul,
+  .level2 h2,
+  .level3 h3 {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+  
+  /* in text lists */
+  
+  .level1 ul p {
+    margin: initial;
+    line-height: 1.8;
+  }
+  
+  .level1 ul li {
+    margin-bottom: 10px;
+  }
+  
+  /* Chrome, Safari, Opera */
+  @-webkit-keyframes mymove {
+      0% {padding-right:10px;}
+      20% {padding-right:13px;}
+      80% {padding-right:13px;}
+      100% {padding-right: 10px;}
+  }
+  
+  /* Standard syntax */
+  @keyframes mymove {
+      0% {padding-right:10px;}
+      20% {padding-right:13px;}
+      80% {padding-right:13px;}    
+      100% {padding-right: 10px;}
+  }
+  
+  .level3{
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+    width: 100%;
+  }
+  
+  
+  /* DROPDOWN */
+  
+  #header ul {
+    *zoom:1;
+    list-style:none;
+    margin: 0;
+    padding: 0;
+    float: right;
+    background: #545454;
+    font-size: 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+  
+  .navWrap {
+    margin: 10px !important;
+  }
+  
+  #header ul:before,#header ul:after {
+    content:"";
+    display:table;
+  }
+  
+  #header ul:after {
+    clear:both;
+  }
+  
+  #header ul > li {
+    float:left;
+    position:relative;
+    width: 500px;
+    background: #545454;
+  }
+  
+  #header a {
+    display:block;
+    padding: 10px;
+    line-height:1.2em;
+    background: none;
+    border: 0;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  
+  #header a:hover {
+    text-decoration:none;
+  }
+  
+  #header li ul {
+    background: #FBF5EC;  
+  }
+  
+  #header li ul li {
+  }
+  
+  #header li ul a {
+    border: 0;
+  }
+  
+  #header li ul a:hover {
+  
+  }
+  
+  #header li ul {
+    position:absolute;
+    left: 0;
+    z-index:1;
+  }
+  
+  #header li ul li {
+    overflow:hidden;
+    height: 0;
+    -webkit-transition:height 200ms ease-in;
+    -moz-transition:height 200ms ease-in;
+    -o-transition:height 200ms ease-in;
+    transition:height 200ms ease-in;
+  }
+  
+  #header ul > li:hover ul li {
+    height: 41px;
+  }
+  
+  .navFirst::after {
+    content:" ↓";
+    font-size: 21px;
+    float: right;
+    font-family: 'Roboto Condensed', monospace;
+  }
+  
+  .navFirst:hover::after {
+    content:"  ↑";
+    font-family: 'Roboto Condensed', monospace;
+  }
+  
+  .navOptions a:hover::before {
+    content:"→ ";
+  
+    font-family: 'Roboto Condensed', monospace;
+  }
+  
+  /* FOOTER */
+  
+  #footer {
+    /*float: right;*/
+    background: azure;
+    width: 25%;
+    z-index: 0;
+  }
+  
+  #colofon {
+    background: azure;
+  }
+  
+  /* IMAGES * video */
+  
+  .figure {
+    padding: 0;
+    margin: 10px 0;
+    z-index: 5;
+    /*overflow: hidden;*/
+    width: 20%;
+    height: 0;
+  }
+  
+  .figureLeft {
+    float: left;
+    margin-right: 30px;
+    margin-bottom: -20%;
+  }
+  
+  .figureRight {
+    float: right;
+    margin-left: 30px;
+    margin-bottom: -20%;
+  }
+  
+  img {
+    width: 100%;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }
+  
+  .figure .thumbnail{
+    display: none;
+  }
+  
+  .figure .bigImage {
+    cursor: zoom-in;
+    z-index: 3;
+    position:relative;
+      border: 1px solid #545454;
+    -webkit-box-shadow: 2px 2px 0px 0px #545454;
+    -moz-box-shadow: 2px 2px 0px 0px #545454;
+    box-shadow: 2px 2px 0px 0px #545454;
+  }
+  
+  .lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999999 !important;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    padding: 20px;
+    padding-bottom: 5000%;
+    padding-top: 5000%;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    overflow: hidden;
+    background: #545454;
+  }
+  
+  .lightbox img {
+    max-width: 75%;
+    /*max-height: 90%;*/
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    margin: auto;
+  }
+  
+  .lightbox:target {
+    outline: none;
+    display: block;
+  }
+  
+  video {
+    width: 20%;
+    margin-left: 40%;
+    -webkit-box-shadow: 2px 2px 0px 0px #545454;
+    -moz-box-shadow: 2px 2px 0px 0px #545454;
+    box-shadow: 2px 2px 0px 0px #545454;
+    background: transparent url('./lib/videoposterb.svg') 50% 50% / cover no-repeat ;
+  }
+  
+  video:hover {
+    background: transparent url('./lib/videoposterb_hover.svg') 50% 50% / cover no-repeat ;
+  
+  }
+  
+  /**/
+  
+  [id*="intro"] {
+  }
+  
+  /* toggle options */
+  
+  button {
+    background: #FAF8F4;
+    border: 1px solid #545454;
+    padding: 10px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 15px;
+    margin: 10px;
+    float: right;
+    width: 43px;
+    height: 43px;
+    color: #545454;
+        -webkit-box-shadow: 2px 2px 0px 0px #545454;
+    -moz-box-shadow: 2px 2px 0px 0px #545454;
+    box-shadow: 2px 2px 0px 0px #545454;
+  }
+  
+  #toggleTheme {
+    background: #545454;
+  }
+  
+  #toggleMode {
+    font-family: serif;
+    font-style: italic;
+    font-size: 20px;
+  }
+  
+  #toggleMode:hover {
+    background: rgba(255,255,150,1);
+  }
+  
+  .aActive {
+    font-family: 'Roboto Mono', monospace !important;
+    font-size: 17px !important;
+  }
+  
+  /* change width */
+  
+  .fullWidth {
+    width: calc(100% - 64px);
+    transition: width 0.3s;
+  }
+  
+  .fullWidth .figureLeft,
+  .fullWidth .figureRight {
+    width: 15%;
+    float: none;
+    margin: 5px 20px 5px 0;
+  }
+  
+  .level1.fullWidth {
+    padding: 10px;
+    margin: 10px 20px;
+  }
+  
+  .fullWidth.linkBox,
+  .fullWidth.infoBox,
+  .fullWidth.level1 ul {
+    margin: 15px 15px;
+    padding: 0 20px 10px 20px;
+    width: calc(100% - 84px);
+  }
+  
+  .fullWidth blockquote {
+    margin: 10px -15px;
+    width: calc(100% - 30px);
+  }
+  
+  .fullWidth p,
+  .fullWidth h1,
+  .fullWidth h2,
+  .fullWidth h3 {
+    margin: 20px 0;
+    text-align: left;
+  }
+  
+  .fullWidth.level1 h1 {
+    width: calc(100% - 84px);
+  }
+  
+  .fullWidth p {
+    width: inherit;
+  }
+  
+  .fullWidth.level1 pre {
+    margin: 10px 10px 0 20px;
+  }
+  
+  .fullWidth .difficulty-level {
+    margin-left: -15px;
+  }
+  
+  .initWidth {
+    width: ;
+    transition: width 0.3s;
+  }
+  
+  .fullWidth .figure {
+    height: auto;
   }
   
   </style>
@@ -808,6 +1489,9 @@
 <p><strong>Author:</strong> Jess van Zyl<br /><strong>Editorial support:</strong> Miriam Rasch<br /><strong>Design:</strong> Lasse van den Bosch &amp; Marlon Harder (<a
 href="http://template01.info">Template</a>)<br /><strong>With thanks to:</strong> Hackers&amp;Designers, INC, Torque, Silvio Lorusso, Andre Castro, Gottfried Haider, Michael Murtaugh and the DPT collective.</p>
 </div>
+<div class="figure">
+<img src="lib/money.jpg" />
+</div>
 </div>
 </div>
 </div>
@@ -818,9 +1502,15 @@ href="http://template01.info">Template</a>)<br /><strong>With thanks to:</strong
 <p>The Hybrid Publishing Toolkit provides two methods of creating an ePub:</p>
 <p>1. Using Pandoc &amp; command line you can convert Word documents to epub relatively quickly. If you’d like to try this method, see the instructions below. 2. The latest option is to use our platform created by Gottfried Haider, this eliminates the need for command line and simplifies the setup on GitHub. You can find it <a
 href="http://hpt.publishinglab.org/">here</a>. ### Example</p>
+<div class="figure">
+<img src="lib/placeholder.png" />
+</div>
 <p>The workflow below is a compilation of efforts from the Hybrid Publishing Toolkit, Andre Castro, Michael Murtaugh and others from the DPT collective.</p>
 <p>example: <a
 href="http://networkcultures.org/blog/publication/from-print-to-ebooks-a-hybrid-publishing-toolkit-for-the-arts/">From Print to eBooks: A Hybrid Publishing Toolkit for the Arts</a></p>
+<div class="figure">
+<img src="lib/placeholder.png" />
+</div>
 <div id="technical-considerations" class="section level3">
 <h3>Technical considerations</h3>
 <p>Before you begin:</p>
@@ -852,7 +1542,7 @@ href="https://github.com/DigitalPublishingToolkit/workshop-going\_hybrid/wiki">h
 <div id="method-2" class="section level3">
 <h3>Method 2</h3>
 <p>Here's a quick video of how *the Sausage Machine* turns a Word document into an ePub:</p>
-<video width="100%" height="80%" controls="controls" loop="loop">
+<video width="100%" height="80%" poster="lib/videoposter.gif">
 <source autoplay="false" src="lib/samplevid.mp4" type="video/mp4"/>
 </video>
 
@@ -914,7 +1604,7 @@ href="http://hpt.publishinglab.org/index.php?about">platform</a>, you can add yo
 <p>Though you may take time choosing fonts and colors for your ePubs, they can and will be changed by the human readers or by the devices.</p>
 <p>As an example, this is the same book as seen on a mobile phone (Android OS with Gitden reader):</p>
 <div class="figure">
-<img src="lib/Screenshot_Gitden-reader-android.png" />
+<img src="lib/placeholder.png" />
 </div>
 <p>and on a Nook e-reader:</p>
 <p>Test the ebook on the device(s) your readers most commonly use, keeping in mind that you do not have as much control in the ebook format as you do in print or web.</p>
@@ -986,6 +1676,9 @@ href="https://vimeo.com/25185473">Kadath</a>, by Walrus Studio, which includes c
 <p>eBooks come in many forms, from native Apps to online reading experiences that cross-over to print with the use of MediaWiki and the newly developed htmltoprint workflow. The PublishingLab has spent part of 2015 working on a custom App and an online reading reading experience. Unlike creating ePubs, which can be done with the help of Pandoc, both of these workflows required skilled developers.</p>
 <div id="examples-1" class="section level3">
 <h3>Examples</h3>
+<div class="figure">
+<img src="lib/video-scroll.gif" />
+</div>
 <p>example 1:</p>
 <p>Knowledge Matters - custom built App</p>
 <p>The PublishingLab worked together with UNStudio to prototype a custom App, in the form of an enhanced digital book that complemented their print edition.</p>
@@ -996,12 +1689,9 @@ href="http://www.publishinglab.nl/unstudio/">here</a>.</p>
 <img src="lib/menu-UNStudio.jpg" />
 </div>
 <p>With rich media eBooks like this, it is possible to include more interactive features. This chapter starts with a video scroll introduction that the user controls by swiping down on the app.</p>
-<div class="figure">
-<img src="lib/video-scroll.gif" />
-</div>
 <p>Since this App was specifically designed for an iPad, it could capitalise on the built-in functions of the iPad, like swiping to the next chapter.</p>
-<video width="100%" height="80%" controls="controls" autoplay="autoplay" loop="loop">
-<source src="lib/video-app-transition.mp4" type="video/mp4" />
+<video width="100%" id="video" height="80%" preload="none">
+<source src="lib/samplevid.mp4" type="video/mp4" />
 </video>
 
 <p>Format: Web App</p>
@@ -1059,19 +1749,6 @@ href="http://networkcultures.org/outofink/2013/02/11/the-peoples-e-book/">here</
 </blockquote>
 
 <p>Ideally, artist books could incorporate the interactivity made possible with ePub3 with custom layouts which really reflect the unique visual quality of the work. It's not necessarily about mirroring the beautiful print spreads of art publishers, or following the highly-customised methods of an App, but looking for ways digital publishing visual books can be improved with what we have. For now, the PublishingLab plans to keep experimenting and looking at what others are doing in the digital publishing realm. We hope to post successful visual experiments and inspire publishers and eBook developers to find ways of creating better reading experiences.</p>
-<ul id="nav">
-    <li>
-<a href="#" rel="/path/to/style1.css">Default CSS</a>
-</li>
-    <li>
-<a href="#" rel="/path/to/style2.css">Larger Text</a>
-</li>
-    <li>
-<a href="#" rel="/path/to/style3.css">Something Different</a>
-</li>
-</ul>
-
-
 </div>
 </div>
 </div>

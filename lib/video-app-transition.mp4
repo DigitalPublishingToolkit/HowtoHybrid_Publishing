@@ -14,10 +14,16 @@
     <title>howTo/video-app-transition.mp4 at master · jessvan/howTo · GitHub</title>
     <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
     <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-114.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-144.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
     <meta property="fb:app_id" content="1401488693436528">
 
       <meta content="@github" name="twitter:site" /><meta content="summary" name="twitter:card" /><meta content="jessvan/howTo" name="twitter:title" /><meta content="howTo - Another hybrid book project managed by Sausage Machine" name="twitter:description" /><meta content="https://avatars3.githubusercontent.com/u/10974714?v=3&amp;s=400" name="twitter:image:src" />
@@ -36,9 +42,9 @@
     <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
     <meta name="google-analytics" content="UA-3769691-2">
 
-<meta content="collector.githubapp.com" name="octolytics-host" /><meta content="github" name="octolytics-app-id" /><meta content="565D828C:2F72:B4D462:569F79E6" name="octolytics-dimension-request_id" />
+<meta content="collector.githubapp.com" name="octolytics-host" /><meta content="github" name="octolytics-app-id" /><meta content="565D828C:475A:7369D7F:56A5FBE8" name="octolytics-dimension-request_id" />
 <meta content="/&lt;user-name&gt;/&lt;repo-name&gt;/blob/show" data-pjax-transient="true" name="analytics-location" />
-<meta content="Rails, view, blob#show" data-pjax-transient="true" name="analytics-event" />
+
 
 
   <meta class="js-ga-set" name="dimension1" content="Logged Out">
@@ -53,15 +59,15 @@
       <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#4078c0">
       <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
 
-    <meta content="96a408c2d09b9d88634ac1c5bcaf85ab486adffa" name="form-nonce" />
+    <meta content="aea10cf0584c21bcf8dcf160b5d66cb3927a38f0" name="form-nonce" />
 
-    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github-e64d783fc73cc815bb639b1ee740d83c08b1a72e2955dbd871b5971946f6f73d.css" integrity="sha256-5k14P8c8yBW7Y5se50DYPAixpy4pVdvYcbWXGUb29z0=" media="all" rel="stylesheet" />
-    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github2-d67e665a5adcb4911576562cbeb82c00d697b1f31e846c253fec048877a6b457.css" integrity="sha256-1n5mWlrctJEVdlYsvrgsANaXsfMehGwlP+wEiHemtFc=" media="all" rel="stylesheet" />
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github-898431d6e5abf6c9cbfc59b1b036b8baa63244fe299f7d7eaee452b64571eaee.css" integrity="sha256-iYQx1uWr9snL/FmxsDa4uqYyRP4pn31+ruRStkVx6u4=" media="all" rel="stylesheet" />
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github2-b2d8d1fd984ff1b181275aaa1276c82bb266b4f58f08f3075941d786d5b432ec.css" integrity="sha256-stjR/ZhP8bGBJ1qqEnbIK7JmtPWPCPMHWUHXhtW0Muw=" media="all" rel="stylesheet" />
     
     
 
 
-    <meta http-equiv="x-pjax-version" content="36663430747823914febb0e91e3b8b2f">
+    <meta http-equiv="x-pjax-version" content="39f056823b54a1976a98d9b33d8b4949">
 
       
   <meta name="description" content="howTo - Another hybrid book project managed by Sausage Machine">
@@ -70,6 +76,8 @@
   <meta content="10974714" name="octolytics-dimension-user_id" /><meta content="jessvan" name="octolytics-dimension-user_login" /><meta content="49936984" name="octolytics-dimension-repository_id" /><meta content="jessvan/howTo" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="49936984" name="octolytics-dimension-repository_network_root_id" /><meta content="jessvan/howTo" name="octolytics-dimension-repository_network_root_nwo" />
   <link href="https://github.com/jessvan/howTo/commits/master.atom" rel="alternate" title="Recent Commits to howTo:master" type="application/atom+xml">
 
+
+      <link rel="canonical" href="https://github.com/jessvan/howTo/blob/master/lib/video-app-transition.mp4" data-pjax-transient>
   </head>
 
 
@@ -91,7 +99,7 @@
     </a>
 
     <div class="header-actions" role="navigation">
-        <a class="btn btn-primary" href="/join" data-ga-click="(Logged out) Header, clicked Sign up, text:sign-up">Sign up</a>
+        <a class="btn btn-primary" href="/join?source=header" data-ga-click="(Logged out) Header, clicked Sign up, text:sign-up">Sign up</a>
       <a class="btn" href="/login?return_to=%2Fjessvan%2FhowTo%2Fblob%2Fmaster%2Flib%2Fvideo-app-transition.mp4" data-ga-click="(Logged out) Header, clicked Sign in, text:sign-in">Sign in</a>
     </div>
 
@@ -244,7 +252,7 @@
 
     
 
-<a href="/jessvan/howTo/blob/d82f8a272905fc3b25771cf0884f337a2c41ecaa/lib/video-app-transition.mp4" class="hidden js-permalink-shortcut" data-hotkey="y">Permalink</a>
+<a href="/jessvan/howTo/blob/f09ee61650780f434164521263f9fda5aa840583/lib/video-app-transition.mp4" class="hidden js-permalink-shortcut" data-hotkey="y">Permalink</a>
 
 <!-- blob contrib key: blob_contributors:v21:28d69bf5125c45a63efa69a7ca304a58 -->
 
@@ -349,7 +357,7 @@
     </div>
 
 
-        <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/jessvan/howTo/delete/master/lib/video-app-transition.mp4" class="inline-form" data-form-nonce="96a408c2d09b9d88634ac1c5bcaf85ab486adffa" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="j/DYpZMNooQQ0Nl0Ng7v53X9RI2Lhlp7rF2bTspm/ORIzHcHHnz1lfzemqGInB8JVw8mp7nPaBxD6zGB/+gmgw==" /></div>
+        <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/jessvan/howTo/delete/master/lib/video-app-transition.mp4" class="inline-form" data-form-nonce="aea10cf0584c21bcf8dcf160b5d66cb3927a38f0" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="G+dikipgcxi+NvFlzctx2qA7AwFg15e+k9jT2RZneciFaVS1AInu0prBxT9HyflWlvpEmQu9v4ZsvNOjh81MHA==" /></div>
           <button class="btn-octicon btn-octicon-danger tooltipped tooltipped-nw" type="submit"
             aria-label="You must be signed in to make or propose changes" data-disable-with>
             <span aria-hidden="true" class="octicon octicon-trashcan"></span>
@@ -408,7 +416,7 @@
       <span aria-hidden="true" class="mega-octicon octicon-mark-github" title="GitHub "></span>
 </a>
     <ul class="site-footer-links">
-      <li>&copy; 2016 <span title="0.04017s from github-fe138-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+      <li>&copy; 2016 <span title="0.05536s from github-fe139-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
         <li><a href="https://github.com/site/terms" data-ga-click="Footer, go to terms, text:terms">Terms</a></li>
         <li><a href="https://github.com/site/privacy" data-ga-click="Footer, go to privacy, text:privacy">Privacy</a></li>
         <li><a href="https://github.com/security" data-ga-click="Footer, go to security, text:security">Security</a></li>
@@ -435,7 +443,7 @@
 
       
       <script crossorigin="anonymous" integrity="sha256-nuVc6vh/w03IYzQkn+9svs6I6BVHjg++gWQtV+0P/4k=" src="https://assets-cdn.github.com/assets/frameworks-9ee55ceaf87fc34dc86334249fef6cbece88e815478e0fbe81642d57ed0fff89.js"></script>
-      <script async="async" crossorigin="anonymous" integrity="sha256-myNyouhsB4E/qZiMz3Oasnq97ikJZ1iJkbsZ3V28iC0=" src="https://assets-cdn.github.com/assets/github-9b2372a2e86c07813fa9988ccf739ab27abdee290967588991bb19dd5dbc882d.js"></script>
+      <script async="async" crossorigin="anonymous" integrity="sha256-G+Ga1mKcjStSuxsBHGt+z3Q9tWkFTBwPNsjZhYzj9kA=" src="https://assets-cdn.github.com/assets/github-1be19ad6629c8d2b52bb1b011c6b7ecf743db569054c1c0f36c8d9858ce3f640.js"></script>
       
       
       

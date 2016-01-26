@@ -45,6 +45,8 @@ Andre Castro, Gottfried Haider, Michael Murtaugh and the DPT collective.
 
 </div>
 
+![](lib/money.jpg)
+
 # Intro to the HPToolkit Workflow 1/4
 
 ## Intro
@@ -60,6 +62,9 @@ GitHub. You can find it <a
 href="http://hpt.publishinglab.org/">here</a>.
 ### Example
 
+![](lib/placeholder.png) 
+
+
 The workflow below is a compilation of efforts from the Hybrid
 Publishing Toolkit, Andre Castro, Michael Murtaugh and others from the
 DPT collective.
@@ -67,6 +72,9 @@ DPT collective.
 example: <a
 href="http://networkcultures.org/blog/publication/from-print-to-ebooks-a-hybrid-publishing-toolkit-for-the-arts/">From
 Print to eBooks: A Hybrid Publishing Toolkit for the Arts</a>
+
+![](lib/placeholder.png) 
+
 
 ### Technical considerations
 
@@ -105,7 +113,7 @@ the designer, developer and editor roles.
 Here's a quick video of how \*the Sausage Machine\* turns a Word
 document into an ePub:
 
-<video width="100%" height="80%" controls="controls" loop="loop"><source autoplay="false" src="lib/samplevid.mp4" type="video/mp4"/></video>
+<video width="100%" height="80%" poster="lib/videoposter.gif"><source autoplay="false" src="lib/samplevid.mp4" type="video/mp4"/></video>
 
 Using \*the Sausage Machine\* platform, first you drag and drop your
 text files <a href="http://hpt.publishinglab.org/">here</a>
@@ -213,7 +221,7 @@ can and will be changed by the human readers or by the devices.
 As an example, this is the same book as seen on a mobile phone (Android
 OS with Gitden reader):
 
-![](lib/Screenshot\_Gitden-reader-android.png)
+![](lib/placeholder.png)
 
 and on a Nook e-reader:
 
@@ -353,6 +361,9 @@ Pandoc, both of these workflows required skilled developers.
 
 ### Examples
 
+![](lib/video-scroll.gif)
+
+
 example 1:
 
 Knowledge Matters - custom built App
@@ -372,13 +383,12 @@ With rich media eBooks like this, it is possible to include more
 interactive features. This chapter starts with a video scroll
 introduction that the user controls by swiping down on the app.
 
-![](lib/video-scroll.gif)
-
 Since this App was specifically designed for an iPad, it could
 capitalise on the built-in functions of the iPad, like swiping to the
 next chapter.
 
-<video width="100%" height="80%" controls="controls" autoplay="autoplay" loop="loop"><source src="lib/video-app-transition.mp4" type="video/mp4" /></video>
+
+<video width="100%" id="video" height="80%" preload="none"><source src="lib/samplevid.mp4" type="video/mp4" /></video>
 
 Format: Web App
 
@@ -497,10 +507,3 @@ keep experimenting and looking at what others are doing in the digital
 publishing realm. We hope to post successful visual experiments and
 inspire publishers and eBook developers to find ways of creating better
 reading experiences.
-
-
-<ul id="nav">
-	<li><a href="#" rel="/path/to/style1.css">Default CSS</a></li>
-	<li><a href="#" rel="/path/to/style2.css">Larger Text</a></li>
-	<li><a href="#" rel="/path/to/style3.css">Something Different</a></li>
-</ul>
