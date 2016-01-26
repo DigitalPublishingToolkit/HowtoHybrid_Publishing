@@ -19,7 +19,7 @@ body, html {
 div {
   padding: 10px;
   padding-bottom: 0;
-  margin: 10px 15px;
+  margin: 10px 20px;
   position: initial;
 }
 
@@ -45,6 +45,8 @@ div {
   font-weight: 600;
   padding: 0;
   margin: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 26px;
 }
 
 #header p {
@@ -441,8 +443,8 @@ img {
 }
 
 video {
-  width: 20%;
-  margin-left: 40%;
+  width: 30%;
+  margin-left: 35%;
   -webkit-box-shadow: 2px 2px 0px 0px #545454;
   -moz-box-shadow: 2px 2px 0px 0px #545454;
   box-shadow: 2px 2px 0px 0px #545454;
@@ -451,7 +453,6 @@ video {
 
 video:hover {
   background: transparent url('./lib/videoposterb_hover.svg') 50% 50% / cover no-repeat ;
-
 }
 
 /**/
@@ -627,38 +628,143 @@ button:hover {
 
 }
 
-@media only screen and (max-width: 1024px) and (min-resolution: 192dpi) {
+@media only screen and (max-width: 1024px) {
 
-body,
-.level1 p {
-  font-size: 15px;
-}
+  body {
+    margin-top: 135px;
+  }
 
-.level1 p,
-.infobox,
-.linkbox,
-.level1 ol,
-.level1 ul,
-blockquote {
-  width: initial;
-  margin: 5px;
-}
+  div {
+  margin: 10px 20px;
+  }
 
-h3,
-.level3 h3 {
-  font-size: 15px;
-}
+  .level1 p, 
+  .level1 pre, 
+  .level1 h1, 
+  .level1 ul, 
+  .level2 h2, 
+  .level3 h3 {
+    width: auto;
+    margin: 10px;
+  }
 
-h2,
-.level2 h2 {
-  /*font-size: 18px;*/
-}
+  .level1{
+    width: auto;
+    margin: 0;
+  }
 
-h1,
-.level1 h1 {
-  /*font-size: 201px;*/
-  color:red ;
-}
+  .infobox,
+  .linkbox,
+  blockquote {
+    width: auto;
+    margin: 20px;
+  }
+
+  blockquote {
+    width: auto;
+    margin: 10px;
+    font-size: 13px;
+  }
+
+  ul, ol {
+    width: auto;
+    padding: 0 15px 0 25px;
+  }
+
+  .level3 {
+    margin-top: initial;
+  }
+
+  /*header*/
+
+  #header {
+    max-width: 100%;
+    min-width: initial; 
+    margin-top: -115px;
+  }
+
+  .navWrap {
+    margin: 0 !important;
+  }
+
+  #header ul {
+    width: 100%;
+  }
+
+  #header ul > li {
+    width: 100%;
+  }
+
+  #header ul, p, body {
+    font-size: 15px;
+  }
+
+  #toggleWidth {
+    display: none;
+  }
+
+  #toggleMode {
+    font-size: 15px;
+  }
+
+  button {
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    margin: 0 0 10px 0;
+  }
+
+  /* fonts */
+
+  .difficulty-level {
+    font-size: 12px;
+    float: none;
+    margin: 10px;
+  }
+
+  h3,
+  .level3 h3 {
+    font-size: 15px;
+    margin-top: 20px;
+  }
+
+  h2,
+  .level2 h2 {
+    font-size: 18px;
+  }
+
+  h1,
+  .level1 h1 {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  #header h1 {
+    font-size: 20px;
+  }
+
+  /* images + video */
+
+  .figure {
+    font-size: 12px;
+    width: 65%;
+    margin: 20px 15%;
+    height: auto;
+  }
+
+  .ui-resizable-e,
+  .ui-resizable-handle {
+    display: none !important;
+  }
+
+  .level1:hover,
+  #header1:hover {
+    animation: none;
+  }
+
+  .navWrap {
+    float: left;
+  }
 
 }
 
