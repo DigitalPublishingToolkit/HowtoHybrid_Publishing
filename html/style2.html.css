@@ -627,7 +627,7 @@ button:hover {
 
 }
 
-@media only screen and (max-width: 1024px) and (min-resolution: 192dpi) {
+@media only screen and (max-width: 1024px){
 
 body,
 .level1 p {
