@@ -91,7 +91,7 @@
       })
 
       // append title
-      $('#header').find('h1').html("<h1>"+$('#header').find('h1').text()+"</br>"+$('.htmlTitle').text()+"</h1>")
+      $('#header').find('h1').html("<h1>"+$('#header').find('h1').text()+"</br>"+$('.pagetitle').text()+"</h1>")
     
 
       // move 'linkbox' out
