@@ -24,8 +24,8 @@
 }
 
 .level1:hover .ui-resizable-e,
-.linkBox:hover .ui-resizable-e,
-.infoBox:hover .ui-resizable-e,
+.linkbox:hover .ui-resizable-e,
+.infobox:hover .ui-resizable-e,
 #header:hover .ui-resizable-e {
   background: rgba(255,255,150,1);
 }
@@ -155,7 +155,7 @@ a:hover {
   background: none;
 }
 
-.linkBox {
+.linkbox {
   width: calc(25%);
   max-width: calc(100% - 64px);
   min-width: calc(25% - 64px);
@@ -165,7 +165,7 @@ a:hover {
   /*z-index: 7;*/
 }
 
-.infoBox {
+.infobox {
   width: calc(15%);
   max-width: calc(100% - 64px);
   min-width: calc(15% - 64px);
@@ -175,11 +175,11 @@ a:hover {
   /*z-index: 7;*/
 }
 
-.infoBox .level2 {
+.infobox .level2 {
   background: #D8F3D1;
 }
 
-.linkBox>.level2 {
+.linkbox>.level2 {
   background: lightcyan;
   position: relative;
 }
@@ -237,8 +237,8 @@ a:hover {
 }
 
 .level1:hover,
-.linkBox:hover,
-.infoBox:hover,
+.linkbox:hover,
+.infobox:hover,
 #header:hover {
   -webkit-animation: mymove 0.5s ease-in; /* Chrome, Safari, Opera */
   animation: mymove 0.5s ease-in;
@@ -560,11 +560,11 @@ button:hover {
 
 @media only screen and (max-width : 1600px) {
 
-  .linkBox {
+  .linkbox {
     width: calc(40% - 5px);
   }
 
-  .infoBox {
+  .infobox {
     width: calc(25%);
   }
 
@@ -580,8 +580,8 @@ button:hover {
     width: calc(55%);
   }
 
-  .linkBox,
-  .infoBox {
+  .linkbox,
+  .infobox {
     width: calc(30% - 5px);
   }
 
@@ -658,8 +658,8 @@ button:hover {
 @media only screen and (max-width: 1024px) and (min-resolution: 192dpi) {
 
   .level1,
-  .infoBox,
-  .linkBox,
+  .infobox,
+  .linkbox,
   blockquote {
     width: 100%;
   }
@@ -676,7 +676,7 @@ button:hover {
   }
 
   .navWrap {
-    margin: 0;
+    margin: 0 !important;
   }
 
   #header ul {
@@ -699,6 +699,7 @@ button:hover {
     width: 35px;
     height: 35px;
     padding: 5px;
+    margin: 0 0 10px 0;
   }
 
   /*levels*/
@@ -728,7 +729,7 @@ button:hover {
     font-size: 20px;
   }
 
-  /* images */
+  /* images + video */
 
   .figure {
     font-size: 12px;
@@ -748,6 +749,14 @@ button:hover {
 
   .navWrap {
     float: left;
+  }
+
+  video:hover {
+    background: transparent;
+  }
+
+  video {
+    background: transparent;
   }
 
 }

@@ -47,7 +47,7 @@
         // resizeable stuff
   
         $(function() {
-          $(".level1, .linkBox, .infoBox, #header" ).resizable({
+          $(".level1, .linkbox, .infobox, #header" ).resizable({
             handles: 'e',
             cancel: '.fullWidth',
             // grid: [ $('#header').outerWidth()/8, 0 ],
@@ -133,17 +133,17 @@
         $('#header').find('h1').html("<h1>"+$('#header').find('h1').text()+"</br>"+$('.pagetitle').text()+"</h1>")
       
   
-        // move 'linkBox' out
-        $('.linkBox, .infoBox').each(function() {
+        // move 'linkbox' out
+        $('.linkbox, .infobox').each(function() {
           $(this).insertAfter($(this).parents('.level1'));
         })
-        $('.linkBox, .infoBox').each(function() {
+        $('.linkbox, .infobox').each(function() {
           $(this).insertAfter($(this).parents('.level2'));
         })
   
-        // edit linkBox appearance
+        // edit linkbox appearance
   
-        $('.linkBox, .infoBox').each(function() {
+        $('.linkbox, .infobox').each(function() {
           $(this).children().not('h1, .ui-resizable-handle').wrapAll('<div class="level2"></div>');
         })
   
@@ -152,7 +152,7 @@
         $(document).on('click', '#toggleWidth', function(){
   
           if ($('.level1').hasClass('fullWidth')) {
-            $('#header, .level1, .linkBox, .infoBox').removeClass('fullWidth').addClass('initWidth')
+            $('#header, .level1, .linkbox, .infobox').removeClass('fullWidth').addClass('initWidth')
             $('#toggleWidth').text('⟷')
               
               window.setTimeout(function(){  
@@ -164,14 +164,14 @@
             },200)
   
               window.setTimeout(function(){  
-            $('#header, .level1, .linkBox, .infoBox').removeClass('initWidth')
+            $('#header, .level1, .linkbox, .infobox').removeClass('initWidth')
   
             },600)
   
   
           } else {
-            $('#header, .level1, .linkBox, .infoBox').css({'width':''})
-            $('#header, .level1, .linkBox, .infoBox').addClass('fullWidth')
+            $('#header, .level1, .linkbox, .infobox').css({'width':''})
+            $('#header, .level1, .linkbox, .infobox').addClass('fullWidth')
             $('#toggleWidth').text('⟺')
             $('.figure').addClass('figureInside')
           }
@@ -308,8 +308,8 @@
   }
   
   .level1:hover .ui-resizable-e,
-  .linkBox:hover .ui-resizable-e,
-  .infoBox:hover .ui-resizable-e,
+  .linkbox:hover .ui-resizable-e,
+  .infobox:hover .ui-resizable-e,
   #header:hover .ui-resizable-e {
     background: rgba(255,255,150,1);
   }
@@ -439,7 +439,7 @@
     background: none;
   }
   
-  .linkBox {
+  .linkbox {
     width: calc(25%);
     max-width: calc(100% - 64px);
     min-width: calc(25% - 64px);
@@ -449,7 +449,7 @@
     /*z-index: 7;*/
   }
   
-  .infoBox {
+  .infobox {
     width: calc(15%);
     max-width: calc(100% - 64px);
     min-width: calc(15% - 64px);
@@ -459,11 +459,11 @@
     /*z-index: 7;*/
   }
   
-  .infoBox .level2 {
+  .infobox .level2 {
     background: #D8F3D1;
   }
   
-  .linkBox>.level2 {
+  .linkbox>.level2 {
     background: lightcyan;
     position: relative;
   }
@@ -521,8 +521,8 @@
   }
   
   .level1:hover,
-  .linkBox:hover,
-  .infoBox:hover,
+  .linkbox:hover,
+  .infobox:hover,
   #header:hover {
     -webkit-animation: mymove 0.5s ease-in; /* Chrome, Safari, Opera */
     animation: mymove 0.5s ease-in;
@@ -844,11 +844,11 @@
   
   @media only screen and (max-width : 1600px) {
   
-    .linkBox {
+    .linkbox {
       width: calc(40% - 5px);
     }
   
-    .infoBox {
+    .infobox {
       width: calc(25%);
     }
   
@@ -864,8 +864,8 @@
       width: calc(55%);
     }
   
-    .linkBox,
-    .infoBox {
+    .linkbox,
+    .infobox {
       width: calc(30% - 5px);
     }
   
@@ -942,8 +942,8 @@
   @media only screen and (max-width: 1024px) and (min-resolution: 192dpi) {
   
     .level1,
-    .infoBox,
-    .linkBox,
+    .infobox,
+    .linkbox,
     blockquote {
       width: 100%;
     }
@@ -960,7 +960,7 @@
     }
   
     .navWrap {
-      margin: 0;
+      margin: 0 !important;
     }
   
     #header ul {
@@ -983,6 +983,7 @@
       width: 35px;
       height: 35px;
       padding: 5px;
+      margin: 0 0 10px 0;
     }
   
     /*levels*/
@@ -1012,7 +1013,7 @@
       font-size: 20px;
     }
   
-    /* images */
+    /* images + video */
   
     .figure {
       font-size: 12px;
@@ -1032,6 +1033,14 @@
   
     .navWrap {
       float: left;
+    }
+  
+    video:hover {
+      background: transparent;
+    }
+  
+    video {
+      background: transparent;
     }
   
   }
@@ -1156,8 +1165,8 @@
     border: 0;
   }
   
-  .linkBox,
-  .infoBox,
+  .linkbox,
+  .infobox,
   blockquote {
     width: calc(50% - 13px);
     float: none;
@@ -1172,20 +1181,20 @@
     font-family: 'Libre Baskerville', serif;
   }
   
-  .linkBox p,
-  .linkBox h1,
-  .linkBox h2,
-  .linkBox h3 {
+  .linkbox p,
+  .linkbox h1,
+  .linkbox h2,
+  .linkbox h3 {
     word-wrap: break-word;
   }
   
-  .infoBox {
+  .infobox {
     background: #545454;
     color: #FAF8F4;
   }
   
-  .linkBox h3,
-  .infoBox h3 {
+  .linkbox h3,
+  .infobox h3 {
     margin: 0;
     margin-bottom: -10px;
   }
@@ -1554,8 +1563,8 @@
     margin: 10px 20px;
   }
   
-  .fullWidth.linkBox,
-  .fullWidth.infoBox,
+  .fullWidth.linkbox,
+  .fullWidth.infobox,
   .fullWidth.level1 ul {
     margin: 15px 15px;
     padding: 0 20px 10px 20px;
@@ -1607,8 +1616,8 @@
       font-size: 18px;
     }
   
-    .linkBox,
-    .infoBox {
+    .linkbox,
+    .infobox {
       padding: 15px;
     }
   
@@ -1648,8 +1657,8 @@
       /*margin: initial;*/
     }
   /*
-    .linkBox,
-    .infoBox {
+    .linkbox,
+    .infobox {
       padding: 15px;
     }*/
   
@@ -1674,8 +1683,8 @@
   }
   
   .level1 p,
-  .infoBox,
-  .linkBox,
+  .infobox,
+  .linkbox,
   .level1 ol,
   .level1 ul,
   blockquote {
@@ -1718,18 +1727,17 @@ How To Standard Title
 <p>You will find instructions &amp; a template for making an ePub3, use css styles to modify your layout, and learn about the pros &amp; cons of a fixed layout ePub. Finally, we look at what some other current options are for digital publishing.</p>
 <p>Sections:</p>
 <p>1. Intro to the HPToolkit Workflow<br />2. Styling ePubs<br />3. Fixed layout ePubs<br />4. Other digital publishing options</p>
-<div class="infoBox">
-<h3 id="who-is-this-how-to-for">Who is this How To for?</h3>
+<div class="infobox">
+<h3>Who is this How To for?</h3>
 <p>Small publishers, arts publishers, designers and developers creating digital publications.</p>
 </div>
-<div class="linkBox">
-<h3 id="colophon">Colophon</h3>
+<div class="linkbox">
+<h3>Colophon</h3>
 <p><strong>Author:</strong> Jess van Zyl<br /><strong>Editorial support:</strong> Miriam Rasch<br /><strong>Design:</strong> Lasse van den Bosch &amp; Marlon Harder (<a
 href="http://template01.info">Template</a>)<br /><strong>With thanks to:</strong> Hackers&amp;Designers, INC, Torque, Silvio Lorusso, Andre Castro, Gottfried Haider, Michael Murtaugh and the DPT collective.</p>
 </div>
 <div class="figure">
 <img src="lib/money.jpg" />
-
 </div>
 </div>
 </div>
@@ -1743,14 +1751,12 @@ href="http://template01.info">Template</a>)<br /><strong>With thanks to:</strong
 href="http://hpt.publishinglab.org/">here</a>. ### Example</p>
 <div class="figure">
 <img src="lib/placeholder.png" />
-
 </div>
 <p>The workflow below is a compilation of efforts from the Hybrid Publishing Toolkit, Andre Castro, Michael Murtaugh and others from the DPT collective.</p>
 <p>example: <a
 href="http://networkcultures.org/blog/publication/from-print-to-ebooks-a-hybrid-publishing-toolkit-for-the-arts/">From Print to eBooks: A Hybrid Publishing Toolkit for the Arts</a></p>
 <div class="figure">
 <img src="lib/placeholder.png" />
-
 </div>
 <div id="technical-considerations" class="section level3">
 <h3>Technical considerations</h3>
@@ -1784,8 +1790,9 @@ href="https://github.com/DigitalPublishingToolkit/workshop-going\_hybrid/wiki">h
 <h3>Method 2</h3>
 <p>Here's a quick video of how *the Sausage Machine* turns a Word document into an ePub:</p>
 <video width="100%" height="80%" poster="lib/videoposter.gif">
-<source autoplay="false" src="lib/samplevid.mp4" type="video/mp4"/>
+<source src="lib/samplevid.mp4" type="video/mp4"/> <source src="lib/samplevid.ogg" type="video/ogg"/>
 </video>
+
 <p>Using *the Sausage Machine* platform, first you drag and drop your text files <a href="http://hpt.publishinglab.org/">here</a></p>
 <p>then you can choose an output: markdown, html or ePub from the drop down menu and click 'Update'</p>
 <p>Create your book project on GitHub (click 'Continue on GitHub) to keep track of your versions and work collaboratively with an editor or designer.</p>
@@ -1845,7 +1852,6 @@ href="http://hpt.publishinglab.org/index.php?about">platform</a>, you can add yo
 <p>As an example, this is the same book as seen on a mobile phone (Android OS with Gitden reader):</p>
 <div class="figure">
 <img src="lib/placeholder.png" />
-
 </div>
 <p>and on a Nook e-reader:</p>
 <p>Test the ebook on the device(s) your readers most commonly use, keeping in mind that you do not have as much control in the ebook format as you do in print or web.</p>
@@ -1879,8 +1885,10 @@ href="http://www.publishinglab.nl/blog/2015/11/09/fixed-layout-epubs-useful-or-b
 <div id="the-controversy" class="section level3">
 <h3>The controversy</h3>
 <blockquote>
+
 <p>&quot;I think they sound like a pointless step backward – a filetype with all the rigidity of PDF but with none of the cross-platform support.&quot; - Ben Hollingum</p>
 </blockquote>
+
 <p>The quote above epitomises the Digital Reader article's list of problems with fixed layout books. Digital Reader proposes that eBook designers should move away from trying to keep the printed book format as a template for digital publishing. Craig Mod argues that the bond between reader and text can be strengthened or broken by the container, I see this as an affirmation that it needs serious consideration by designers and developers. He sums up his concern below:</p>
 <p>Amazon and Apple are the paper‑makers, the typographers, the printers, the binders and the distributors: if they don’t make a style of paper you like, too bad. The boundaries of digital book design are beholden to their whim. - Craig Mod</p>
 <p>Fixed layout books are often children's books, photography or cookbooks. To decide whether using fixed layout is right for a project, the publisher needs a clear idea of what their reader's devices are - it takes too much effort to create a layout that might work well in i-Books and not at all on other readers. This problem of limited implementation affects fixed layout ePubs as well as reflowable ePubs which often support only a very few styling options. The IDPF cautions eBook developers to be aware that reading systems typically restrict the ability to modify body margins indicates this limitation. Which essentially means designers are bound by the choices of distributors and e-reader makers.</p>
@@ -1890,7 +1898,6 @@ href="http://www.publishinglab.nl/blog/2015/11/09/fixed-layout-epubs-useful-or-b
 <p>To demonstrate, I created a fixed layout epub in InDD CC 2015. It didn't take much time to file &gt; export fixed layout, and the pros are that it retains my weird text wrap, and the caption over the video. Since I wrote about the display in the cons section above, I thought I'd also show what it looks like - not just tell. When viewed in iBooks, changing the width of the viewport (screen) does not change the size of the text and it is only suitable for viewing on an ipad.</p>
 <div class="figure">
 <img src="lib/iphone4s-300x230.jpg" />
-
 </div>
 <p>Fixed layout viewed on iPhone4s</p>
 </div>
@@ -1918,7 +1925,6 @@ href="https://vimeo.com/25185473">Kadath</a>, by Walrus Studio, which includes c
 <h3>Examples</h3>
 <div class="figure">
 <img src="lib/video-scroll.gif" />
-
 </div>
 <p>example 1:</p>
 <p>Knowledge Matters - custom built App</p>
@@ -1928,13 +1934,13 @@ href="http://www.publishinglab.nl/unstudio/">here</a>.</p>
 <p>The team created a custom menu for the book:</p>
 <div class="figure">
 <img src="lib/menu-UNStudio.jpg" />
-
 </div>
 <p>With rich media eBooks like this, it is possible to include more interactive features. This chapter starts with a video scroll introduction that the user controls by swiping down on the app.</p>
 <p>Since this App was specifically designed for an iPad, it could capitalise on the built-in functions of the iPad, like swiping to the next chapter.</p>
 <video width="100%" id="video" height="80%" preload="none">
 <source src="lib/samplevid.mp4" type="video/mp4" />
 </video>
+
 <p>Format: Web App</p>
 <div class="difficulty-level expert">
 
@@ -1988,6 +1994,7 @@ href="http://networkcultures.org/outofink/2013/02/11/the-peoples-e-book/">here</
 <blockquote>
 &quot;With a proper API (an application programming interface, which allows one authorised application to read and manipulate data in another), entrepreneurs outside of Amazon or Apple could step in and offer more beautiful, efficient, or innovative reading containers for our books, leaving the bigger companies to do what they do best: payments and infrastructure.&quot; - Craig Mod
 </blockquote>
+
 <p>Ideally, artist books could incorporate the interactivity made possible with ePub3 with custom layouts which really reflect the unique visual quality of the work. It's not necessarily about mirroring the beautiful print spreads of art publishers, or following the highly-customised methods of an App, but looking for ways digital publishing visual books can be improved with what we have. For now, the PublishingLab plans to keep experimenting and looking at what others are doing in the digital publishing realm. We hope to post successful visual experiments and inspire publishers and eBook developers to find ways of creating better reading experiences.</p>
 </div>
 </div>
