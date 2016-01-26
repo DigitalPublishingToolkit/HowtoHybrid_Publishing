@@ -22,7 +22,7 @@ Sections:
 3\. Fixed layout ePubs  
 4\. Other digital publishing options
 
-<div class="infoBox">
+<div class="infobox">
 
 ### Who is this How To for?
 
@@ -32,7 +32,7 @@ digital publications.
 </div>
 
 
-<div class="linkBox">
+<div class="linkbox">
 
 ### Colophon
 

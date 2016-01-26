@@ -8,7 +8,7 @@
       // resizeable stuff
 
       $(function() {
-        $(".level1, .linkBox, .infoBox, #header" ).resizable({
+        $(".level1, .linkbox, .infobox, #header" ).resizable({
           handles: 'e',
           cancel: '.fullWidth',
           // grid: [ $('#header').outerWidth()/8, 0 ],
@@ -94,17 +94,17 @@
       $('#header').find('h1').html("<h1>"+$('#header').find('h1').text()+"</br>"+$('.htmlTitle').text()+"</h1>")
     
 
-      // move 'linkBox' out
-      $('.linkBox, .infoBox').each(function() {
+      // move 'linkbox' out
+      $('.linkbox, .infobox').each(function() {
         $(this).insertAfter($(this).parents('.level1'));
       })
-      $('.linkBox, .infoBox').each(function() {
+      $('.linkbox, .infobox').each(function() {
         $(this).insertAfter($(this).parents('.level2'));
       })
 
-      // edit linkBox appearance
+      // edit linkbox appearance
 
-      $('.linkBox, .infoBox').each(function() {
+      $('.linkbox, .infobox').each(function() {
         $(this).children().not('h1, .ui-resizable-handle').wrapAll('<div class="level2"></div>');
       })
 
@@ -113,7 +113,7 @@
       $(document).on('click', '#toggleWidth', function(){
 
         if ($('.level1').hasClass('fullWidth')) {
-          $('#header, .level1, .linkBox, .infoBox').removeClass('fullWidth').addClass('initWidth')
+          $('#header, .level1, .linkbox, .infobox').removeClass('fullWidth').addClass('initWidth')
           $('#toggleWidth').text('⟷')
             
             window.setTimeout(function(){  
@@ -125,14 +125,14 @@
           },200)
 
             window.setTimeout(function(){  
-          $('#header, .level1, .linkBox, .infoBox').removeClass('initWidth')
+          $('#header, .level1, .linkbox, .infobox').removeClass('initWidth')
 
           },600)
 
 
         } else {
-          $('#header, .level1, .linkBox, .infoBox').css({'width':''})
-          $('#header, .level1, .linkBox, .infoBox').addClass('fullWidth')
+          $('#header, .level1, .linkbox, .infobox').css({'width':''})
+          $('#header, .level1, .linkbox, .infobox').addClass('fullWidth')
           $('#toggleWidth').text('⟺')
           $('.figure').addClass('figureInside')
         }
