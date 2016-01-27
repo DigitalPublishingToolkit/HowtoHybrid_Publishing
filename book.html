@@ -65,19 +65,18 @@
   
         // generate header and chapters
   
-        $( "body" ).prepend(`<div id="header">
-          <h1><a href="http://localhost/html/open/template01All/template01/clients/inc/howTo/test04/iframeGetFinal/index.html">Publishing Lab:</a></h1> 
-          <button id="toggleWidth" type="button">⟷</button>
-          <button id="toggleMode" type="button">Aa</button>
-          <ul class="navWrap">
-              <li>
-                  <a href="#" class="navFirst">Chapters</a>
-                  <ul class="navOptions">
-                      
-                  </ul>
-              </li>
-          </ul>
-        </div>`);
+        $( "body" ).prepend('<div id="header">'+
+          '<h1><a href="http://localhost/html/open/template01All/template01/clients/inc/howTo/test04/iframeGetFinal/index.html">Publishing Lab:</a></h1>'+
+          '<button id="toggleWidth" type="button">⟷</button>'+
+          '<button id="toggleMode" type="button">Aa</button>'+
+          '<ul class="navWrap">'+
+              '<li>'+
+                  '<a href="#" class="navFirst">Chapters</a>'+
+                  '<ul class="navOptions">'+
+                  '</ul>'+
+              '</li>'+
+          '</ul>'+
+       '</div>');
   
         $('.level1').each(function(){
           parentId = $(this).attr('id')
@@ -106,19 +105,17 @@
           i=i+1
           $(this).unwrap()
           thisSrc = $(this).attr('src')
-          figureWrap = `
-            <div class="figure">
-              <div class="thumbnail">`+thisSrc.split('/').pop()+`</div>
-              <a href="#img`+i+`">
-                <img class="bigImage" src=`+thisSrc+` alt="" />
-              </a> 
-              <a href="#_">
-                <div id="img`+i+`" class="lightbox">
-                  <img src=`+thisSrc+` alt="" />
-                </div>
-              </a>
-            </div>
-          `;
+          figureWrap = '<div class="figure">'+
+              '<div class="thumbnail">'+thisSrc.split('/').pop()+'</div>'+
+              '<a href="#img'+i+'">'+
+                '<img class="bigImage" src='+thisSrc+' alt="" />'+
+              '</a> '+
+              '<a href="#_">'+
+                '<div id="img'+i+'" class="lightbox">'+
+                  '<img src='+thisSrc+' alt="" />'+
+                '</div>'+
+              '</a>'+
+            '</div>';
           $(figureWrap).insertAfter( $(this) );
           $(this).remove()
         })
@@ -935,6 +932,8 @@
       margin-top: 135px;
     }
   
+  @media only screen and (max-width: 1024px){
+  
     #header {
       margin-top: -115px;
     }
@@ -1688,6 +1687,7 @@
   
   }
   
+  
   @media only screen and (max-width: 1024px) {
   
     body {
@@ -1934,7 +1934,7 @@ href="http://en.flossmanuals.net/command-line/getting-started/">here</a>.</p>
 <div id="method-2" class="section level3">
 <h3>Method 2</h3>
 <p>Here's a quick video of how *the Sausage Machine* turns a Word document into an ePub:</p>
-<video poster="png.png">
+<video poster="./lib/png.png">
     
 <source src="lib/samplevid.mp4" type="video/mp4"/>
 </video>
@@ -2114,7 +2114,7 @@ href="http://www.publishinglab.nl/unstudio/">here</a>.</p>
 <img src="lib/video-scroll.gif" />
 </div>
 <p>Since this App was specifically designed for an iPad, it could capitalise on the built-in functions of the iPad, like swiping to the next chapter.</p>
-<video poster="png.png">
+<video poster="./lib/png.png">
 <source src="lib/samplevid.mp4" type="video/mp4" />
 </video>
 
