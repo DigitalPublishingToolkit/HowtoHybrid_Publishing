@@ -55,9 +55,9 @@
         window.scrollTo(0,positionId)
         hrefIdBackgroundColor = $(hrefId).css('background-color')
         console.log(hrefIdBackgroundColor)
-        $(hrefId+', '+hrefId+' div').not('.ui-resizable-handle, .difficulty-level').addClass('highlightThis').removeClass('removeHighlightThis').css({'background-color':''})
+        $(hrefId+', '+hrefId+' div, blockquote').not('.ui-resizable-handle, .difficulty-level').addClass('highlightThis').removeClass('removeHighlightThis').css({'background-color':''})
         window.setTimeout(function(){
-           $(hrefId+', '+hrefId+' div').not('.ui-resizable-handle, .difficulty-level').addClass('removeHighlightThis').removeClass('highlightThis').css({'background-color':''})
+           $(hrefId+', '+hrefId+' div, blockquote').not('.ui-resizable-handle, .difficulty-level').addClass('removeHighlightThis').removeClass('highlightThis').css({'background-color':''})
         },600)
       })
 

@@ -30,10 +30,6 @@
   background: rgba(255,255,150,1);
 }
 
-/*.color {
-  background-color: lemonchiffon;
-}
-*/
 .pagetitle{
   display: none;
 }
@@ -613,10 +609,6 @@ button:hover {
     margin: initial;
   }
 
-  video {
-    width: calc(100% - 22px);
-  }
-
   .level1 .figure,
   .level2 .figure {
     float: none;
@@ -630,7 +622,7 @@ button:hover {
  }
 
  .figure:hover {
-    width: calc(100% - 22px);
+    width: 70%;
  }
 
  .fullWidth .figure:hover {
@@ -707,7 +699,7 @@ button:hover {
   }
 
   #header ul, p, body {
-    font-size: 15px;
+    font-size: 17px;
   }
 
   #toggleWidth {
@@ -724,12 +716,13 @@ button:hover {
   /* fonts */
 
   .difficulty-level {
-    font-size: 12px;
+    font-size: 13px;
+    margin: 10px;
   }
 
   h3,
   .level3 h3 {
-    font-size: 15px;
+    font-size: 17px;
   }
 
   h2,
@@ -744,8 +737,12 @@ button:hover {
 
   /* images + video */
 
+  video:hover {
+    background: none;
+  }
+
   .figure {
-    font-size: 12px;
+    font-size: 13px;
     width: 200px;
   }
 
@@ -763,6 +760,19 @@ button:hover {
     float: left;
   }
 
+  video {
+    max-width: 70%;
+    height: auto !important;
+    width: auto !important;
+  }
+
 }
 
+@media only screen and (max-width: 1024px) and (min-resolution: 192dpi){
+  video {
+    width: calc(100% - 22px);
+    max-width: calc(100% - 22px);
+    margin: 10px;
+  }
+}
 </style>

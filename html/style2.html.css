@@ -11,7 +11,8 @@ body {
 }
 
 body, html {
-  font-family: 'Libre Baskerville', serif;
+  /*font-family: 'Libre Baskerville', serif;*/
+  font-family: 'Roboto Slab', serif;
   font-size: 20px;
   color: #545454;
 }
@@ -56,36 +57,35 @@ div {
 }
 
 .level1 h1 {
-  font-size: 25px;
-  font-family: 'Libre Baskerville', serif;
+  font-size: 40px;
+  font-family: 'Roboto Slab', serif;
   text-align: center;
-  -webkit-transform:scale(1,1.2); /* Safari and Chrome */
-  -moz-transform:scale(1,1.2); /* Firefox */
-  -ms-transform:scale(1,1.2); /* IE 9 */
-  -o-transform:scale(1,1.2); /* Opera */
-  transform:scale(1,1.2); /* W3C */
+  font-weight: 200;
 }
 
-.level1 {
+/*.level1 {
   margin-top: 50px;
 }
-
+*/
 h2 {
   font-family: 'Libre Baskerville', serif;
-  font-size: 24px;
+  font-family: 'Roboto Slab', serif;
+  font-size: 20px;
   text-align: center;
-  font-style: italic;
+  letter-spacing: 4px;
 }
 
 h3 {
   font-family: 'Libre Baskerville', serif;
-  font-size: 17px;
+  font-family: 'Roboto Slab', serif;
+  font-size: 20px;
   margin-bottom: -10px;
-  text-decoration: underline;
+  font-weight: 700;
+  /*text-decoration: underline;*/
 }
 
 p, li, code {
-  line-height: 1.7;
+  line-height: 1.5;
 }
 
 code {
@@ -132,7 +132,6 @@ blockquote {
   margin: 20px 0;
   margin-left: calc(24% + 13px);
   padding: 25px;
-  font-family: 'Libre Baskerville', serif;
 }
 
 .linkbox p,
@@ -156,7 +155,8 @@ blockquote {
 blockquote {
   line-height: 1.6;
   letter-spacing: 2px;
-  font-size: 17px;
+  font-size: 20px;
+  font-weight: 300;
   background: #FAF8F4; 
 }
 
@@ -170,9 +170,8 @@ blockquote p {
   padding: 10px;
   display: inline-block;
   margin: 5px 5px 5px 24%;
-  font-weight: 400; 
-  /*font-family: 'Roboto Mono', monospace;*/
-  font-size: 17px;
+  font-size: 20px;
+  font-weight: 300;
   letter-spacing: 1px;
 }
 
@@ -225,6 +224,7 @@ blockquote p {
 
 .level1 ul p {
   margin: initial;
+  width: initial;
   line-height: 1.8;
 }
 
@@ -562,11 +562,25 @@ button:hover {
   height: auto;
 }
 
+.fullWidth video {
+  width: 20%;
+  float: none;
+  margin-left: 0;
+}
+
 @media only screen and (max-width : 1600px) {
 
   p,
-  body {
+  body,
+  h2,
+  h3,
+  blockquote,
+  .difficulty-level {
     font-size: 18px;
+  }
+
+  .level1 h1 {
+    font-size: 35px;
   }
 
   .linkbox,
@@ -588,37 +602,21 @@ button:hover {
   }
 
   p,
-  body {
+  body,
+  h2,
+  h3,
+  blockquote,
+  .difficulty-level {
     font-size: 16px;
+  }
+
+  .level1 h1 {
+    font-size: 30px;
+    font-weight: 300;
   }
 
   #header ul {
     font-size: 18px;
-  }
-
-  h1,
-  .level1 h1 {
-    font-size: 23px;
-  }
-
-  h2 {
-    font-size: 21px;
-  }
-
-  h3 {
-    font-size: 14px;
-    /*margin: initial;*/
-  }
-/*
-  .linkbox,
-  .infobox {
-    padding: 15px;
-  }*/
-
-  blockquote,
-    .difficulty-level {
-    letter-spacing: 1px;
-    font-size: 15px;
   }
 
   video {
@@ -648,6 +646,10 @@ button:hover {
     margin: 10px;
   }
 
+  .level2 h2 {
+    letter-spacing: 3px;
+  }
+
   .level1{
     width: auto;
     margin: 0;
@@ -673,6 +675,13 @@ button:hover {
 
   .level3 {
     margin-top: initial;
+  }
+
+  .difficulty-level {
+    width: 225px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
   }
 
   /*header*/
@@ -716,27 +725,17 @@ button:hover {
 
   /* fonts */
 
-  .difficulty-level {
-    font-size: 12px;
-    float: none;
-    margin: 10px;
-  }
-
-  h3,
-  .level3 h3 {
-    font-size: 15px;
-    margin-top: 20px;
-  }
-
+  p,
+  body,
   h2,
-  .level2 h2 {
-    font-size: 18px;
+  h3,
+  blockquote,
+  .difficulty-level {
+    font-size: 17px;
   }
 
-  h1,
   .level1 h1 {
-    font-size: 18px;
-    line-height: 1.4;
+    font-size: 30px;
   }
 
   #header h1 {
@@ -747,9 +746,21 @@ button:hover {
 
   .figure {
     font-size: 12px;
-    width: 65%;
-    margin: 20px 15%;
+    width: 60%;
+    margin: 20px 20%;
     height: auto;
+  }
+
+  video {
+    max-width: 60%;
+    height: auto;
+    width: auto;
+    margin: 10px;
+    margin-left: 20%;
+  }
+
+  video:hover {
+    background: none;
   }
 
   .ui-resizable-e,
@@ -766,6 +777,14 @@ button:hover {
     float: left;
   }
 
+}
+
+@media only screen and (max-width: 1024px) and (min-resolution: 192dpi){
+  video {
+    width: calc(100% - 22px);
+    max-width: calc(100% - 22px);
+    margin: 10px;
+  }
 }
 
 </style>
