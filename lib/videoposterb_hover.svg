@@ -27,9 +27,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.96580434"
-     inkscape:cx="193.63772"
-     inkscape:cy="190.35005"
+     inkscape:zoom="7.7264347"
+     inkscape:cx="285.94949"
+     inkscape:cy="182.90056"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -68,13 +68,13 @@
        y="-1048.3193" />
     <path
        sodipodi:type="arc"
-       style="color:#000000;fill:#545454;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       style="color:#000000;fill:#545454;fill-opacity:1;fill-rule:nonzero;stroke:#faf8f4;stroke-width:1.34519403000000004;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path3783"
        sodipodi:cx="247"
        sodipodi:cy="167.92859"
        sodipodi:rx="21.5"
        sodipodi:ry="21.5"
-       d="m 268.5,167.92859 a 21.5,21.5 0 1 1 -43,0 21.5,21.5 0 1 1 43,0 z"
+       d="m 268.5,167.92859 c 0,11.87412 -9.62588,21.5 -21.5,21.5 -11.87412,0 -21.5,-9.62588 -21.5,-21.5 0,-11.87412 9.62588,-21.5 21.5,-21.5 11.87412,0 21.5,9.62588 21.5,21.5 z"
        transform="matrix(-0.30627033,-1.0721957,1.0721957,-0.30627033,-739.4036,-557.08812)" />
     <path
        style="fill:#faf8f4;fill-opacity:1;stroke:none"

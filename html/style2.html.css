@@ -11,7 +11,8 @@ body {
 }
 
 body, html {
-  font-family: 'Libre Baskerville', serif;
+  /*font-family: 'Libre Baskerville', serif;*/
+  font-family: 'Roboto Slab', serif;
   font-size: 20px;
   color: #545454;
 }
@@ -19,7 +20,7 @@ body, html {
 div {
   padding: 10px;
   padding-bottom: 0;
-  margin: 10px 15px;
+  margin: 10px 20px;
   position: initial;
 }
 
@@ -45,6 +46,8 @@ div {
   font-weight: 600;
   padding: 0;
   margin: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 26px;
 }
 
 #header p {
@@ -54,36 +57,35 @@ div {
 }
 
 .level1 h1 {
-  font-size: 25px;
-  font-family: 'Libre Baskerville', serif;
+  font-size: 40px;
+  font-family: 'Roboto Slab', serif;
   text-align: center;
-  -webkit-transform:scale(1,1.2); /* Safari and Chrome */
-  -moz-transform:scale(1,1.2); /* Firefox */
-  -ms-transform:scale(1,1.2); /* IE 9 */
-  -o-transform:scale(1,1.2); /* Opera */
-  transform:scale(1,1.2); /* W3C */
+  font-weight: 200;
 }
 
-.level1 {
+/*.level1 {
   margin-top: 50px;
 }
-
+*/
 h2 {
   font-family: 'Libre Baskerville', serif;
-  font-size: 24px;
+  font-family: 'Roboto Slab', serif;
+  font-size: 20px;
   text-align: center;
-  font-style: italic;
+  letter-spacing: 4px;
 }
 
 h3 {
   font-family: 'Libre Baskerville', serif;
-  font-size: 17px;
+  font-family: 'Roboto Slab', serif;
+  font-size: 20px;
   margin-bottom: -10px;
-  text-decoration: underline;
+  font-weight: 700;
+  /*text-decoration: underline;*/
 }
 
 p, li, code {
-  line-height: 1.7;
+  line-height: 1.5;
 }
 
 code {
@@ -130,7 +132,6 @@ blockquote {
   margin: 20px 0;
   margin-left: calc(24% + 13px);
   padding: 25px;
-  font-family: 'Libre Baskerville', serif;
 }
 
 .linkbox p,
@@ -154,7 +155,8 @@ blockquote {
 blockquote {
   line-height: 1.6;
   letter-spacing: 2px;
-  font-size: 17px;
+  font-size: 20px;
+  font-weight: 300;
   background: #FAF8F4; 
 }
 
@@ -168,9 +170,8 @@ blockquote p {
   padding: 10px;
   display: inline-block;
   margin: 5px 5px 5px 24%;
-  font-weight: 400; 
-  /*font-family: 'Roboto Mono', monospace;*/
-  font-size: 17px;
+  font-size: 20px;
+  font-weight: 300;
   letter-spacing: 1px;
 }
 
@@ -223,6 +224,7 @@ blockquote p {
 
 .level1 ul p {
   margin: initial;
+  width: initial;
   line-height: 1.8;
 }
 
@@ -441,8 +443,8 @@ img {
 }
 
 video {
-  width: 20%;
-  margin-left: 40%;
+  width: 30%;
+  margin-left: 35%;
   -webkit-box-shadow: 2px 2px 0px 0px #545454;
   -moz-box-shadow: 2px 2px 0px 0px #545454;
   box-shadow: 2px 2px 0px 0px #545454;
@@ -451,7 +453,6 @@ video {
 
 video:hover {
   background: transparent url('./lib/videoposterb_hover.svg') 50% 50% / cover no-repeat ;
-
 }
 
 /**/
@@ -561,11 +562,25 @@ button:hover {
   height: auto;
 }
 
+.fullWidth video {
+  width: 20%;
+  float: none;
+  margin-left: 0;
+}
+
 @media only screen and (max-width : 1600px) {
 
   p,
-  body {
+  body,
+  h2,
+  h3,
+  blockquote,
+  .difficulty-level {
     font-size: 18px;
+  }
+
+  .level1 h1 {
+    font-size: 35px;
   }
 
   .linkbox,
@@ -587,37 +602,21 @@ button:hover {
   }
 
   p,
-  body {
+  body,
+  h2,
+  h3,
+  blockquote,
+  .difficulty-level {
     font-size: 16px;
+  }
+
+  .level1 h1 {
+    font-size: 30px;
+    font-weight: 300;
   }
 
   #header ul {
     font-size: 18px;
-  }
-
-  h1,
-  .level1 h1 {
-    font-size: 23px;
-  }
-
-  h2 {
-    font-size: 21px;
-  }
-
-  h3 {
-    font-size: 14px;
-    /*margin: initial;*/
-  }
-/*
-  .linkbox,
-  .infobox {
-    padding: 15px;
-  }*/
-
-  blockquote,
-    .difficulty-level {
-    letter-spacing: 1px;
-    font-size: 15px;
   }
 
   video {
@@ -627,39 +626,166 @@ button:hover {
 
 }
 
-@media only screen and (max-width: 1024px) and (min-resolution: 192dpi) {
 
-body,
-.level1 p {
-  font-size: 15px;
+@media only screen and (max-width: 1024px) {
+
+  body {
+    margin-top: 135px;
+  }
+
+  div {
+  margin: 10px 20px;
+  }
+
+  .level1 p, 
+  .level1 pre, 
+  .level1 h1, 
+  .level1 ul, 
+  .level2 h2, 
+  .level3 h3 {
+    width: auto;
+    margin: 10px;
+  }
+
+  .level2 h2 {
+    letter-spacing: 3px;
+  }
+
+  .level1{
+    width: auto;
+    margin: 0;
+  }
+
+  .infobox,
+  .linkbox,
+  blockquote {
+    width: auto;
+    margin: 20px;
+  }
+
+  blockquote {
+    width: auto;
+    margin: 10px;
+    font-size: 13px;
+  }
+
+  ul, ol {
+    width: auto;
+    padding: 0 15px 0 25px;
+  }
+
+  .level3 {
+    margin-top: initial;
+  }
+
+  .difficulty-level {
+    width: 225px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  /*header*/
+
+  #header {
+    max-width: 100%;
+    min-width: initial; 
+    margin-top: -115px;
+  }
+
+  .navWrap {
+    margin: 0 !important;
+  }
+
+  #header ul {
+    width: 100%;
+  }
+
+  #header ul > li {
+    width: 100%;
+  }
+
+  #header ul, p, body {
+    font-size: 15px;
+  }
+
+  #toggleWidth {
+    display: none;
+  }
+
+  #toggleMode {
+    font-size: 15px;
+  }
+
+  button {
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    margin: 0 0 10px 0;
+  }
+
+  /* fonts */
+
+  p,
+  body,
+  h2,
+  h3,
+  blockquote,
+  .difficulty-level {
+    font-size: 17px;
+  }
+
+  .level1 h1 {
+    font-size: 30px;
+  }
+
+  #header h1 {
+    font-size: 20px;
+  }
+
+  /* images + video */
+
+  .figure {
+    font-size: 12px;
+    width: 60%;
+    margin: 20px 20%;
+    height: auto;
+  }
+
+  video {
+    max-width: 60%;
+    height: auto;
+    width: auto;
+    margin: 10px;
+    margin-left: 20%;
+  }
+
+  video:hover {
+    background: none;
+  }
+
+  .ui-resizable-e,
+  .ui-resizable-handle {
+    display: none !important;
+  }
+
+  .level1:hover,
+  #header1:hover {
+    animation: none;
+  }
+
+  .navWrap {
+    float: left;
+  }
+
 }
 
-.level1 p,
-.infobox,
-.linkbox,
-.level1 ol,
-.level1 ul,
-blockquote {
-  width: initial;
-  margin: 5px;
-}
-
-h3,
-.level3 h3 {
-  font-size: 15px;
-}
-
-h2,
-.level2 h2 {
-  /*font-size: 18px;*/
-}
-
-h1,
-.level1 h1 {
-  /*font-size: 201px;*/
-  color:red ;
-}
-
+@media only screen and (max-width: 1024px) and (min-resolution: 192dpi){
+  video {
+    width: calc(100% - 22px);
+    max-width: calc(100% - 22px);
+    margin: 10px;
+  }
 }
 
 </style>

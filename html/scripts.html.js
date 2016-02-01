@@ -39,6 +39,20 @@
       // </div>)';
 
 
+      $( "body" ).prepend('<div id="header">'+
+        '<h1><a href="http://localhost/html/open/template01All/template01/clients/inc/howTo/test04/iframeGetFinal/index.html">Publishing Lab:</a></h1>'+
+        '<button id="toggleWidth" type="button">⟷</button>'+
+        '<button id="toggleMode" type="button">Aa</button>'+
+        '<ul class="navWrap">'+
+            '<li>'+
+                '<a href="#" class="navFirst">Chapters</a>'+
+                '<ul class="navOptions">'+
+                '</ul>'+
+            '</li>'+
+        '</ul>'+
+     '</div>');
+
+
       $('.level1').each(function(){
         parentId = $(this).attr('id')
         console.log(parentId)
@@ -54,9 +68,9 @@
         window.scrollTo(0,positionId)
         hrefIdBackgroundColor = $(hrefId).css('background-color')
         console.log(hrefIdBackgroundColor)
-        $(hrefId+', '+hrefId+' div').not('.ui-resizable-handle, .difficulty-level').addClass('highlightThis').removeClass('removeHighlightThis').css({'background-color':''})
+        $(hrefId+', '+hrefId+' div, blockquote').not('.ui-resizable-handle, .difficulty-level').addClass('highlightThis').removeClass('removeHighlightThis').css({'background-color':''})
         window.setTimeout(function(){
-           $(hrefId+', '+hrefId+' div').not('.ui-resizable-handle, .difficulty-level').addClass('removeHighlightThis').removeClass('highlightThis').css({'background-color':''})
+           $(hrefId+', '+hrefId+' div, blockquote').not('.ui-resizable-handle, .difficulty-level').addClass('removeHighlightThis').removeClass('highlightThis').css({'background-color':''})
         },600)
       })
 
@@ -66,19 +80,17 @@
         i=i+1
         $(this).unwrap()
         thisSrc = $(this).attr('src')
-        figureWrap = `
-          <div class="figure">
-            <div class="thumbnail">`+thisSrc.split('/').pop()+`</div>
-            <a href="#img`+i+`">
-              <img class="bigImage" src=`+thisSrc+` alt="" />
-            </a> 
-            <a href="#_">
-              <div id="img`+i+`" class="lightbox">
-                <img src=`+thisSrc+` alt="" />
-              </div>
-            </a>
-          </div>
-        `;
+        figureWrap = '<div class="figure">'+
+            '<div class="thumbnail">'+thisSrc.split('/').pop()+'</div>'+
+            '<a href="#img'+i+'">'+
+              '<img class="bigImage" src='+thisSrc+' alt="" />'+
+            '</a> '+
+            '<a href="#_">'+
+              '<div id="img'+i+'" class="lightbox">'+
+                '<img src='+thisSrc+' alt="" />'+
+              '</div>'+
+            '</a>'+
+          '</div>';
         $(figureWrap).insertAfter( $(this) );
         $(this).remove()
       })

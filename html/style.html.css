@@ -30,11 +30,7 @@
   background: rgba(255,255,150,1);
 }
 
-.color {
-  background-color: lemonchiffon;
-}
-
-.htmlTitle{
+.pagetitle{
   display: none;
 }
 
@@ -613,10 +609,6 @@ button:hover {
     margin: initial;
   }
 
-  video {
-    width: calc(100% - 22px);
-  }
-
   .level1 .figure,
   .level2 .figure {
     float: none;
@@ -630,7 +622,7 @@ button:hover {
  }
 
  .figure:hover {
-    width: calc(100% - 22px);
+    width: 70%;
  }
 
  .fullWidth .figure:hover {
@@ -654,8 +646,16 @@ button:hover {
 
 }
 
+@media only screen and (max-width: 1024px) {
+  body {
+    margin-top: 135px;
+  }
 
-@media only screen and (max-width: 1024px) and (min-resolution: 192dpi) {
+@media only screen and (max-width: 1024px){
+
+  #header {
+    margin-top: -115px;
+  }
 
   .level1,
   .infobox,
@@ -664,11 +664,24 @@ button:hover {
     width: 100%;
   }
 
+  blockquote {
+    width: calc(100% - 42px);
+  }
+
   ul, ol {
     width: auto;
+    padding: 0 15px 0 25px;
+  }
+
+  .level3 {
+    margin-top: initial;
   }
 
   /*header*/
+
+  #toggleMode {
+    font-size: 15px;
+  }
 
   #header {
     max-width: 100%;
@@ -688,7 +701,7 @@ button:hover {
   }
 
   #header ul, p, body {
-    font-size: 15px;
+    font-size: 17px;
   }
 
   #toggleWidth {
@@ -702,21 +715,16 @@ button:hover {
     margin: 0 0 10px 0;
   }
 
-  /*levels*/
-
-  .level3 {
-    margin-top: initial;
-  }
-
   /* fonts */
 
   .difficulty-level {
-    font-size: 12px;
+    font-size: 13px;
+    margin: 10px;
   }
 
   h3,
   .level3 h3 {
-    font-size: 15px;
+    font-size: 17px;
   }
 
   h2,
@@ -731,11 +739,14 @@ button:hover {
 
   /* images + video */
 
-  .figure {
-    font-size: 12px;
-    width: 150px;
+  video:hover {
+    background: none;
   }
 
+  .figure {
+    font-size: 13px;
+    width: 200px;
+  }
 
   .ui-resizable-e,
   .ui-resizable-handle {
@@ -751,14 +762,19 @@ button:hover {
     float: left;
   }
 
-  video:hover {
-    background: transparent;
-  }
-
   video {
-    background: transparent;
+    max-width: 70%;
+    height: auto !important;
+    width: auto !important;
   }
 
 }
 
+@media only screen and (max-width: 1024px) and (min-resolution: 192dpi){
+  video {
+    width: calc(100% - 22px);
+    max-width: calc(100% - 22px);
+    margin: 10px;
+  }
+}
 </style>
