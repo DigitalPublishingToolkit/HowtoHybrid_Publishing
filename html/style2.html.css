@@ -592,6 +592,10 @@ button:hover {
   margin-left: 0;
 }
 
+.pagetitle {
+  display: none;
+}
+
 @media only screen and (max-width : 1600px) {
 
   p,
@@ -634,8 +638,12 @@ button:hover {
     font-size: 16px;
   }
 
-  .level1 h1 {
+  #header h1 {
     font-size: 23px;
+  }
+
+  .level1 h1 {
+    font-size: 30px;
     font-weight: 300;
   }
 
@@ -718,7 +726,7 @@ button:hover {
   }
 
   .navWrap {
-    margin: 0 !important;
+    margin: 5px 0 0 0 !important;
   }
 
   #header ul {
@@ -729,7 +737,7 @@ button:hover {
     width: 100%;
   }
 
-  #header ul, p, body {
+  #header ul {
     font-size: 15px;
   }
 
@@ -805,11 +813,7 @@ button:hover {
 }
 
 @media only screen and (max-width: 1024px) and (min-resolution: 192dpi){
-  video {
-    width: calc(100% - 22px);
-    max-width: calc(100% - 22px);
-    margin: 10px;
-  }
+
 }
 
 </style>

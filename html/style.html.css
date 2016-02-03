@@ -688,7 +688,7 @@ button:hover {
   /*header*/
 
   #toggleMode {
-    font-size: 15px;
+    font-size: 17px;
   }
 
   #header {
@@ -697,7 +697,7 @@ button:hover {
   }
 
   .navWrap {
-    margin: 0 !important;
+    margin: 5px 0 0 0 !important;
   }
 
   #header ul {
@@ -708,8 +708,8 @@ button:hover {
     width: 100%;
   }
 
-  #header ul, p, body {
-    font-size: 17px;
+  #header ul {
+    font-size: 15px;
   }
 
   #toggleWidth {
@@ -724,6 +724,10 @@ button:hover {
   }
 
   /* fonts */
+
+  p, body {
+    font-size: 17px;
+  }
 
   .difficulty-level {
     font-size: 13px;
