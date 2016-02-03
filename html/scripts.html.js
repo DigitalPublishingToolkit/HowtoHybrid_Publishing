@@ -57,7 +57,7 @@
         $(hrefId+', '+hrefId+' div, blockquote').not('.ui-resizable-handle, .difficulty-level').addClass('highlightThis').removeClass('removeHighlightThis').css({'background-color':''})
         window.setTimeout(function(){
            $(hrefId+', '+hrefId+' div, blockquote').not('.ui-resizable-handle, .difficulty-level').addClass('removeHighlightThis').removeClass('highlightThis').css({'background-color':''})
-        },600)
+        },500)
       })
 
       i=0
@@ -137,17 +137,20 @@
       });
 
 
-// random image float
+// prevent images from overlappenings
 
-    function floatImageRandom(){
+    function imageNoOverlap(){
 
-      var classes = ["figureLeft", "figureRight"];
-
-      $(".figure").each(function(){
-          $(this).addClass(classes[~~(Math.random()*classes.length)]);
-      });
+      $('.figure').each(function(){
+          if ($(this).nextUntil('.figure').length <= 2) {
+          if ($(this).css('float') == 'none') {
+      $(this).addClass('figureRight')
+      }
+          }
+      })
 
     }
+
 
   // toggle between stylesheets
 
@@ -203,7 +206,7 @@
 
     // our toggle functions
     toggleStyleSheets()
-    // floatImageRandom()
+    imageNoOverlap()
 
   })
 

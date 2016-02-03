@@ -96,7 +96,7 @@
           $(hrefId+', '+hrefId+' div, blockquote').not('.ui-resizable-handle, .difficulty-level').addClass('highlightThis').removeClass('removeHighlightThis').css({'background-color':''})
           window.setTimeout(function(){
              $(hrefId+', '+hrefId+' div, blockquote').not('.ui-resizable-handle, .difficulty-level').addClass('removeHighlightThis').removeClass('highlightThis').css({'background-color':''})
-          },600)
+          },500)
         })
   
         i=0
@@ -176,17 +176,20 @@
         });
   
   
-  // random image float
+  // prevent images from overlappenings
   
-      function floatImageRandom(){
+      function imageNoOverlap(){
   
-        var classes = ["figureLeft", "figureRight"];
-  
-        $(".figure").each(function(){
-            $(this).addClass(classes[~~(Math.random()*classes.length)]);
-        });
+        $('.figure').each(function(){
+            if ($(this).nextUntil('.figure').length <= 2) {
+            if ($(this).css('float') == 'none') {
+        $(this).addClass('figureRight')
+        }
+            }
+        })
   
       }
+  
   
     // toggle between stylesheets
   
@@ -242,7 +245,7 @@
   
       // our toggle functions
       toggleStyleSheets()
-      // floatImageRandom()
+      imageNoOverlap()
   
     })
   
@@ -283,6 +286,12 @@
   
   .figureInside{
     margin: 8px !important;
+    float: none !important;
+    display: inline-block;
+  }
+  
+  .figureInside .thumbnail {
+    display: inline-block;
   }
   
   .highlightThis{
@@ -336,6 +345,7 @@
   blockquote {
     padding: 10px;
     margin: 10px 20px;
+    width: calc(100% - 42px);
     float: left;
     border: 1px solid  black;
     -webkit-box-shadow: 2px 2px 0px 0px black;
@@ -653,7 +663,8 @@
   
   video {
     width: 50%;
-    margin-left: 10px;
+    height: auto;
+    margin: 10px;
     -webkit-box-shadow: 2px 2px 0px 0px black;
     -moz-box-shadow: 2px 2px 0px 0px black;
     box-shadow: 2px 2px 0px 0px black;
@@ -697,7 +708,7 @@
   .figure .thumbnail{
     word-break: break-all;
     padding: 10px;
-    max-width: 150px;
+    max-width: 175px;
     height: auto;
     border: 0;
     box-shadow: none;
@@ -1061,6 +1072,21 @@
   </style>
   <style id='b'>
   
+  .highlightThis h1{
+    color: #FAF8F4 !important;
+    transition: color 0.1s ease-in-out;
+    -moz-transition: color 0.1s ease-in-out; /* FF 4 */
+    -webkit-transition: color 0.1s ease-in-out; /* Safari & Chrome */
+    -o-transition: color 0.1s ease-in-out; /* Opera */
+  }
+  
+  .removeHighlightThis h1{
+    transition: color 0.1s ease-in-out;
+    -moz-transition: color 0.1s ease-in-out; /* FF 4 */
+    -webkit-transition: color 0.1s ease-in-out; /* Safari & Chrome */
+    -o-transition: color 0.1s ease-in-out; /* Opera */
+  }
+  
   html {
     background: #FAF8F4;
   }
@@ -1211,6 +1237,16 @@
   .infobox h3 {
     margin: 0;
     margin-bottom: -10px;
+  }
+  
+  .infobox a {
+    color: #FAF8F4;
+    border-bottom: 1px solid #FAF8F4;
+  }
+  
+  .infobox a:hover {
+    background-color: #FAF8F4;
+    color: #545454;
   }
   
   blockquote {
@@ -1436,21 +1472,12 @@
     padding: 0;
     margin: 10px 0;
     z-index: 5;
-    /*overflow: hidden;*/
     width: 20%;
     height: 0;
   }
   
-  .figureLeft {
-    float: left;
-    margin-right: 30px;
-    margin-bottom: -20%;
-  }
-  
   .figureRight {
     float: right;
-    margin-left: 30px;
-    margin-bottom: -20%;
   }
   
   img {
@@ -1505,6 +1532,7 @@
   
   video {
     width: 30%;
+    height: auto;
     margin-left: 35%;
     -webkit-box-shadow: 2px 2px 0px 0px #545454;
     -moz-box-shadow: 2px 2px 0px 0px #545454;
@@ -1672,7 +1700,7 @@
     }
   
     .level1 h1 {
-      font-size: 30px;
+      font-size: 23px;
       font-weight: 300;
     }
   
@@ -1890,12 +1918,12 @@ href="http://template01.info">Template</a>)</p>
 <p><strong>Method 1</strong> builds on chapter 6 of the Hybrid Publishing Toolkit book, it relies on a makefile and using the command line.</p>
 <p><strong>Method 2:</strong> The latest option is to use our platform created by Gottfried Haider, this eliminates the need for command line and simplifies the setup on GitHub. You can find it <a
 href="http://hpt.publishinglab.org/">here</a>.</p>
-<div id="technical-considerations" class="section level3">
-<h3>Technical considerations</h3>
+<div class="infobox">
+<h3>Technical Considerations</h3>
 <p>Before you begin you will need:</p>
 <ul>
 <li><p>your text (in Word .docx format) and image files (jpg or png).</p></li>
-<li><p><a href="https://desktop.github.com/">GitHub Desktop</a> (for working collaboratively)</p></li>
+<li><p><a href="https://desktop.github.com/">GitHub Desktop</a> program (for working collaboratively)</p></li>
 <li><p><a href="http://macdown.uranusjr.com/">MacDown</a> or XCode (to edit your sourcefile which is written in markdown)</p></li>
 <li><p><a
 href="http://calibre-ebook.com/download">Calibre</a> (to view/edit ebooks)</p></li>
@@ -1903,8 +1931,8 @@ href="http://calibre-ebook.com/download">Calibre</a> (to view/edit ebooks)</p></
 <p>If you are using Method 1, you will also need to:</p>
 <ul>
 <li><p>install <a href="http://pandoc.org/installing.html">Pandoc</a></p></li>
-<li><p>you will need to familiarise yourself with the command line (terminal on Mac or go to the Start menu on Windows and type cmd into search/run - more <a
-href="http://www.computerhope.com/issues/chusedos.htm">here</a>)</p></li>
+<li>you will need to familiarise yourself with the command line (terminal on Mac or go to the Start menu on Windows and type cmd into search/run - more <a
+href="http://www.computerhope.com/issues/chusedos.htm">here</a>)</li>
 </ul>
 </div>
 </div>
@@ -1958,11 +1986,15 @@ href="http://en.flossmanuals.net/command-line/getting-started/">here</a>.</p>
 <div id="three-key-things-an-epub-developer-needs-to-have-right" class="section level3">
 <h3>Three key things an ePub developer needs to have right</h3>
 <p>A successful ePub has been visually styled (with css and a cover), correctly classified (with metadata), and validated.</p>
-The epub folder typically has 3 important components:
+<p>The epub folder typically has 3 important components:</p>
 <ul>
-the cover image (png or jpg) stylesheet metadata file
+<ol style="list-style-type: decimal">
+<li>the cover image (png or jpg)</li>
+<li>stylesheet</li>
+<li>metadata file
 </ul>
-
+</li>
+</ol>
 <p>The final book needs to have the correct cover image obviously, but you also need to be sure the metadata file has the right information in it so that people can find your book. Talk to the editor to be sure you have the right metadata information, including the epub isbn number. Here's more information about <a href="http://www.publishinglab.nl/blog/2015/09/25/metadata-schmetadata-whats-it-good-for/">metadata</a>.</p>
 <p>The look of your book is controlled by the styles, you can get color values and typeface suggestions from the print designer. Make sure you embed the fonts you use by including them in the make file and in the lib folder. Here's more information about <a href="http://www.publishinglab.nl/blog/2015/07/01/epub-typography/">type in epubs</a>.</p>
 <p>Last, but not least, the developer needs to validate epub to make sure there are no errors that will cause it to be rejected from a retailer or not open correctly for readers.</p>
@@ -2114,6 +2146,10 @@ href="http://www.publishinglab.nl/unstudio/">here</a>.</p>
 <img src="lib/video-scroll.gif" />
 </div>
 <p>Since this App was specifically designed for an iPad, it could capitalise on the built-in functions of the iPad, like swiping to the next chapter.</p>
+<p>PublishingLab collaborated with the Institute of Network Cultures to create a web platform for reading the latest Theory on Demand publication.</p>
+<div class="figure">
+<img src="lib/video-scroll.gif" />
+</div>
 <video poster="./lib/png.png">
 <source src="lib/samplevid.mp4" type="video/mp4" />
 </video>

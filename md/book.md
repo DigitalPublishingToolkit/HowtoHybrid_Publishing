@@ -63,14 +63,15 @@ GitHub. You can find it <a
 href="http://hpt.publishinglab.org/">here</a>.
 
 
-### Technical considerations
+<div class="infobox">
+### Technical Considerations
 
 Before you begin you will need:
 
 - your text (in Word .docx format) and image files (jpg
 or png).
 
-- <a href="https://desktop.github.com/">GitHub Desktop</a> (for working collaboratively)
+- <a href="https://desktop.github.com/">GitHub Desktop</a> program (for working collaboratively)
 
 - <a href="http://macdown.uranusjr.com/">MacDown</a> or XCode (to edit your sourcefile which is written in markdown)
 
@@ -85,6 +86,7 @@ If you are using Method 1, you will also need to:
 on Mac or go to the Start menu on Windows and type cmd into search/run -
 more <a
 href="http://www.computerhope.com/issues/chusedos.htm">here</a>)
+</div>
 
 
 ## How: Instructions for Creating an ePub
@@ -172,15 +174,18 @@ put any images (.jpg or .png) in the 'imgs' folder inside the markdown folder ex
 *the cover.jpg image belongs in the epub folder
 
 
+
+
 ### Three key things an ePub developer needs to have right
 
 A successful ePub has been visually styled (with css and a cover), correctly classified (with metadata), and validated.
 
 The epub folder typically has 3 important components:
+
 <ul>
-the cover image (png or jpg) 
-stylesheet
-metadata file
+1. the cover image (png or jpg)
+2. stylesheet 
+3. metadata file
 </ul>
 
 The final book needs to have the correct cover image obviously, but you also need to be sure the metadata file has the right information in it so that people can find your book. Talk to the editor to be sure you have the right metadata information, including the epub isbn number.
@@ -460,6 +465,11 @@ introduction that the user controls by swiping down on the app.
 Since this App was specifically designed for an iPad, it could
 capitalise on the built-in functions of the iPad, like swiping to the
 next chapter.
+
+PublishingLab collaborated with the Institute of Network Cultures to create a web platform for reading
+the latest Theory on Demand publication. 
+
+![](lib/video-scroll.gif)
 
 <video poster="./lib/png.png">
 <source src="lib/samplevid.mp4" type="video/mp4" />

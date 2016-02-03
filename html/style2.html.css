@@ -1,5 +1,20 @@
 <style id='b'>
 
+.highlightThis h1{
+  color: #FAF8F4 !important;
+  transition: color 0.1s ease-in-out;
+  -moz-transition: color 0.1s ease-in-out; /* FF 4 */
+  -webkit-transition: color 0.1s ease-in-out; /* Safari & Chrome */
+  -o-transition: color 0.1s ease-in-out; /* Opera */
+}
+
+.removeHighlightThis h1{
+  transition: color 0.1s ease-in-out;
+  -moz-transition: color 0.1s ease-in-out; /* FF 4 */
+  -webkit-transition: color 0.1s ease-in-out; /* Safari & Chrome */
+  -o-transition: color 0.1s ease-in-out; /* Opera */
+}
+
 html {
   background: #FAF8F4;
 }
@@ -150,6 +165,16 @@ blockquote {
 .infobox h3 {
   margin: 0;
   margin-bottom: -10px;
+}
+
+.infobox a {
+  color: #FAF8F4;
+  border-bottom: 1px solid #FAF8F4;
+}
+
+.infobox a:hover {
+  background-color: #FAF8F4;
+  color: #545454;
 }
 
 blockquote {
@@ -375,21 +400,12 @@ blockquote p {
   padding: 0;
   margin: 10px 0;
   z-index: 5;
-  /*overflow: hidden;*/
   width: 20%;
   height: 0;
 }
 
-.figureLeft {
-  float: left;
-  margin-right: 30px;
-  margin-bottom: -20%;
-}
-
 .figureRight {
   float: right;
-  margin-left: 30px;
-  margin-bottom: -20%;
 }
 
 img {
@@ -444,6 +460,7 @@ img {
 
 video {
   width: 30%;
+  height: auto;
   margin-left: 35%;
   -webkit-box-shadow: 2px 2px 0px 0px #545454;
   -moz-box-shadow: 2px 2px 0px 0px #545454;
@@ -611,7 +628,7 @@ button:hover {
   }
 
   .level1 h1 {
-    font-size: 30px;
+    font-size: 23px;
     font-weight: 300;
   }
 

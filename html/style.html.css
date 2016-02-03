@@ -2,6 +2,12 @@
 
 .figureInside{
   margin: 8px !important;
+  float: none !important;
+  display: inline-block;
+}
+
+.figureInside .thumbnail {
+  display: inline-block;
 }
 
 .highlightThis{
@@ -55,6 +61,7 @@ div,
 blockquote {
   padding: 10px;
   margin: 10px 20px;
+  width: calc(100% - 42px);
   float: left;
   border: 1px solid  black;
   -webkit-box-shadow: 2px 2px 0px 0px black;
@@ -372,7 +379,8 @@ a:hover {
 
 video {
   width: 50%;
-  margin-left: 10px;
+  height: auto;
+  margin: 10px;
   -webkit-box-shadow: 2px 2px 0px 0px black;
   -moz-box-shadow: 2px 2px 0px 0px black;
   box-shadow: 2px 2px 0px 0px black;
@@ -416,7 +424,7 @@ img {
 .figure .thumbnail{
   word-break: break-all;
   padding: 10px;
-  max-width: 150px;
+  max-width: 175px;
   height: auto;
   border: 0;
   box-shadow: none;
