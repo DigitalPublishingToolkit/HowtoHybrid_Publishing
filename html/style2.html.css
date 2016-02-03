@@ -840,6 +840,11 @@ button:hover {
     margin-left: 20%;
   }
 
+  .videoPlay{
+    font-size: 32px;
+  }
+
+
   video:hover {
     background: none;
   }
@@ -861,6 +866,13 @@ button:hover {
 }
 
 @media only screen and (max-width: 1024px) and (min-resolution: 192dpi){
+
+
+.videoPlay{
+
+    font-size: 32px;
+
+}
 
 }
 

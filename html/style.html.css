@@ -697,12 +697,11 @@ button:hover {
 @media only screen and (max-width: 1024px){
 
 
-.videoPlay{
+  .videoPlay{
 
-  width: calc(70% - 20px);
-
-
-}
+    width: calc(70% - 20px);
+      font-size: 32px;
+  }
 
   .level1,
   .infobox,
@@ -829,5 +828,15 @@ button:hover {
     max-width: calc(100% - 22px);
     margin: 10px;
   }
+
+.videoPlay{
+
+    width: calc(100% - 22px);
+    max-width: calc(100% - 22px);
+    font-size: 32px;
+    margin: 10px;
+
+}
+
 }
 </style>
