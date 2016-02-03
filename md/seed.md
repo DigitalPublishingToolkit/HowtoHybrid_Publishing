@@ -141,7 +141,11 @@ If you get an error message, there is a useful resource section <a href="http://
 Here's a quick video of how \*the Sausage Machine\* turns a Word
 document into an ePub:
 
+<<<<<<< HEAD
 <video poster="./lib/png.png"><source src="lib/samplevid.mp4" type="video/mp4"/></video>
+=======
+<video poster="./html/background.png"><source src="./lib/samplevid.mp4" type="video/mp4"/></video>
+>>>>>>> 14d2d4995170f4d66d5dbdef07f299baff6a8035
 
 Using *the Sausage Machine\* platform 
 
@@ -464,12 +468,16 @@ Since this App was specifically designed for an iPad, it could
 capitalise on the built-in functions of the iPad, like swiping to the
 next chapter.
 
+<<<<<<< HEAD
 PublishingLab collaborated with the Institute of Network Cultures to create a web platform for reading
 the latest Theory on Demand publication. 
 
 ![](lib/video-scroll.gif)
 
 <video poster="./lib/png.png"><source src="lib/samplevid.mp4" type="video/mp4" /></video>
+=======
+<video poster="./html/background.png"><source src="lib/samplevid.mp4" type="video/mp4" /></video>
+>>>>>>> 14d2d4995170f4d66d5dbdef07f299baff6a8035
 
 Format: Web App
 

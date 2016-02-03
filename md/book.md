@@ -141,7 +141,11 @@ If you get an error message, there is a useful resource section <a href="http://
 Here's a quick video of how \*the Sausage Machine\* turns a Word
 document into an ePub:
 
+<<<<<<< HEAD
 <video poster="./lib/png.png"><source src="lib/samplevid.mp4" type="video/mp4"/></video>
+=======
+<video poster="./lib/png.png"><source src="./lib/samplevid.mp4" type="video/mp4"/></video>
+>>>>>>> 14d2d4995170f4d66d5dbdef07f299baff6a8035
 
 Using *the Sausage Machine\* platform 
 
