@@ -161,6 +161,13 @@ blockquote {
   color: #FAF8F4;
 }
 
+.infobox a{
+  color: #FAF8F4;
+  text-decoration: none;
+  border-bottom: 1px solid #FAF8F4;
+  padding-bottom: 1px;
+  margin-bottom: -1px;
+}
 .linkbox h3,
 .infobox h3 {
   margin: 0;

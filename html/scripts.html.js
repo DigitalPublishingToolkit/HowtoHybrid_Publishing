@@ -24,7 +24,7 @@
 
       });
 
-      // generate header and chapters
+      //generate header
 
       $( "body" ).prepend('<div id="header">'+
         '<h1><a href="http://localhost/html/open/template01All/template01/clients/inc/howTo/test04/iframeGetFinal/index.html">Publishing Lab:</a></h1>'+
@@ -38,6 +38,7 @@
             '</li>'+
         '</ul>'+
      '</div>');
+
 
       $('.level1').each(function(){
         parentId = $(this).attr('id')
@@ -68,14 +69,10 @@
         thisSrc = $(this).attr('src')
         figureWrap = '<div class="figure">'+
             '<div class="thumbnail">'+thisSrc.split('/').pop()+'</div>'+
-            '<a href="#img'+i+'">'+
               '<img class="bigImage" src='+thisSrc+' alt="" />'+
-            '</a> '+
-            '<a href="#_">'+
               '<div id="img'+i+'" class="lightbox">'+
                 '<img src='+thisSrc+' alt="" />'+
               '</div>'+
-            '</a>'+
           '</div>';
         $(figureWrap).insertAfter( $(this) );
         $(this).remove()
@@ -169,6 +166,9 @@
         $('body').removeClass('activeStyleA')
         $('#toggleMode').addClass('aActive')
         $('#toggleMode').removeClass('bActive')
+      if($(".level1, .linkbox, .infobox, #header" ).hasClass('ui-resizable')){
+        $(".level1, .linkbox, .infobox, #header" ).resizable('disable')
+      }
       window.location.hash = 'styleb'
     }
 
@@ -186,6 +186,10 @@
       $('body').removeClass('activeStyleA')
       $('#toggleMode').addClass('aActive')
       $('#toggleMode').removeClass('bActive')
+      if($(".level1, .linkbox, .infobox, #header" ).hasClass('ui-resizable')){
+        $(".level1, .linkbox, .infobox, #header" ).resizable('disable')
+      }
+
       window.location.hash = 'styleb'
 
     }else{
@@ -194,6 +198,8 @@
       $('#b').remove()
       $('#toggleMode').addClass('bActive')
       $('#toggleMode').removeClass('aActive')
+      $(".level1, .linkbox, .infobox, #header" ).resizable('enable')
+
       window.location.hash = 'stylea'
 
     }
