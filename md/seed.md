@@ -139,9 +139,7 @@ If you get an error message, there is a useful resource section <a href="http://
 Here's a quick video of how \*the Sausage Machine\* turns a Word
 document into an ePub:
 
-<video poster="./lib/png.png">
-    <source src="lib/samplevid.mp4" type="video/mp4"/>
-</video>
+<video poster="./html/background.png"><source src="./lib/samplevid.mp4" type="video/mp4"/></video>
 
 Using *the Sausage Machine\* platform 
 
@@ -461,9 +459,7 @@ Since this App was specifically designed for an iPad, it could
 capitalise on the built-in functions of the iPad, like swiping to the
 next chapter.
 
-<video poster="./lib/png.png">
-<source src="lib/samplevid.mp4" type="video/mp4" />
-</video>
+<video poster="./html/background.png"><source src="lib/samplevid.mp4" type="video/mp4" /></video>
 
 Format: Web App
 
