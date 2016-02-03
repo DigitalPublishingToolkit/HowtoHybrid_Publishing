@@ -208,6 +208,8 @@
 
     }
 
+    positionPlayButton()
+
   }
 
   // Toggle Mode
@@ -220,9 +222,65 @@
 
   })
 
+  // wrap video
+
+  $("video").each(function(){
+
+    $(this).wrap('<div class="videoWrap"></div>')
+    $(this).before('<div class="videoPlay">▶</div>')
+  })
+
+  // position play button
+
+  function positionPlayButton(){
+    $(".videoWrap").each(function(){
+      var savedThis = $(this)
+      setTimeout(function(){ 
+        savedThis.find('.videoPlay').css({
+          'height':savedThis.find('video').outerHeight()+'px',
+          'line-height':savedThis.find('video').outerHeight()+'px',
+          'opacity':'1'
+
+        })
+      }, 500);
+      
+    })
+  }
+
+  var delay = (function(){
+    var timer = 0;
+    return function(callback, ms){
+      clearTimeout (timer);
+      timer = setTimeout(callback, ms);
+    };
+  })();
+  Usage:
+
+  $(window).resize(function() {
+      $('.videoPlay').css({'opacity':'0'})
+      delay(function(){
+      positionPlayButton()
+        
+        //...
+      }, 500);
+  });
+
+
+  positionPlayButton()
+
+
+  // Make video play on click .videoPlay
+
+    $(document).on('click','.videoPlay',function(){
+      $(this).next('video').click()
+      
+      $(this).remove()
+    })
 
   // Make video play on click
     $("video").click(function(e){
+
+        $(this).prev('.videoPlay').remove()
 
         $(this).attr("controls","controls")
 
@@ -250,6 +308,6 @@
     })
 
 
-})
+  })
 
   </script>
