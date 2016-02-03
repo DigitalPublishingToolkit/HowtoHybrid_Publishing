@@ -385,11 +385,11 @@ video {
   -moz-box-shadow: 2px 2px 0px 0px black;
   box-shadow: 2px 2px 0px 0px black;
   border: 1px solid black;
-  background: transparent url('./lib/videopostera.svg') 50% 50% / cover no-repeat ;
+  background: transparent url('./html/videopostera.svg') 50% 50% / cover no-repeat ;
 }
 
 video:hover {
-  background: transparent url('./lib/videopostera_hover.svg') 50% 50% / cover no-repeat;
+  background: transparent url('./html/videopostera_hover.svg') 50% 50% / cover no-repeat;
 }
 
 .figure {
@@ -661,10 +661,6 @@ button:hover {
 
 @media only screen and (max-width: 1024px){
 
-  #header {
-    margin-top: -115px;
-  }
-
   .level1,
   .infobox,
   .linkbox,
@@ -694,6 +690,8 @@ button:hover {
   #header {
     max-width: 100%;
     min-width: initial; 
+    margin-top: -115px;
+    position: absolute;
   }
 
   .navWrap {

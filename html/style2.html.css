@@ -472,11 +472,11 @@ video {
   -webkit-box-shadow: 2px 2px 0px 0px #545454;
   -moz-box-shadow: 2px 2px 0px 0px #545454;
   box-shadow: 2px 2px 0px 0px #545454;
-  background: transparent url('./lib/videoposterb.svg') 50% 50% / cover no-repeat ;
+  background: transparent url('./html/videoposterb.svg') 50% 50% / cover no-repeat ;
 }
 
 video:hover {
-  background: transparent url('./lib/videoposterb_hover.svg') 50% 50% / cover no-repeat ;
+  background: transparent url('./html/videoposterb_hover.svg') 50% 50% / cover no-repeat ;
 }
 
 /**/
@@ -723,6 +723,7 @@ button:hover {
     max-width: 100%;
     min-width: initial; 
     margin-top: -115px;
+    position: absolute;
   }
 
   .navWrap {

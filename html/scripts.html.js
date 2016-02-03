@@ -32,7 +32,7 @@
         '<button id="toggleMode" type="button">Aa</button>'+
         '<ul class="navWrap">'+
             '<li>'+
-                '<a href="#" class="navFirst">Chapters</a>'+
+                '<a class="navFirst">Chapters</a>'+
                 '<ul class="navOptions">'+
                 '</ul>'+
             '</li>'+
@@ -51,7 +51,11 @@
       $(document).on('click','.navOptions a', function(e){
         e.preventDefault()
         hrefId = $(this).attr('href')
-        positionId = $(hrefId).position().top-125
+        if($(window).width()<1025){
+          positionId = $(hrefId).position().top-10
+        }else{
+          positionId = $(hrefId).position().top-125
+        }
         window.scrollTo(0,positionId)
         hrefIdBackgroundColor = $(hrefId).css('background-color')
         console.log(hrefIdBackgroundColor)

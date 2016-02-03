@@ -141,11 +141,7 @@ If you get an error message, there is a useful resource section <a href="http://
 Here's a quick video of how \*the Sausage Machine\* turns a Word
 document into an ePub:
 
-<<<<<<< HEAD
-<video poster="./lib/png.png"><source src="lib/samplevid.mp4" type="video/mp4"/></video>
-=======
 <video poster="./html/background.png"><source src="./lib/samplevid.mp4" type="video/mp4"/></video>
->>>>>>> 14d2d4995170f4d66d5dbdef07f299baff6a8035
 
 Using *the Sausage Machine\* platform 
 
@@ -454,30 +450,24 @@ print edition.
 Read more about the project <a
 href="http://www.publishinglab.nl/unstudio/">here</a>.
 
-The team created a custom menu for the book:
-
 ![](lib/menu-UNStudio.jpg)
+
+The team created a custom menu for the book:
 
 With rich media eBooks like this, it is possible to include more
 interactive features. This chapter starts with a video scroll
 introduction that the user controls by swiping down on the app.
 
-![](lib/video-scroll.gif)
-
 Since this App was specifically designed for an iPad, it could
 capitalise on the built-in functions of the iPad, like swiping to the
 next chapter.
 
-<<<<<<< HEAD
 PublishingLab collaborated with the Institute of Network Cultures to create a web platform for reading
 the latest Theory on Demand publication. 
 
 ![](lib/video-scroll.gif)
 
-<video poster="./lib/png.png"><source src="lib/samplevid.mp4" type="video/mp4" /></video>
-=======
 <video poster="./html/background.png"><source src="lib/samplevid.mp4" type="video/mp4" /></video>
->>>>>>> 14d2d4995170f4d66d5dbdef07f299baff6a8035
 
 Format: Web App
 
@@ -487,17 +477,17 @@ Format: Web App
 
 Navigating Theory on Demand: an online reading experience of TOD17 GrayZones 
 
+![](lib/NavigatingTOD-tools.png)
+
 PublishingLab collaborated with the Institute of Network Cultures to create a web platform for reading
 the latest Theory on Demand publication. 
 The previous outputs for Theory on Demand has been print on demand and ePub formats, but the team saw an opportunity to improve the accessibility of the content and navigation design in html.
 
 Their site layout included a Table of Contents and expandable tools panel.
 
-![](lib/NavigatingTOD-cite.png)
-
 They incorporated various functions to make it easier to search, highlight and cite the content of the book in the browser. See the citation function in the tools panel:
 
-![](lib/NavigatingTOD-tools.png)
+![](lib/NavigatingTOD-cite.png)
 
 Read more about the project <a
 href="http://www.publishinglab.nl/navigating-tod/">here</a>.
