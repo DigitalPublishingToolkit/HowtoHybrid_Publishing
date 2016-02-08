@@ -32,7 +32,7 @@
         '<button id="toggleMode" type="button">Aa</button>'+
         '<ul class="navWrap">'+
             '<li>'+
-                '<a href="#" class="navFirst">Chapters</a>'+
+                '<a class="navFirst">Chapters</a>'+
                 '<ul class="navOptions">'+
                 '</ul>'+
             '</li>'+
@@ -51,7 +51,11 @@
       $(document).on('click','.navOptions a', function(e){
         e.preventDefault()
         hrefId = $(this).attr('href')
-        positionId = $(hrefId).position().top-125
+        if($(window).width()<1025){
+          positionId = $(hrefId).position().top-10
+        }else{
+          positionId = $(hrefId).position().top-125
+        }
         window.scrollTo(0,positionId)
         hrefIdBackgroundColor = $(hrefId).css('background-color')
         console.log(hrefIdBackgroundColor)
@@ -204,6 +208,8 @@
 
     }
 
+    positionPlayButton()
+
   }
 
   // Toggle Mode
@@ -216,9 +222,65 @@
 
   })
 
+  // wrap video
+
+  $("video").each(function(){
+
+    $(this).wrap('<div class="videoWrap"></div>')
+    $(this).before('<div class="videoPlay">▶</div>')
+  })
+
+  // position play button
+
+  function positionPlayButton(){
+    $(".videoWrap").each(function(){
+      var savedThis = $(this)
+      setTimeout(function(){ 
+        savedThis.find('.videoPlay').css({
+          'height':savedThis.find('video').outerHeight()+'px',
+          'line-height':savedThis.find('video').outerHeight()+'px',
+          'opacity':'1'
+
+        })
+      }, 1000);
+      
+    })
+  }
+
+  var delay = (function(){
+    var timer = 0;
+    return function(callback, ms){
+      clearTimeout (timer);
+      timer = setTimeout(callback, ms);
+    };
+  })();
+  Usage:
+
+  $(window).resize(function() {
+      $('.videoPlay').css({'opacity':'0'})
+      delay(function(){
+      positionPlayButton()
+        
+        //...
+      }, 500);
+  });
+
+
+  positionPlayButton()
+
+
+  // Make video play on click .videoPlay
+
+    $(document).on('click','.videoPlay',function(){
+      $(this).next('video').click()
+      
+      $(this).remove()
+    })
 
   // Make video play on click
     $("video").click(function(e){
+
+        $(this).prev('.videoPlay').remove()
 
         $(this).attr("controls","controls")
 
@@ -246,6 +308,6 @@
     })
 
 
-})
+  })
 
   </script>
