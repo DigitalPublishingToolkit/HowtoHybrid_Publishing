@@ -102,9 +102,10 @@
 
       // edit linkbox appearance
 
-      // $('.linkbox, .infobox').each(function() {
-      //   $(this).children().not('h1, .ui-resizable-handle').wrapAll('<div class="level2"></div>');
-      // })
+      $('.linkbox, .infobox').each(function() {
+        $(this).children().not('h1, .ui-resizable-handle').wrapAll('<div class="level2"></div>');
+        console.log($(this).children())
+      })
 
       // toggle full div width
 
