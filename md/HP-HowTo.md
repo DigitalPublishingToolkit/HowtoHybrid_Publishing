@@ -24,6 +24,7 @@ Rights: CC BY-NC 4.0
 
 ## Introductie
 Hoe kunnen we op zinvolle wijze online kritiek bedrijven en koe kan de digitale omgeving de huidige kritiek verrijken? Aan de hand van deze vragen onderzochten we de mogelijkheden die het Longform genre de kritiek bied. In deze 'how to' delen we onze ervaringen en kennis. 
+
 ##Wat vind je in deze ‘How To’ 
 Deze 'How To' bied een praktische 'guide' voor culturele tijdschriften, kleine uitgeverijen, websites, blogs, critici, schrijvers, ontwerpers en ontwikkelaars voor het creëren en verrijken van longforms. Hoe maak je een longform en waar te beginnen? In deze omgeving 
 vind je vier verschillende experimenten - voorbeelden van longforms - met benodigdheden en tips om zelf aan de slag te gaan.  
@@ -33,7 +34,13 @@ Er bestaat geen duidelijke definitie, veelal wordt er verwezen naar diepgaande o
 
 <div class="infobox">
 #Hoe moet je deze ‘How To’ gebruikten 
-In deze 'how to' zijn 4 longform experimenten te vinden met elk een eigen moeilijkheidsgraad - easy, moderate en expert - die aangeeft in welke mate technische kennis vereist is. Bij elk experiment vind je links op de pagina het voorbeeld en de technische overwegingen. Rechts kun je de benodigdheden en extra bronnen raadplegen. 
+In deze 'how to' zijn 4 longform experimenten te vinden met elk een eigen moeilijkheidsgraad - easy, moderate en expert - die aangeeft in welke mate technische kennis vereist is. 
+
+##Hatwee
+Bij elk experiment vind je links op de pagina het voorbeeld en de technische overwegingen. Rechts kun je de benodigdheden en extra bronnen raadplegen. 
+
+###Drie
+Test
 </div>
 
 <div class="linkbox">
@@ -80,11 +87,12 @@ Lees de gehele blogpost over longform tools [hier](http://www.publishinglab.nl/d
 
 ##Technische overwegingen 
 Aesop Engine (Wordpress plugin)
+
 <div class="difficulty-level moderate"></div>
 
 
-[Timeline Express](https://wordpress.org/plugins/timeline-express/) (Wordpress plugin) <br>
-</div>
+[Timeline Express](https://wordpress.org/plugins/timeline-express/) (Wordpress plugin)
+
 
 <div class="infobox">
 #Een extraatje<br>
@@ -172,7 +180,7 @@ We hebben deze probleem opgelost door:
 3. Lasse en Marlon?
 
 3. Lasse en Marlon?
-
+vind je in deze ‘How To’ Deze 'How To' bied een praktische 'guide' voor culturele tijdschriften, kleine uitgeverijen, websites, blogs, critici, schrijvers, ontwerpers en ontwikkelaars voor het 
 
 <div class="linkbox">
 ##Benodigdheden
@@ -185,6 +193,12 @@ Lasse en Marlon? (indien die er zijn)
 Hier komen leuke linkjes met inspirerende dingen/voorbeelden
 </div>
 
+<div class="infobox">
+##Een extraatje** <br>
+http://psousa.net/demos/zoom-images/ <br>
+</div>
+
+
 
 #De Image Map / Beeldkaart
 ##Introductie
@@ -193,10 +207,13 @@ Link voorbeeld kunstbeeld
 
 ##Het experiment
 omschrijven leonieke
+
 ![](lib/Kunstbeeld.png)
+<!-- *[KnightLab](https://projects.knightlab.com/)* -->
 
 ##Technische overwegingen
 Voor deze image map is gezocht naar een alternatief op de meer traditionele image map. Het doel was iets te vinden met een moderne uitstraling, werkend op verschillende platforms. 
+
 
 Er is gekozen om de traditionele image map te vervangen voor [Leaflet](http://leafletjs.com/); een open source JavaScript-bibliotheek voor interactieve kaarten. Hierdoor wordt je afbeelding minder statisch en je hebt meer het gevoel dat je kunt ’surfen’ in een digitale omgeving. 
 Door het gebruik van Leaflet hoef je je foto niet op te delen in stukken maar kun je ‘markers’ toevoegen op je kaart. Door er op te klikken opent zich een pop-up met een speler voor audio. 
@@ -208,11 +225,6 @@ Door het gebruik van Leaflet hoef je je foto niet op te delen in stukken maar ku
 [Responsive Image Map Plugin](http://mattstow.com/experiment/responsive-image-maps/rwd-image-maps.html#ppg) <br>
 [jQuery Rain](http://www.jqueryrain.com/?xBLzPIQE) <br>
 [Pedro’s Tech Mumblings](http://build-failed.blogspot.nl/2012/11/zoomable-image-with-leaflet.html) <br>
-</div>
-
-<div class="infobox">
-##Een extraatje** <br>
-http://psousa.net/demos/zoom-images/ <br>
 </div>
 
 

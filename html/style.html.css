@@ -656,7 +656,8 @@ button:hover {
   .level2 .figure {
     float: none;
     margin: 0;
-  margin-left: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
 
   }
 

@@ -50,6 +50,7 @@
   -o-transition: color 0.1s ease-in-out; /* Opera */
 }
 
+
 html {
   background: #FAF8F4;
 }
@@ -113,16 +114,16 @@ div {
   font-weight: 200;
 }
 
-/*.level1 {
-  margin-top: 50px;
+.level1 ~ .level1 {
+  margin-top: 5%;
 }
-*/
+
 h2 {
   font-family: 'Libre Baskerville', serif;
   font-family: 'Roboto Slab', serif;
   font-size: 20px;
-  text-align: center;
   letter-spacing: 4px;
+  font-weight: 400;
 }
 
 h3 {
@@ -131,11 +132,10 @@ h3 {
   font-size: 20px;
   margin-bottom: -10px;
   font-weight: 700;
-  /*text-decoration: underline;*/
 }
 
 p, li, code {
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 code {
@@ -150,13 +150,15 @@ pre {
   margin: 10px 10px 0 20px;
 }
 
+.level1 a,
 p>a,
 li>a {
-  border-bottom: 1px solid #545454 ;
+  border-bottom: 1px solid #545454;
   color: #545454 ;
   text-decoration: none;
 }
 
+.level1 a:hover,
 p>a:hover,
 li>a:hover {
   border: 0;
@@ -167,56 +169,6 @@ li>a:hover {
 .figure a,
 .figure a:hover {
   border: 0;
-}
-
-.linkbox,
-.infobox,
-blockquote {
-  width: calc(50% - 13px);
-  float: none;
-  border: 1px solid #545454;
-  -webkit-box-shadow: 2px 2px 0px 0px #545454;
-  -moz-box-shadow: 2px 2px 0px 0px #545454;
-  box-shadow: 2px 2px 0px 0px #545454;
-  z-index: 7;
-  margin: 20px 0;
-  margin-left: calc(24% + 13px);
-  padding: 25px;
-}
-
-.linkbox p,
-.linkbox h1,
-.linkbox h2,
-.linkbox h3 {
-  word-wrap: break-word;
-}
-
-.infobox {
-  background: #545454;
-  color: #FAF8F4;
-}
-
-.infobox a{
-  color: #FAF8F4;
-  text-decoration: none;
-  border-bottom: 1px solid #FAF8F4;
-  padding-bottom: 1px;
-  margin-bottom: -1px;
-}
-.linkbox h3,
-.infobox h3 {
-  margin: 0;
-  margin-bottom: -10px;
-}
-
-.infobox a {
-  color: #FAF8F4;
-  border-bottom: 1px solid #FAF8F4;
-}
-
-.infobox a:hover {
-  background-color: #FAF8F4;
-  color: #545454;
 }
 
 blockquote {
@@ -232,11 +184,15 @@ blockquote p {
   margin: 0 !important;
 }
 
+div .difficulty-level + .difficulty-level {
+  margin-left: 0;
+}
+
 .difficulty-level {
   width: auto;
-  padding: 10px;
+  padding: 10px 10px 10px 0;
   display: inline-block;
-  margin: 5px 5px 5px 24%;
+  margin: 5px 5px 5px 25%;
   font-size: 20px;
   font-weight: 300;
   letter-spacing: 1px;
@@ -280,11 +236,108 @@ blockquote p {
 .level1 pre,
 .level1 h1,
 .level1 ul,
+.level1 ol,
 .level2 h2,
 .level3 h3 {
   width: 50%;
   margin-left: 25%;
   margin-right: 25%;
+}
+
+li>p {
+  margin: initial !important;
+  width: initial !important;
+}
+
+.level1 ol,
+.level1 ul {
+  padding-left: 20px;
+}
+
+.level1 ul {
+   list-style-type:circle;
+}
+
+.level1 li {
+  padding: 0 5px 10px 5px;
+}
+
+/* infobox ~ linkbox */
+
+.linkbox,
+.infobox,
+blockquote {
+  width: calc(50% - 13px);
+  float: none;
+  border: 1px solid #545454;
+  -webkit-box-shadow: 2px 2px 0px 0px #545454;
+  -moz-box-shadow: 2px 2px 0px 0px #545454;
+  box-shadow: 2px 2px 0px 0px #545454;
+  z-index: 7;
+  margin: 20px 0;
+  margin-left: calc(24% + 13px);
+  padding: 25px 25px 10px 25px;
+}
+
+.infobox h1,
+.linkbox h1 {
+  font-size: 20px;
+  letter-spacing: 3px;
+  margin: initial;
+}
+
+.infobox h2,
+.linkbox h2 {
+  font-size: 20px;
+  font-weight: 400;
+  margin: initial;
+  letter-spacing: 2px;
+  text-align: left;
+}
+
+.infobox h3,
+.linkbox h3 {
+  font-size: 20px;
+  font-weight: 300;
+  margin: initial;
+  letter-spacing: 2px;
+  text-align: left;
+}
+
+.linkbox p,
+.linkbox h1,
+.linkbox h2,
+.linkbox h3 {
+  word-wrap: break-word;
+}
+
+.infobox {
+  background: #545454;
+  color: #FAF8F4;
+}
+
+.infobox .level2,
+.linkbox .level2 {
+  margin: 0;
+  padding: 0;
+}
+
+.infobox a{
+  color: #FAF8F4;
+  text-decoration: none;
+  border-bottom: 1px solid #FAF8F4;
+  padding-bottom: 1px;
+  margin-bottom: -1px;
+}
+
+.infobox a {
+  color: #FAF8F4;
+  border-bottom: 1px solid #FAF8F4;
+}
+
+.infobox a:hover {
+  background-color: #FAF8F4;
+  color: #545454;
 }
 
 /* in text lists */
@@ -423,19 +476,6 @@ blockquote p {
   font-family: 'Roboto Condensed', monospace;
 }
 
-/* FOOTER */
-
-#footer {
-  /*float: right;*/
-  background: azure;
-  width: 25%;
-  z-index: 0;
-}
-
-#colofon {
-  background: azure;
-}
-
 /* IMAGES * video */
 
 .figure {
@@ -489,7 +529,6 @@ img {
 
 .lightbox img {
   max-width: 75%;
-  /*max-height: 90%;*/
   position: absolute;
   top: 0; right: 0; bottom: 0; left: 0;
   margin: auto;
@@ -512,11 +551,6 @@ video {
 
 video:hover {
   background: transparent;
-}
-
-/**/
-
-[id*="intro"] {
 }
 
 /* toggle options */
@@ -720,6 +754,7 @@ button:hover {
   .level1 pre, 
   .level1 h1, 
   .level1 ul, 
+  .level1 ol,
   .level2 h2, 
   .level3 h3 {
     width: auto;
@@ -748,11 +783,6 @@ button:hover {
     font-size: 13px;
   }
 
-  ul, ol {
-    width: auto;
-    padding: 0 15px 0 25px;
-  }
-
   .level3 {
     margin-top: initial;
   }
@@ -762,6 +792,15 @@ button:hover {
     display: block;
     margin: 0 auto;
     text-align: center;
+  }
+
+  div .difficulty-level + .difficulty-level {
+    margin-left: auto;
+    margin-top: 5px;
+  }
+
+  .level1 ul li {
+    margin-bottom: 5px;
   }
 
   /*header*/
@@ -806,6 +845,31 @@ button:hover {
 
   /* fonts */
 
+  .infobox h1,
+.linkbox h1 {
+  font-size: 17px;
+  letter-spacing: 3px;
+  margin: initial;
+}
+
+.infobox h2,
+.linkbox h2 {
+  font-size: 17px;
+  font-weight: 400;
+  margin: initial;
+  letter-spacing: 2px;
+  text-align: left;
+}
+
+.infobox h3,
+.linkbox h3 {
+  font-size: 17px;
+  font-weight: 300;
+  margin: initial;
+  letter-spacing: 2px;
+  text-align: left;
+}
+
   p,
   body,
   h2,
@@ -816,7 +880,7 @@ button:hover {
   }
 
   .level1 h1 {
-    font-size: 30px;
+    font-size: 25px;
   }
 
   #header h1 {
@@ -849,12 +913,7 @@ button:hover {
     background: none;
   }
 
-  .ui-resizable-e,
-  .ui-resizable-handle {
-    display: none !important;
-  }
-
-  .level1:hover,
+ .level1:hover,
   #header1:hover {
     animation: none;
   }
@@ -862,18 +921,19 @@ button:hover {
   .navWrap {
     float: left;
   }
-
 }
 
 @media only screen and (max-width: 1024px) and (min-resolution: 192dpi){
-
-
-.videoPlay{
-
-    font-size: 32px;
-
+  .videoPlay {
+      font-size: 32px;
+  }
 }
 
+@media screen and (max-width: 1024px) and (min-resolution: 192dpi)  and (orientation: portrait) {
+
+  #header h1 {
+      font-size: 17px;
+  }
 }
 
 </style>
