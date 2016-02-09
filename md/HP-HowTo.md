@@ -47,16 +47,15 @@ Met dank aan: Wouter Hillaert (Rekto Verso), Marianne van den Berg (ArchiNed), S
 
 #Lessons Learned
 ##Auteurs<br>
-<li>Denk vanuit de content.</li>
-<li>Denk na over een hybrid workflow: wat heb je nodig: audio, video tekst etc? En hoe kun je deze verbinden met elkaar en de mensen die je hiervoor nodig hebt. </li>
-<li>Vertrouw op de expertise van web developers en designers en betrek ze in een zo vroeg mogelijk stadium. Zij denken vanuit de techniek en zijn mogelijkheden en op deze manier hoeft dat geen belemmering te zijn. </li>
-<li>Een eerste publicatie is een investering qua tijd en geld, elk artikel wat daarna komt is die investering waard. </li>
-<li>Meestal blijkt er technisch meer mogelijk dan op voorhand gedacht. </li>
+* Denk vanuit de content.
+* Denk na over een hybrid workflow: wat heb je nodig: audio, video tekst etc? En hoe kun je deze verbinden met elkaar en de mensen die je hiervoor nodig hebt.
+* Vertrouw op de expertise van web developers en designers en betrek ze in een zo vroeg mogelijk stadium. Zij denken vanuit de techniek en zijn mogelijkheden en op deze manier hoeft dat geen belemmering te zijn.
+* Een eerste publicatie is een investering qua tijd en geld, elk artikel wat daarna komt is die investering waard.
+* Meestal blijkt er technisch meer mogelijk dan op voorhand gedacht.
 
 ##Developers (misschien nog aan te vullen door Lasse en Marlon)<br>
-<li>Denk aan de backend en of je gebruik maakt van een Content Management Systeem(CMS).</li>
-<li>Overweeg de responsiveness en offline reading mogelijkheden.</li>
-
+* Denk aan de backend en of je gebruik maakt van een Content Management Systeem(CMS).
+* Overweeg de responsiveness en offline reading mogelijkheden.
 
 #De Multimediale Essay
 <div class="difficulty-level easy"></div>
