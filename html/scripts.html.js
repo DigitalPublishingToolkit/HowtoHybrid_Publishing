@@ -319,8 +319,16 @@
 
     // let's open links in a new tab 
     $('.level1 a, .infobox a, .linkbox a').each(function(){
-      $(this).attr('target','_blank')
+      var attr = $(this).attr('target');
+
+      // For some browsers, `attr` is undefined; for others,
+      // `attr` is false.  Check for both.
+      if (!typeof attr !== typeof undefined && !attr !== false) {
+        $(this).attr('target','_blank')
+          // ...
+      }
     })
+
 
   })
 
