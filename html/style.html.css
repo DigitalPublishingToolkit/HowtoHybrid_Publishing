@@ -152,7 +152,7 @@ h1 {
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 22px;
   margin-bottom: -5px;
 }
 
@@ -211,7 +211,6 @@ a:hover {
   background: lightcyan;
   position: relative;
   right: 0;
-  /*z-index: 7;*/
 }
 
 .infobox {
@@ -221,7 +220,6 @@ a:hover {
   background: #D8F3D1;
   position: relative;
   right: 0;
-  /*z-index: 7;*/
 }
 
 .infobox .level2 {
@@ -268,15 +266,15 @@ a:hover {
 }
 
 .expert::after {
-  content: "expert";
+  content: "difficulty level: expert";
 }
 
 .moderate::after {
-  content: "moderate";
+  content: "difficulty level: moderate";
 }
 
 .easy::after {
-  content: "easy";
+  content: "difficulty level: easy";
 }
 
 .level1 {
@@ -601,6 +599,11 @@ button:hover {
 .fullWidth {
   width: calc(100% - 64px);
   transition: width 0.3s;
+}
+
+.fullWidth video,
+.fullWidth .videoPlay {
+  width: 30%;
 }
 
 .initWidth {

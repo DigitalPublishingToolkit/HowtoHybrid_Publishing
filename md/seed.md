@@ -12,7 +12,7 @@ Below you'll find a basic markup and special html formatting options available i
 
 	Paragraph of text .... Lorem ipsum.
 
-**For full documentation check: https://daringfireball.net/projects/markdown/**
+**For full documentation check: <a href="">https://daringfireball.net/projects/markdown/</a>**
 
 Result (below)
 
@@ -125,20 +125,4 @@ Result:
 
 <div class="difficulty-level easy">This difficulty level is </div>
 	
-
-# 4: Linking
-
-Each link, by default, opens in a new tab. To counteract this, use the following piece of HTML:  
-
-	<a href="http://yourlink.com" target="_self"> Link opens in the same window/tab </a>
-
-
-<div class="linkbox">
-
-## Target test
-<a href="http://example.com/" target="_self"> This link opens in the same tab </a>
-
-[Example link](http://example.com/) opens in a new tab.
-
-</div>
 
