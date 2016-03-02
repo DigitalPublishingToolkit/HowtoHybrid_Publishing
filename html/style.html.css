@@ -22,7 +22,6 @@
   margin: 0px;
   background-color: transparent;
   width: calc(50% - 10px);
-  /*width: calc(70% - 20px);*/
   text-align: center;
   margin-top: 10px;
     -webkit-user-select: none;  /* Chrome all / Safari all */
@@ -524,13 +523,6 @@ img {
   margin-top: 2%;
   border: 1px solid black;
 }
-
-/*.lightbox:target {
-  outline: none;
-  display: block;
-}*/
-
-/**/
 
 [id*="intro"] {
 }
