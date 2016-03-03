@@ -396,7 +396,6 @@
     margin: 0px;
     background-color: transparent;
     width: calc(50% - 10px);
-    /*width: calc(70% - 20px);*/
     text-align: center;
     margin-top: 10px;
       -webkit-user-select: none;  /* Chrome all / Safari all */
@@ -899,13 +898,6 @@
     border: 1px solid black;
   }
   
-  /*.lightbox:target {
-    outline: none;
-    display: block;
-  }*/
-  
-  /**/
-  
   [id*="intro"] {
   }
   
@@ -1371,6 +1363,13 @@
     font-weight: 400;
   }
   
+  .infobox strong,
+  .infobox b,
+  .linkbox strong,
+  .linkbox b {
+    font-weight: 700;
+  }
+  
   p, li, code {
     line-height: 1.6;
   }
@@ -1486,104 +1485,6 @@
     font-weight: 700;
   }
   
-  
-  /*.linkbox p {
-    font-size: 17px;
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: 700;
-  }
-  */
-  /*.infobox h1,
-  .infobox h2,
-  .infobox h3 {
-    font-weight: 600;
-  }
-  */
-  
-  /*
-  .linkbox h1,
-  .linkbox h2,
-  .linkbox h3 {
-    font-weight: 400;
-  }
-  */
-  
-  
-  /*.linkbox,
-  .infobox {
-    width: calc(50% - 13px);
-    float: none;
-    border: 1px solid #545454;
-    -webkit-box-shadow: 2px 2px 0px 0px #545454;
-    -moz-box-shadow: 2px 2px 0px 0px #545454;
-    box-shadow: 2px 2px 0px 0px #545454;
-    z-index: 7;
-    margin: 20px 0;
-    margin-left: calc(24% + 13px);
-    padding: 25px;
-  }
-  
-  .infobox h1,
-  .linkbox h1 {
-    font-size: 20px;
-    letter-spacing: 3px;
-    margin: initial;
-  }
-  
-  .infobox h2,
-  .linkbox h2 {
-    font-size: 20px;
-    font-weight: 400;
-    margin: initial;
-    letter-spacing: 2px;
-    text-align: left;
-  }
-  
-  .infobox h3,
-  .linkbox h3 {
-    font-size: 20px;
-    font-weight: 300;
-    margin: initial;
-    letter-spacing: 2px;
-    text-align: left;
-  }
-  
-  .linkbox p,
-  .linkbox h1,
-  .linkbox h2,
-  .linkbox h3 {
-    word-wrap: break-word;
-  }
-  
-  .infobox {
-    background: #545454;
-    color: #FAF8F4;
-  }
-  
-  .infobox .level2,
-  .linkbox .level2 {
-    margin: 0;
-    padding: 0;
-  }*/
-  
-  /*.infobox a{
-    color: #FAF8F4;
-    text-decoration: none;
-    border-bottom: 1px solid #FAF8F4;
-    padding-bottom: 1px;
-    margin-bottom: -1px;
-  }
-  
-  .infobox a {
-    color: #FAF8F4;
-    border-bottom: 1px solid #FAF8F4;
-  }
-  
-  .infobox a:hover {
-    background-color: #FAF8F4;
-    color: #545454;
-  }
-  */
   /* in text lists */
   
   .level1 ul p {
@@ -1850,17 +1751,13 @@
     width: calc(50% - 60px);
   }
   
-  .fullWidth.linkbox p{
+  .fullWidth.linkbox p,
+  .fullWidth.infobox p {
     font-size: 20px;
     font-weight: 500;
   }
   
-  .fullWidth.infobox p{
-    font-size: 20px;
-  }
-  
   .fullWidth blockquote {
-    margin: 10px -15px;
     width: calc(100% - 30px);
   }
   
@@ -2044,13 +1941,10 @@
       font-size: 20px;
     }
   
-    .fullWidth.linkbox p{
-      font-size: 18px;
+    .linkbox p,
+    .infobox p {
+      font-size: 17px;
       font-weight: 500;
-    }
-  
-    .fullWidth.infobox p{
-      font-size: 18px;
     }
   
     /* images + video */
@@ -2192,128 +2086,6 @@ Your How To Title
 </div>
 </div>
 <div id="difficulty-levels" class="section level2">
-<h2>Difficulty levels:</h2>
-<p>Small wrappers to indicate difficulty level. The single div will automatically have a set text relating to the level (easy, moderate, expert), but you can supply more info in the div it self.</p>
-<pre><code>&lt;div class=&quot;difficulty-level easy&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;difficulty-level moderate&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;difficulty-level expert&quot;&gt;&lt;/div&gt;
-
-And expanded:
-
-&lt;div class=&quot;difficulty-level easy&quot;&gt;This difficulty level is &lt;/div&gt;</code></pre>
-<p>Result:</p>
-<div class="difficulty-level easy">
-
-</div>
-<div class="difficulty-level moderate">
-
-</div>
-<div class="difficulty-level expert">
-
-</div>
-<div class="difficulty-level easy">
-This difficulty level is
-</div>
-</div>
-</div>
-<div id="how-to-template-1" class="section level1">
-<h1>How to Template</h1>
-<div id="introduction-1" class="section level2">
-<h2>Introduction</h2>
-<p>Below you'll find a basic markup and special html formatting options available in this How To Template.</p>
-</div>
-</div>
-<div id="standard-markdown-markup-1" class="section level1">
-<h1>1: Standard Markdown markup</h1>
-<pre><code># Header 1
-## Header 2
-### Header 3
-
-Paragraph of text .... Lorem ipsum.</code></pre>
-<p><strong>For full documentation check: https://daringfireball.net/projects/markdown/</strong></p>
-<p>Result (below)</p>
-</div>
-<div id="header-1-1" class="section level1">
-<h1>Header 1</h1>
-<div id="header-2-1" class="section level2">
-<h2>Header 2</h2>
-<div id="header-3-1" class="section level3">
-<h3>Header 3</h3>
-<p>Paragraph of text .... Lorem ipsum.</p>
-</div>
-</div>
-</div>
-<div id="media-1" class="section level1">
-<h1>2: Media</h1>
-<p><strong>General note: Store all media files in the lib-folder to keep a nice and clean repository</strong></p>
-<div id="images-and-gifs-1" class="section level2">
-<h2>Images and Gifs</h2>
-<p>You add these also using the standard Markdown markup:</p>
-<pre><code>![](./lib/YOURFILE.ext(png/jpg/gif..))</code></pre>
-<p>Result (below or to the right):</p>
-<div class="figure">
-<img src="./lib/placeholder.png" alt="" />
-
-</div>
-</div>
-<div id="videos-1" class="section level2">
-<h2>Videos</h2>
-<p>You'll have to add videos using the html-video-tag. Also you'll have to supply two file versions video: one formatted as mp4, the other formatted as ogv. To convert a video you can use FFMPEG or a gui-interface such as miro video-converter (http://www.mirovideoconverter.com/). This is the markup. It's best not to split the tag into several lines, since this can confuse Pandoc:</p>
-<pre><code>&lt;video poster=&quot;./html/background.png&quot;&gt;&lt;source src=&quot;./lib/YOURFILE.mp4&quot; type=&quot;video/mp4&quot; /&gt;&lt;source src=&quot;./lib/YOURFILE.ogv&quot; type=&quot;video/ogg&quot;&gt;&lt;/video&gt;</code></pre>
-<p>Result (below):</p>
-<video poster="./html/background.png">
-<source src="./lib/placeholder.mp4" type="video/mp4" />
-<source src="./lib/placeholder.ogv" type="video/ogg">
-</video>
-</div>
-</div>
-<div id="special-html-options-made-for-this-template-1" class="section level1">
-<h1>3: Special html options made for this template</h1>
-<p><strong>A mix-in between html and markdown is possible. Therefore certain html-wrappers have been added to give structure to the how to.</strong></p>
-<div id="header-options-1" class="section level2">
-<h2>Header options:</h2>
-<p>The header of the how to is automatically generated by javascript. It supplys a menu with 'chapters' each item based on the '# Header 1'-titles. Also it offers you to give the how-to a title. This is done by placing this custom piece of html anywhere in your markdown-file. It looks like this:</p>
-<pre><code>&lt;div class=&quot;pagetitle&quot;&gt;Your How To Title&lt;/div&gt;</code></pre>
-<p>Result (see the title 'Your How To Title' in the header)</p>
-<div class="pagetitle">
-Your How To Title
-</div>
-</div>
-<div id="infoboxes-1" class="section level2">
-<h2>Infoboxes:</h2>
-<pre><code>&lt;div class=&quot;infobox&quot;&gt;
-
-### For &#39;infoboxes&#39; that stands out from the main text.
-
-**Author:** Template
-
-&lt;/div&gt;</code></pre>
-<p>Result (below or to the right):</p>
-<div class="figure">
-<img src="./lib/placeholder.png" alt="" />
-
-</div>
-<div class="infobox">
-<h3 id="for-infoboxes-that-stands-out-from-the-main-text.-1">For 'infoboxes' that stands out from the main text.</h3>
-<p><strong>Author:</strong> Template</p>
-</div>
-</div>
-<div id="linkboxes-1" class="section level2">
-<h2>Linkboxes</h2>
-<pre><code>&lt;div class=&quot;linkbox&quot;&gt;
-
-### For all Your Links/ Resourcers
-
-**Author:** Template
-
-&lt;/div&gt;</code></pre>
-<p>Result (below or to the right):</p>
-<div class="linkbox">
-<h3 id="for-all-your-links-resourcers-1">For all Your Links/ Resourcers</h3>
-<p><strong>Author:</strong> Template</p>
-</div>
-</div>
-<div id="difficulty-levels-1" class="section level2">
 <h2>Difficulty levels:</h2>
 <p>Small wrappers to indicate difficulty level. The single div will automatically have a set text relating to the level (easy, moderate, expert), but you can supply more info in the div it self.</p>
 <pre><code>&lt;div class=&quot;difficulty-level easy&quot;&gt;&lt;/div&gt;

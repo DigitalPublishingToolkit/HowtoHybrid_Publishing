@@ -140,6 +140,13 @@ strong, b {
   font-weight: 400;
 }
 
+.infobox strong,
+.infobox b,
+.linkbox strong,
+.linkbox b {
+  font-weight: 700;
+}
+
 p, li, code {
   line-height: 1.6;
 }
@@ -521,17 +528,13 @@ button:hover {
   width: calc(50% - 60px);
 }
 
-.fullWidth.linkbox p{
+.fullWidth.linkbox p,
+.fullWidth.infobox p {
   font-size: 20px;
   font-weight: 500;
 }
 
-.fullWidth.infobox p{
-  font-size: 20px;
-}
-
 .fullWidth blockquote {
-  margin: 10px -15px;
   width: calc(100% - 30px);
 }
 
@@ -715,13 +718,10 @@ button:hover {
     font-size: 20px;
   }
 
-  .fullWidth.linkbox p{
-    font-size: 18px;
+  .linkbox p,
+  .infobox p {
+    font-size: 17px;
     font-weight: 500;
-  }
-
-  .fullWidth.infobox p{
-    font-size: 18px;
   }
 
   /* images + video */
