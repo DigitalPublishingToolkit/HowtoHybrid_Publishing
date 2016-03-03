@@ -247,7 +247,11 @@ li>p {
 }
 
 .infobox p,
-.linkbox p {
+.infobox ol,
+.infobox ul,
+.linkbox p,
+.linkbox ol,
+.linkbox ul {
   font-size: 17px;
   font-weight: 700;
   font-family: 'Roboto Condensed', sans-serif;
