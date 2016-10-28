@@ -446,9 +446,11 @@
   <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
     <Content>Step 6 Use the command line to navigate to the Resources folder (that you renamed). You will need some knowledge of using the command line, you can find help with this </Content>
   </CharacterStyleRange>
-  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
-    <Content>here</Content>
-  </CharacterStyleRange>
+  <HyperlinkTextSource Self="htss-2" Name="" Hidden="false">
+    <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Link">
+      <Content>here</Content>
+    </CharacterStyleRange>
+  </HyperlinkTextSource>
   <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
     <Content>.</Content>
   </CharacterStyleRange><Br />
@@ -1560,6 +1562,13 @@
 </ParagraphStyleRange>
 
   </Story>
+  <HyperlinkURLDestination Self="HyperlinkURLDestination/http%3a//en.flossmanuals.net/command-line/getting-started/" Name="link" DestinationURL="http://en.flossmanuals.net/command-line/getting-started/" DestinationUniqueKey="1" />
+  <Hyperlink Self="uf-2" Name="http://en.flossmanuals.net/command-line/getting-started/" Source="htss-2" Visible="true" DestinationUniqueKey="1">
+    <Properties>
+      <BorderColor type="enumeration">Black</BorderColor>
+      <Destination type="object">HyperlinkURLDestination/http%3a//en.flossmanuals.net/command-line/getting-started/</Destination>
+    </Properties>
+  </Hyperlink>
   <HyperlinkURLDestination Self="HyperlinkURLDestination/https%3a//github.com/DigitalPublishingToolkit/workshop-going_hybrid/wiki" Name="link" DestinationURL="https://github.com/DigitalPublishingToolkit/workshop-going_hybrid/wiki" DestinationUniqueKey="1" />
   <Hyperlink Self="uf-1" Name="https://github.com/DigitalPublishingToolkit/workshop-going_hybrid/wiki" Source="htss-1" Visible="true" DestinationUniqueKey="1">
     <Properties>
