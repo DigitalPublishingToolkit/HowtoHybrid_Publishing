@@ -90,7 +90,7 @@ href="http://www.computerhope.com/issues/chusedos.htm">here</a>)
 
 ### Method 1
 
-Andre Castro prepared an excellent workshop, based on an updated version of the Hybrid Publishing Toolkit Workflow [here](https://github.com/DigitalPublishingToolkit/workshop-going_hybrid/wiki).
+Andre Castro prepared an excellent workshop, based on an updated version of the Hybrid Publishing Toolkit Workflow [here](https://github.com/DigitalPublishingToolkit/workshop-going\_hybrid/wiki).
 
 Below are some simplified steps:
 
