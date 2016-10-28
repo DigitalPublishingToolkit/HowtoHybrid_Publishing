@@ -113,8 +113,7 @@ Step 5
 Open command line (terminal on Mac)
 
 Step 6
-Use the command line to navigate to the Resources folder (that you renamed). You will need some knowledge of using the command line, you can find help with this <a
-href="http://en.flossmanuals.net/command-line/getting-started/">here</a>.
+Use the command line to navigate to the Resources folder (that you renamed). You will need some knowledge of using the command line, you can find help with this [here](http://en.flossmanuals.net/command-line/getting-started/).
 
 Step 7
 Check you have pandoc installed correctly
