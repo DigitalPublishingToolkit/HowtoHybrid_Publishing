@@ -1,0 +1,1557 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?aid style="50" type="snippet" readerVersion="6.0" featureSet="513" product="8.0(370)" ?>
+<?aid SnippetType="InCopyInterchange"?>
+<Document DOMVersion="8.0" Self="pandoc_doc">
+    <RootCharacterStyleGroup Self="pandoc_character_styles">
+      <CharacterStyle Self="$ID/NormalCharacterStyle" Name="Default" />
+      <CharacterStyle Self="CharacterStyle/" Name="">
+        <Properties>
+          <BasedOn type="object">$ID/NormalCharacterStyle</BasedOn>
+        </Properties>
+      </CharacterStyle>
+      <CharacterStyle Self="CharacterStyle/Bold" Name="Bold" FontStyle="Bold">
+        <Properties>
+          <BasedOn type="object">$ID/NormalCharacterStyle</BasedOn>
+        </Properties>
+      </CharacterStyle> 
+    </RootCharacterStyleGroup>
+    <RootParagraphStyleGroup Self="pandoc_paragraph_styles">
+      <ParagraphStyle Self="$ID/NormalParagraphStyle" Name="$ID/NormalParagraphStyle"
+          SpaceBefore="6" SpaceAfter="6"> <!-- paragraph spacing -->
+        <Properties>
+          <TabList type="list">
+            <ListItem type="record">
+              <Alignment type="enumeration">LeftAlign</Alignment>
+              <AlignmentCharacter type="string">.</AlignmentCharacter>
+              <Leader type="string"></Leader>
+              <Position type="unit">10</Position> <!-- first tab stop -->
+            </ListItem>
+          </TabList>
+        </Properties>
+      </ParagraphStyle>
+      <ParagraphStyle Self="ParagraphStyle/" Name="" LeftIndent="0">
+        <Properties>
+          <BasedOn type="object">$ID/NormalParagraphStyle</BasedOn>
+        </Properties>
+      </ParagraphStyle>
+      <ParagraphStyle Self="ParagraphStyle/BulList" Name="BulList" BulletsAndNumberingListType="BulletList" LeftIndent="0">
+        <Properties>
+          <BasedOn type="object">$ID/NormalParagraphStyle</BasedOn>
+          <TabList type="list">
+            <ListItem type="record">
+              <Alignment type="enumeration">LeftAlign</Alignment>
+              <AlignmentCharacter type="string">.</AlignmentCharacter>
+              <Leader type="string" />
+              <Position type="unit">10</Position>
+            </ListItem>
+          </TabList>
+        </Properties>
+      </ParagraphStyle>
+      <ParagraphStyle Self="ParagraphStyle/BulList &gt; Paragraph" Name="BulList &gt; Paragraph" BulletsAndNumberingListType="BulletList" LeftIndent="0">
+        <Properties>
+          <BasedOn type="object">$ID/NormalParagraphStyle</BasedOn>
+          <TabList type="list">
+            <ListItem type="record">
+              <Alignment type="enumeration">LeftAlign</Alignment>
+              <AlignmentCharacter type="string">.</AlignmentCharacter>
+              <Leader type="string" />
+              <Position type="unit">10</Position>
+            </ListItem>
+          </TabList>
+        </Properties>
+      </ParagraphStyle>
+      <ParagraphStyle Self="ParagraphStyle/BulList &gt; first" Name="BulList &gt; first" BulletsAndNumberingListType="BulletList" LeftIndent="0">
+        <Properties>
+          <BasedOn type="object">$ID/NormalParagraphStyle</BasedOn>
+          <TabList type="list">
+            <ListItem type="record">
+              <Alignment type="enumeration">LeftAlign</Alignment>
+              <AlignmentCharacter type="string">.</AlignmentCharacter>
+              <Leader type="string" />
+              <Position type="unit">10</Position>
+            </ListItem>
+          </TabList>
+        </Properties>
+      </ParagraphStyle>
+      <ParagraphStyle Self="ParagraphStyle/BulList &gt; first &gt; Paragraph" Name="BulList &gt; first &gt; Paragraph" BulletsAndNumberingListType="BulletList" LeftIndent="0">
+        <Properties>
+          <BasedOn type="object">$ID/NormalParagraphStyle</BasedOn>
+          <TabList type="list">
+            <ListItem type="record">
+              <Alignment type="enumeration">LeftAlign</Alignment>
+              <AlignmentCharacter type="string">.</AlignmentCharacter>
+              <Leader type="string" />
+              <Position type="unit">10</Position>
+            </ListItem>
+          </TabList>
+        </Properties>
+      </ParagraphStyle>
+      <ParagraphStyle Self="ParagraphStyle/CodeBlock" Name="CodeBlock" LeftIndent="0">
+        <Properties>
+          <BasedOn type="object">$ID/NormalParagraphStyle</BasedOn>
+          <AppliedFont type="string">Courier New</AppliedFont>
+        </Properties>
+      </ParagraphStyle>
+      <ParagraphStyle Self="ParagraphStyle/Header1" Name="Header1" LeftIndent="0" PointSize="36">
+        <Properties>
+          <BasedOn type="object">$ID/NormalParagraphStyle</BasedOn>
+        </Properties>
+      </ParagraphStyle>
+      <ParagraphStyle Self="ParagraphStyle/Header2" Name="Header2" LeftIndent="0" PointSize="30">
+        <Properties>
+          <BasedOn type="object">$ID/NormalParagraphStyle</BasedOn>
+        </Properties>
+      </ParagraphStyle>
+      <ParagraphStyle Self="ParagraphStyle/Header3" Name="Header3" LeftIndent="0" PointSize="24">
+        <Properties>
+          <BasedOn type="object">$ID/NormalParagraphStyle</BasedOn>
+        </Properties>
+      </ParagraphStyle>
+      <ParagraphStyle Self="ParagraphStyle/Paragraph" Name="Paragraph" LeftIndent="0">
+        <Properties>
+          <BasedOn type="object">$ID/NormalParagraphStyle</BasedOn>
+        </Properties>
+      </ParagraphStyle> 
+    </RootParagraphStyleGroup>
+    <RootTableStyleGroup Self="pandoc_table_styles">
+      <TableStyle Self="TableStyle/Table" Name="Table" />
+    </RootTableStyleGroup>
+    <RootCellStyleGroup Self="pandoc_cell_styles">
+      <CellStyle Self="CellStyle/Cell" AppliedParagraphStyle="ParagraphStyle/$ID/[No paragraph style]" Name="Cell" />
+    </RootCellStyleGroup>
+  <Story Self="pandoc_story"
+      TrackChanges="false"
+      StoryTitle=""
+      AppliedTOCStyle="n"
+      AppliedNamedGrid="n" >
+    <StoryPreference OpticalMarginAlignment="true" OpticalMarginSize="12" />
+
+<!-- body needs to be non-indented, otherwise code blocks are indented too far -->
+<ParagraphStyleRange AppliedParagraphStyle="">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>How to: Design Solutions for Digital Publishing</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header1">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>How to: Design Solutions for Digital Publishing</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header2">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Introduction</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>What are the visual options for artistic digital publications?</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header3">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>What can you find in this How To?</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>This site shows you how to create an epub - it is part of the Hybrid Publishing Workflow for creating multiple publications from one source file (including eBooks as ePub3 files).</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>For more information about the Workflow and creating output for print files, visit the PublishingLab </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>site</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>You will find instructions &amp; a template for making an ePub3, use css styles to modify your layout, and learn about the pros &amp; cons of a fixed layout ePub. Finally, we look at what some other current options are for digital publishing.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Sections:</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>1. How to create an ePub</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>2. Styling ePubs</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>3. Fixed layout ePubs</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>4. Other digital publishing options</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header3">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Who is this How To for?</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Small publishers, arts publishers, designers and developers creating digital publications.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header3">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Colophon</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>Author:</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> Jess van Zyl</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>Editorial support:</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> Miriam Rasch</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>Design:</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> Lasse van den Bosch &amp; Marlon Harder (</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Template</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>)</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>With thanks to:</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> Hackers&amp;Designers, Institute of Network Cultures, Torque, Silvio Lorusso, Andre Castro, Gottfried Haider, Michael Murtaugh and the DPT collective.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header1">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>How to create an ePub</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header2">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Intro</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The Hybrid Publishing Toolkit provides two methods of creating an ePub.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>Method 1</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> builds on chapter 6 of the Hybrid Publishing Toolkit book, it relies on a makefile and using the command line.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>Method 2:</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> The latest option is to use our platform created by Gottfried Haider, this eliminates the need for command line and simplifies the setup on GitHub. You can find it </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>here</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header3">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Technical considerations</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Before you begin you will need:</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/BulList &gt; first &gt; Paragraph" NumberingContinue="false">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>your text (in Word .docx format) and image files (jpg or png).</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/BulList &gt; Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>GitHub Desktop</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> (for working collaboratively)</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/BulList &gt; Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>MacDown</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> or XCode (to edit your sourcefile which is written in markdown)</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/BulList &gt; Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Calibre</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> (to view/edit ebooks)</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>If you are using Method 1, you will also need to:</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/BulList &gt; first &gt; Paragraph" NumberingContinue="false">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>install </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Pandoc</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/BulList &gt; Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>you will need to familiarise yourself with the command line (terminal on Mac or go to the Start menu on Windows and type cmd into search/run - more </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>here</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>)</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header2">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>How: Instructions for Creating an ePub</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header3">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Method 1</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Andre Castro prepared an excellent workshop, based on an updated version of the Hybrid Publishing Toolkit Workflow </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>here</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Below are some simplified steps:</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Step 1 Once you've installed the programs listed above, visit the PublishingLab </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Resources</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> page on GitHub.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Step 2 Clone or save this resource repository to your computer It will include several folders as well as the makefile.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Rectangle Self="uec" ItemTransform="1 0 0 1 75 -50">
+      <Properties>
+        <PathGeometry>
+          <GeometryPathType PathOpen="false">
+            <PathPointArray>
+              <PathPointType Anchor="-75 -50" LeftDirection="-75 -50" RightDirection="-75 -50" />
+              <PathPointType Anchor="-75 50" LeftDirection="-75 50" RightDirection="-75 50" />
+              <PathPointType Anchor="75 50" LeftDirection="75 50" RightDirection="75 50" />
+              <PathPointType Anchor="75 -50" LeftDirection="75 -50" RightDirection="75 -50" />
+            </PathPointArray>
+          </GeometryPathType>
+        </PathGeometry>
+      </Properties>
+      <Image Self="ue6" ItemTransform="1.0 0 0 1.0 -75 -50">
+        <Properties>
+          <Profile type="string">
+            $ID/Embedded
+            <GraphicBounds Left="0" Top="0" Right="150" Bottom="100" />
+          </Profile>
+        </Properties>
+        <Link Self="ueb" LinkResourceURI="file:lib/resources-folder.png" />
+      </Image>
+    </Rectangle>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Step 3 Rename this folder to your book title</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Step 4 Make sure your manuscript(s) are saved as .docx files and move them to the docx folder, replacing the Test-chapter.docx file.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Step 5 Open command line (terminal on Mac)</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Step 6 Use the command line to navigate to the Resources folder (that you renamed). You will need some knowledge of using the command line, you can find help with this </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>here</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Step 7 Check you have pandoc installed correctly do this by typing 'pandoc --version' in command line</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Step 8 Create the source file(s) for your ebook by typing 'make markdowns' in command line</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Step 9 Now that you have markdown files, you can create an epub! type 'make epub' in command line</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Step 10 Check the resources folder to see your book.epub file, which you can open with Calibre or iBooks.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>If you get an error message, there is a useful resource section </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>here</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> to help you.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header3">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Method 2</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Here's a quick video of how *the Sausage Machine* turns a Word document into an ePub:</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Using *the Sausage Machine* platform</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Step 1 Drag and drop your text files </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>here</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Step 2 Choose an output: markdown, html or ePub from the drop down menu and click 'Update'</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Step 3 Create your book project on GitHub (click 'Continue on GitHub) to keep track of your versions and work collaboratively with an editor or designer.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Once you make changes to your source file, make sure to commit your changes on GitHub and then sync. After a few minutes *the Sausage Machine* will generate a new ePub/html file with the latest changes.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header3">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Avoiding Errors</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>make sure there are no spaces or unusual characters (like %) in file names</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>make sure you work with .docx files not .doc</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>put any images (.jpg or .png) in the 'imgs' folder inside the markdown folder except the cover*</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>*the cover.jpg image belongs in the epub folder</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header3">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Three key things an ePub developer needs to have right</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>A successful ePub has been visually styled (with css and a cover), correctly classified (with metadata), and validated.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The epub folder typically has 3 important components:</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/BulList &gt; first" NumberingContinue="false">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>the cover image (png or jpg)</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/BulList">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>stylesheet</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/BulList">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>metadata file</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The final book needs to have the correct cover image obviously, but you also need to be sure the metadata file has the right information in it so that people can find your book. Talk to the editor to be sure you have the right metadata information, including the epub isbn number. Here's more information about </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>metadata</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The look of your book is controlled by the styles, you can get color values and typeface suggestions from the print designer. Make sure you embed the fonts you use by including them in the make file and in the lib folder. Here's more information about </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>type in epubs</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Last, but not least, the developer needs to validate epub to make sure there are no errors that will cause it to be rejected from a retailer or not open correctly for readers.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header3">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Validating your ePub file</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Make sure you validate the ePub file before you send it out into the world. If it isn't valid Google Play Books and other ePub readers may not be able to open your new book, causing reader frustration!</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>You can use the </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>online validator</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> for smaller ePubs (under 10MB)</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The validator will show you where the errors are in your book. See the example below:</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Rectangle Self="uec" ItemTransform="1 0 0 1 75 -50">
+      <Properties>
+        <PathGeometry>
+          <GeometryPathType PathOpen="false">
+            <PathPointArray>
+              <PathPointType Anchor="-75 -50" LeftDirection="-75 -50" RightDirection="-75 -50" />
+              <PathPointType Anchor="-75 50" LeftDirection="-75 50" RightDirection="-75 50" />
+              <PathPointType Anchor="75 50" LeftDirection="75 50" RightDirection="75 50" />
+              <PathPointType Anchor="75 -50" LeftDirection="75 -50" RightDirection="75 -50" />
+            </PathPointArray>
+          </GeometryPathType>
+        </PathGeometry>
+      </Properties>
+      <Image Self="ue6" ItemTransform="1.0 0 0 1.0 -75 -50">
+        <Properties>
+          <Profile type="string">
+            $ID/Embedded
+            <GraphicBounds Left="0" Top="0" Right="150" Bottom="100" />
+          </Profile>
+        </Properties>
+        <Link Self="ueb" LinkResourceURI="file:lib/idpf-validator.png" />
+      </Image>
+    </Rectangle>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The error occurs in chapter ch002.xhtml, line 47, there's an explanation that a 'referenced resource is missing', but it helps a lot to edit the book in </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Calibre</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> and further diagnose that in this case an image is missing.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Rectangle Self="uec" ItemTransform="1 0 0 1 75 -50">
+      <Properties>
+        <PathGeometry>
+          <GeometryPathType PathOpen="false">
+            <PathPointArray>
+              <PathPointType Anchor="-75 -50" LeftDirection="-75 -50" RightDirection="-75 -50" />
+              <PathPointType Anchor="-75 50" LeftDirection="-75 50" RightDirection="-75 50" />
+              <PathPointType Anchor="75 50" LeftDirection="75 50" RightDirection="75 50" />
+              <PathPointType Anchor="75 -50" LeftDirection="75 -50" RightDirection="75 -50" />
+            </PathPointArray>
+          </GeometryPathType>
+        </PathGeometry>
+      </Properties>
+      <Image Self="ue6" ItemTransform="1.0 0 0 1.0 -75 -50">
+        <Properties>
+          <Profile type="string">
+            $ID/Embedded
+            <GraphicBounds Left="0" Top="0" Right="150" Bottom="100" />
+          </Profile>
+        </Properties>
+        <Link Self="ueb" LinkResourceURI="file:lib/calibre.png" />
+      </Image>
+    </Rectangle>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Then find the missing image(s) and then fix them in the source (markdown) file. It is important that you make the corrections in the markdown file because then you just do the work once and the changes are made to the epub as well as html or icml files for the print designer.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>or install the validator on your Desktop from </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>GitHub</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The idpf includes a useful wiki to help you understand </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>errors</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>when validating your ePub on your desktop, navigate to the folder with the .jar file and copy this in your commandline:</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/CodeBlock">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>java -jar epubcheck.jar file.epub</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>(Make sure to replace the generic file.epub with the location + name of your own epub.)</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header3">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Example</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The workflow below is a compilation of efforts from the Hybrid Publishing Toolkit, Andre Castro, Michael Murtaugh and others from the DPT collective.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>example: </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>From Print to eBooks: A Hybrid Publishing Toolkit for the Arts</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header3">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Sources / list of inspiration</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Hybrid Workflow</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> is a workflow developed to help art publishers create digital versions of their publications, focused on an ePub3 output.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The Sausage Machine platform</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> is based on Pandoc and designed to complement and simplify the Hybrid Publishing workflow by ouputting the desired formats and setting up a repository for you.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> A good resource </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> for getting started with command line.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header1">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Styling Reflowable ePubs 2/4</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header2">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Intro</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Once you've created your ePub3 using the Hybrid Publishing Toolkit method [link to page 1/4] or *the Sausage Machine* </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>platform</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>, you can add your own style to it. This can be done with some changes to the markdown file and mostly through the css stylesheet.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header3">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Example</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>PublishingLab template file with test cover.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header3">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Technical considerations</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>To create and distribute your ePub you will need at least a basic knowledge of css and some knowledge of the specifications of the idpf to validate your book. Test the ePub on different ereader devices to know which features are supported. Note: The control you have with css on websites is much more limited in eBooks as of this writing (2016).</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header2">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>How</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Step 1 Once you have an .epub file from Method 1 or Method 2 above, you will need to open the epub folder to access the css.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Step 2 Open your epub with Calibre, and right click to edit book</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Step 3 You can make changes to the stylesheet of your epub in Calibre and experiment visually because Calibre allows you to see the changes immediately. Once you decide on the styles you want to keep then change the .css file.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Step 4 open the styles.epub.css with a text editor (like Xcode or Sublime) and copy the styles that you chose from Calibre to the stylesheet.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header3">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Remember</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Though you may take time choosing fonts and colors for your ePubs, they can and will be changed by the human readers or by the devices.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>As an example, this is the same book as seen on a mobile phone (Android OS with Gitden reader) (see image).</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Rectangle Self="uec" ItemTransform="1 0 0 1 75 -50">
+      <Properties>
+        <PathGeometry>
+          <GeometryPathType PathOpen="false">
+            <PathPointArray>
+              <PathPointType Anchor="-75 -50" LeftDirection="-75 -50" RightDirection="-75 -50" />
+              <PathPointType Anchor="-75 50" LeftDirection="-75 50" RightDirection="-75 50" />
+              <PathPointType Anchor="75 50" LeftDirection="75 50" RightDirection="75 50" />
+              <PathPointType Anchor="75 -50" LeftDirection="75 -50" RightDirection="75 -50" />
+            </PathPointArray>
+          </GeometryPathType>
+        </PathGeometry>
+      </Properties>
+      <Image Self="ue6" ItemTransform="1.0 0 0 1.0 -75 -50">
+        <Properties>
+          <Profile type="string">
+            $ID/Embedded
+            <GraphicBounds Left="0" Top="0" Right="150" Bottom="100" />
+          </Profile>
+        </Properties>
+        <Link Self="ueb" LinkResourceURI="file:lib/Screenshot_Gitden-reader-android.png" />
+      </Image>
+    </Rectangle>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>and on a Nook e-reader.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Test the ebook on the device(s) your readers most commonly use, keeping in mind that you do not have as much control in the ebook format as you do in print or web.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header3">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>sources / list of inspiration</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>These publications were all created using the Hybrid Publishing method:</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The publications series of the INC </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>here</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Knowledge Mile </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>series</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header1">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Fixed Layout ePub 3/4</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header2">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Intro</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>A fixed layout epub (FXL) can be described as a hybrid of pdf &amp; ePub; combining the design control of a pdf with ePub’s searchability and the ability to be sold on Amazon. A main disadvantage is the lack of distribution opportunities (meaning not many ereaders will display them). The other disadvantage is the format is not responsive - like a .pdf it requires a lot of zooming to read on a mobile. You can see examples </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>here</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header3">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The pros</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Distribution: while you can't currently sell .pdfs, you can sell ePubs in iBookstore and on Amazon</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Live text: all written content is searchable (for example, captions over photos do not have to be part of the image)</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Control over page design</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Full-bleed images and backgrounds</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The cons</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Labor intensive: InDD CS5.5 and earlier do not support exporting fixed layouts, so that means coding it by hand. Each page of a FXL has it's own .xhtml file, unlike reflowable ePubs which have one .xhtml per chapter</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Limited distribution opportunities: very few readers support it at the moment. Apple is the main re-seller and this may result in needing to design 2 layouts (i.e. a tweaked version for Kobo)</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The format doesn't scale for mobile reading.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header3">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The controversy</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>&quot;I think they sound like a pointless step backward – a filetype with all the rigidity of PDF but with none of the cross-platform support.&quot; - Ben Hollingum</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The quote above epitomises the Digital Reader article's list of problems with fixed layout books. Digital Reader proposes that eBook designers should move away from trying to keep the printed book format as a template for digital publishing. Craig Mod argues that the bond between reader and text can be strengthened or broken by the container, I see this as an affirmation that it needs serious consideration by designers and developers. He sums up his concern below:</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Amazon and Apple are the paper‑makers, the typographers, the printers, the binders and the distributors: if they don’t make a style of paper you like, too bad. The boundaries of digital book design are beholden to their whim. - Craig Mod</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Fixed layout books are often children's books, photography or cookbooks. But complex visual layouts with layers and transparencies won't export perfectly without some additional work, usually requiring flattened artwork.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>To decide whether using fixed layout is right for a project, the publisher needs a clear idea of what their reader's devices are - it takes too much effort to create a layout that might work well in i-Books and not at all on other readers. This problem of limited implementation affects fixed layout ePubs as well as reflowable ePubs which often support only a very few styling options. The IDPF cautions eBook developers to be aware that reading systems typically restrict the ability to modify body margins indicates this limitation. Which essentially means designers are bound by the choices of distributors and e-reader makers.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>As epubsecrets caution: FXL epubs will not work at all on any Kindle devices and conversion to the KF8-FXL format will be difficult.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header3">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The experiment(s)</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>To demonstrate, I created a fixed layout epub in InDD CC 2015. It didn't take much time to file &gt; export fixed layout, and the pros are that it retains my weird text wrap, and the caption over the video. Since I wrote about the display in the cons section above, I thought I'd also show what it looks like - not just tell. When viewed in iBooks, changing the width of the viewport (screen) does not change the size of the text and it is only suitable for viewing on an ipad.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Rectangle Self="uec" ItemTransform="1 0 0 1 75 -50">
+      <Properties>
+        <PathGeometry>
+          <GeometryPathType PathOpen="false">
+            <PathPointArray>
+              <PathPointType Anchor="-75 -50" LeftDirection="-75 -50" RightDirection="-75 -50" />
+              <PathPointType Anchor="-75 50" LeftDirection="-75 50" RightDirection="-75 50" />
+              <PathPointType Anchor="75 50" LeftDirection="75 50" RightDirection="75 50" />
+              <PathPointType Anchor="75 -50" LeftDirection="75 -50" RightDirection="75 -50" />
+            </PathPointArray>
+          </GeometryPathType>
+        </PathGeometry>
+      </Properties>
+      <Image Self="ue6" ItemTransform="1.0 0 0 1.0 -75 -50">
+        <Properties>
+          <Profile type="string">
+            $ID/Embedded
+            <GraphicBounds Left="0" Top="0" Right="150" Bottom="100" />
+          </Profile>
+        </Properties>
+        <Link Self="ueb" LinkResourceURI="file:lib/iphone4s-300x230.jpg" />
+      </Image>
+    </Rectangle>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Fixed layout viewed on iPhone4s</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header3">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Reflowable vs Fixed Format</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>It's obvious that the reading experience is just as difficult on a mobile where you have to zoom to read as it is reading pdfs. Another difference between fixed and reflowable ePubs is shown below, see that there are 3 pages in this book - and 3 corresponding xhtml files, imagine if it had been 130 pages.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header3">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Examples</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Now that you've seen the rough-and ready test, here is an exciting example of a hand-coded ePub3, </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Kadath</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>, by Walrus Studio, which includes columns and an interactive map. This book is really inspiring, but it's also custom-made - requiring a skilled developer and robust budget.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header3">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Additional Reading</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>For a really clear distinction between ePubs, PDFs and Apps see this excellent article from Indesignsecrets</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>epubsecrets provides more in-depth information on exporting fixed layout epubs from InDesign </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>here</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header1">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Other Digital Publishing Options 4/4</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header2">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Intro</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>eBooks come in many forms, from native Apps to online reading experiences that cross-over to print with the use of MediaWiki and the newly developed htmltoprint workflow. The PublishingLab has spent part of 2015 working on a custom App and an online reading reading experience. Unlike creating ePubs, which can be done with the help of Pandoc, both of these workflows required skilled developers.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header3">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Example 1</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Knowledge Matters - custom built App</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The PublishingLab worked together with UNStudio to prototype a custom App, in the form of an enhanced digital book that complemented their print edition.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Read more about the project </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>here</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The team created a custom menu for the book:</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Rectangle Self="uec" ItemTransform="1 0 0 1 75 -50">
+      <Properties>
+        <PathGeometry>
+          <GeometryPathType PathOpen="false">
+            <PathPointArray>
+              <PathPointType Anchor="-75 -50" LeftDirection="-75 -50" RightDirection="-75 -50" />
+              <PathPointType Anchor="-75 50" LeftDirection="-75 50" RightDirection="-75 50" />
+              <PathPointType Anchor="75 50" LeftDirection="75 50" RightDirection="75 50" />
+              <PathPointType Anchor="75 -50" LeftDirection="75 -50" RightDirection="75 -50" />
+            </PathPointArray>
+          </GeometryPathType>
+        </PathGeometry>
+      </Properties>
+      <Image Self="ue6" ItemTransform="1.0 0 0 1.0 -75 -50">
+        <Properties>
+          <Profile type="string">
+            $ID/Embedded
+            <GraphicBounds Left="0" Top="0" Right="150" Bottom="100" />
+          </Profile>
+        </Properties>
+        <Link Self="ueb" LinkResourceURI="file:lib/menu-UNStudio.jpg" />
+      </Image>
+    </Rectangle>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>With rich media eBooks like this, it is possible to include more interactive features. This chapter starts with a video scroll introduction that the user controls by swiping down on the app.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Rectangle Self="uec" ItemTransform="1 0 0 1 75 -50">
+      <Properties>
+        <PathGeometry>
+          <GeometryPathType PathOpen="false">
+            <PathPointArray>
+              <PathPointType Anchor="-75 -50" LeftDirection="-75 -50" RightDirection="-75 -50" />
+              <PathPointType Anchor="-75 50" LeftDirection="-75 50" RightDirection="-75 50" />
+              <PathPointType Anchor="75 50" LeftDirection="75 50" RightDirection="75 50" />
+              <PathPointType Anchor="75 -50" LeftDirection="75 -50" RightDirection="75 -50" />
+            </PathPointArray>
+          </GeometryPathType>
+        </PathGeometry>
+      </Properties>
+      <Image Self="ue6" ItemTransform="1.0 0 0 1.0 -75 -50">
+        <Properties>
+          <Profile type="string">
+            $ID/Embedded
+            <GraphicBounds Left="0" Top="0" Right="150" Bottom="100" />
+          </Profile>
+        </Properties>
+        <Link Self="ueb" LinkResourceURI="file:lib/video-scroll.gif" />
+      </Image>
+    </Rectangle>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Since this App was specifically designed for an iPad, it could capitalise on the built-in functions of the iPad, like swiping to the next chapter.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Format: Web App</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header3">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Example 2:</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Navigating Theory on Demand: an online reading experience of TOD17 GrayZones</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>PublishingLab collaborated with the Institute of Network Cultures to create a web platform for reading the latest Theory on Demand publication. The previous outputs for Theory on Demand has been print on demand and ePub formats, but the team saw an opportunity to improve the accessibility of the content and navigation design in html.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Their site layout included a Table of Contents and expandable tools panel.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Rectangle Self="uec" ItemTransform="1 0 0 1 75 -50">
+      <Properties>
+        <PathGeometry>
+          <GeometryPathType PathOpen="false">
+            <PathPointArray>
+              <PathPointType Anchor="-75 -50" LeftDirection="-75 -50" RightDirection="-75 -50" />
+              <PathPointType Anchor="-75 50" LeftDirection="-75 50" RightDirection="-75 50" />
+              <PathPointType Anchor="75 50" LeftDirection="75 50" RightDirection="75 50" />
+              <PathPointType Anchor="75 -50" LeftDirection="75 -50" RightDirection="75 -50" />
+            </PathPointArray>
+          </GeometryPathType>
+        </PathGeometry>
+      </Properties>
+      <Image Self="ue6" ItemTransform="1.0 0 0 1.0 -75 -50">
+        <Properties>
+          <Profile type="string">
+            $ID/Embedded
+            <GraphicBounds Left="0" Top="0" Right="150" Bottom="100" />
+          </Profile>
+        </Properties>
+        <Link Self="ueb" LinkResourceURI="file:lib/NavigatingTOD-cite.png" />
+      </Image>
+    </Rectangle>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>They incorporated various functions to make it easier to search, highlight and cite the content of the book in the browser. See the citation function in the tools panel:</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Rectangle Self="uec" ItemTransform="1 0 0 1 75 -50">
+      <Properties>
+        <PathGeometry>
+          <GeometryPathType PathOpen="false">
+            <PathPointArray>
+              <PathPointType Anchor="-75 -50" LeftDirection="-75 -50" RightDirection="-75 -50" />
+              <PathPointType Anchor="-75 50" LeftDirection="-75 50" RightDirection="-75 50" />
+              <PathPointType Anchor="75 50" LeftDirection="75 50" RightDirection="75 50" />
+              <PathPointType Anchor="75 -50" LeftDirection="75 -50" RightDirection="75 -50" />
+            </PathPointArray>
+          </GeometryPathType>
+        </PathGeometry>
+      </Properties>
+      <Image Self="ue6" ItemTransform="1.0 0 0 1.0 -75 -50">
+        <Properties>
+          <Profile type="string">
+            $ID/Embedded
+            <GraphicBounds Left="0" Top="0" Right="150" Bottom="100" />
+          </Profile>
+        </Properties>
+        <Link Self="ueb" LinkResourceURI="file:lib/NavigatingTOD-tools.png" />
+      </Image>
+    </Rectangle>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Read more about the project </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>here</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Format: Online reading, ePub3 &amp; Print on Demand (POD)</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header3">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Technical considerations</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The UNStudio App project was built as a WebApp and then bundled as a native App for IOS with the client specifying that it be designed for one platform: the iPad.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Navigating TOD was built with html, javascript and bootstrap using plugins for added functions like highlighting or adding dates to citation.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header2">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>How: iPad App &amp; online reading</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The UNStudio App was built with html, css and javascript by a team of 4 interns + a developer.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The INC project involved conversion of the manuscript using the HPT workflow to create html files from the Word documents. From there the team used javascript and plugins to build custom functions with some support from a developer.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header3">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Sources / list of inspiration</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>PublishingLab spoke to other makers and publishers about their digital publications. This is a short list of makers we found so far...</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Torque</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>, a UK based publisher created ePubs as well as developing a speed reading App for their first book.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Format: App &amp; ePub</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Hackers&amp;Designers</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> use MediaWiki and </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>LaTeX</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> to create their latest book: About Bugs, Bots and Bytes.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Format: Online reading &amp; print</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Andre Castro used MediaWiki as well as css to create a printed version of the design magazine </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Beyond Social</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> in partnership with the design studio </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Template</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Format: Online reading &amp; print</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The People's E-Book</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> is a super-simple online tool with an intuitive visual interface to allow anyone to make e-books quickly and for free. You can find out more </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>here</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Format: Platform &amp; ePub3</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Eric Gardner &amp; The Getty You can find out more about the extension Gardner is writing to create online books for academic publications </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>here</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Format: Static website(s)</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header3">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The other possibilities...</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>What can be done about visual layouts in digital publications? The International Digital Publishing Forum (IDPF) is writing standards, however it is unclear whether these will be viable because the e-reader market is so varied in its adoption of standards.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Some critics claim that ebook development is 15 years behind the web in terms of development and standards being adopted by ereaders. The web has developed faster, in part due to the adoption of common standards between major brosers like Safari, Chrome &amp; Firefox. The variety and lower financial imperative to adhere to and develop standards in ereaders may mean visual publications in ePub format remain limited.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>With the rise of books online, like Ford's </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>What is Code</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>, web might be a better format for arts publications than epub.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>To see what is happening with epub and html, here are some interesting experiments and standards, starting with an example and how-to:</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Adaptive layout </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>how-to </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>by Sorotokin</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>CSS Paged Media Module</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>, which has been a working draft since 2013 from the W3</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Media Queries, which help text display on different devices by linking to a stylesheet relevant to the targeted device's capabilities. </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Liz Castro</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> shows how she used media queries to better display poetry across devices.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The IDPF brought out a specification for ePub Adaptive Layout </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>here</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header3">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Future</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Ideally, artist books could incorporate the interactivity made possible with ePub3 with custom layouts which really reflect the unique visual quality of the work. It's not necessarily about copying the beautiful print spreads of art publishers, or following the highly-customised methods of an App, but looking for ways digital publishing visual books can be improved with the evolving tools avaliable.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>&quot;With a proper API (an application programming interface, which allows one authorised application to read and manipulate data in another), entrepreneurs outside of Amazon or Apple could step in and offer more beautiful, efficient, or innovative reading containers for our books, leaving the bigger companies to do what they do best: payments and infrastructure.&quot; - Craig Mod</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The PublishingLab is looking for, and creating new ways of publishing digital books. Please </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>contact</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> us if you have a project to share or want to partner with us.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+
+  </Story>
+  
+</Document>

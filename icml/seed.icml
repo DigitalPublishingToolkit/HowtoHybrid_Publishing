@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?aid style="50" type="snippet" readerVersion="6.0" featureSet="513" product="8.0(370)" ?>
+<?aid SnippetType="InCopyInterchange"?>
+<Document DOMVersion="8.0" Self="pandoc_doc">
+    <RootCharacterStyleGroup Self="pandoc_character_styles">
+      <CharacterStyle Self="$ID/NormalCharacterStyle" Name="Default" />
+      <CharacterStyle Self="CharacterStyle/" Name="">
+        <Properties>
+          <BasedOn type="object">$ID/NormalCharacterStyle</BasedOn>
+        </Properties>
+      </CharacterStyle>
+      <CharacterStyle Self="CharacterStyle/Bold" Name="Bold" FontStyle="Bold">
+        <Properties>
+          <BasedOn type="object">$ID/NormalCharacterStyle</BasedOn>
+        </Properties>
+      </CharacterStyle> 
+    </RootCharacterStyleGroup>
+    <RootParagraphStyleGroup Self="pandoc_paragraph_styles">
+      <ParagraphStyle Self="$ID/NormalParagraphStyle" Name="$ID/NormalParagraphStyle"
+          SpaceBefore="6" SpaceAfter="6"> <!-- paragraph spacing -->
+        <Properties>
+          <TabList type="list">
+            <ListItem type="record">
+              <Alignment type="enumeration">LeftAlign</Alignment>
+              <AlignmentCharacter type="string">.</AlignmentCharacter>
+              <Leader type="string"></Leader>
+              <Position type="unit">10</Position> <!-- first tab stop -->
+            </ListItem>
+          </TabList>
+        </Properties>
+      </ParagraphStyle>
+      <ParagraphStyle Self="ParagraphStyle/" Name="" LeftIndent="0">
+        <Properties>
+          <BasedOn type="object">$ID/NormalParagraphStyle</BasedOn>
+        </Properties>
+      </ParagraphStyle>
+      <ParagraphStyle Self="ParagraphStyle/CodeBlock" Name="CodeBlock" LeftIndent="0">
+        <Properties>
+          <BasedOn type="object">$ID/NormalParagraphStyle</BasedOn>
+          <AppliedFont type="string">Courier New</AppliedFont>
+        </Properties>
+      </ParagraphStyle>
+      <ParagraphStyle Self="ParagraphStyle/Header1" Name="Header1" LeftIndent="0" PointSize="36">
+        <Properties>
+          <BasedOn type="object">$ID/NormalParagraphStyle</BasedOn>
+        </Properties>
+      </ParagraphStyle>
+      <ParagraphStyle Self="ParagraphStyle/Header2" Name="Header2" LeftIndent="0" PointSize="30">
+        <Properties>
+          <BasedOn type="object">$ID/NormalParagraphStyle</BasedOn>
+        </Properties>
+      </ParagraphStyle>
+      <ParagraphStyle Self="ParagraphStyle/Header3" Name="Header3" LeftIndent="0" PointSize="24">
+        <Properties>
+          <BasedOn type="object">$ID/NormalParagraphStyle</BasedOn>
+        </Properties>
+      </ParagraphStyle>
+      <ParagraphStyle Self="ParagraphStyle/Paragraph" Name="Paragraph" LeftIndent="0">
+        <Properties>
+          <BasedOn type="object">$ID/NormalParagraphStyle</BasedOn>
+        </Properties>
+      </ParagraphStyle> 
+    </RootParagraphStyleGroup>
+    <RootTableStyleGroup Self="pandoc_table_styles">
+      <TableStyle Self="TableStyle/Table" Name="Table" />
+    </RootTableStyleGroup>
+    <RootCellStyleGroup Self="pandoc_cell_styles">
+      <CellStyle Self="CellStyle/Cell" AppliedParagraphStyle="ParagraphStyle/$ID/[No paragraph style]" Name="Cell" />
+    </RootCellStyleGroup>
+  <Story Self="pandoc_story"
+      TrackChanges="false"
+      StoryTitle=""
+      AppliedTOCStyle="n"
+      AppliedNamedGrid="n" >
+    <StoryPreference OpticalMarginAlignment="true" OpticalMarginSize="12" />
+
+<!-- body needs to be non-indented, otherwise code blocks are indented too far -->
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header1">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>How to Template</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header2">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Introduction</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Below you'll find a basic markup and special html formatting options available in this How To Template.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header1">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>1: Standard Markdown markup</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/CodeBlock">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content># Header 1
+## Header 2
+### Header 3
+
+Paragraph of text .... Lorem ipsum.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>For full documentation check: </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>https://daringfireball.net/projects/markdown/</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Result (below)</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header1">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Header 1</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header2">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Header 2</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header3">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Header 3</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Paragraph of text .... Lorem ipsum.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header1">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>2: Media</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>General note: Store all media files in the lib-folder to keep a nice and clean repository</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header2">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Images and Gifs</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>You add these also using the standard Markdown markup:</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/CodeBlock">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>![](./lib/YOURFILE.ext(png/jpg/gif..))</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Result (below or to the right):</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Rectangle Self="uec" ItemTransform="1 0 0 1 75 -50">
+      <Properties>
+        <PathGeometry>
+          <GeometryPathType PathOpen="false">
+            <PathPointArray>
+              <PathPointType Anchor="-75 -50" LeftDirection="-75 -50" RightDirection="-75 -50" />
+              <PathPointType Anchor="-75 50" LeftDirection="-75 50" RightDirection="-75 50" />
+              <PathPointType Anchor="75 50" LeftDirection="75 50" RightDirection="75 50" />
+              <PathPointType Anchor="75 -50" LeftDirection="75 -50" RightDirection="75 -50" />
+            </PathPointArray>
+          </GeometryPathType>
+        </PathGeometry>
+      </Properties>
+      <Image Self="ue6" ItemTransform="1.0 0 0 1.0 -75 -50">
+        <Properties>
+          <Profile type="string">
+            $ID/Embedded
+            <GraphicBounds Left="0" Top="0" Right="150" Bottom="100" />
+          </Profile>
+        </Properties>
+        <Link Self="ueb" LinkResourceURI="file:./lib/placeholder.png" />
+      </Image>
+    </Rectangle>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header2">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Videos</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>You'll have to add videos using the html-video-tag. Also you'll have to supply two file versions video: one formatted as mp4, the other formatted as ogv. To convert a video you can use FFMPEG or a gui-interface such as miro video-converter (http://www.mirovideoconverter.com/). This is the markup. It's best not to split the tag into several lines, since this can confuse Pandoc:</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/CodeBlock">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>&lt;video poster=&quot;./html/background.png&quot;&gt;&lt;source src=&quot;./lib/YOURFILE.mp4&quot; type=&quot;video/mp4&quot; /&gt;&lt;source src=&quot;./lib/YOURFILE.ogv&quot; type=&quot;video/ogg&quot;&gt;&lt;/video&gt;</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Result (below):</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header1">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>3: Special html options made for this template</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>A mix-in between html and markdown is possible. Therefore certain html-wrappers have been added to give structure to the how to.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header2">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Header options:</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The header of the how to is automatically generated by javascript. It supplys a menu with 'chapters' each item based on the '# Header 1'-titles. Also it offers you to give the how-to a title. This is done by placing this custom piece of html anywhere in your markdown-file. It looks like this:</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/CodeBlock">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>&lt;div class=&quot;pagetitle&quot;&gt;Your How To Title&lt;/div&gt;</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Result (see the title 'Your How To Title' in the header)</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Your How To Title</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header2">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Infoboxes:</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/CodeBlock">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>&lt;div class=&quot;infobox&quot;&gt;
+
+### For 'infoboxes' that stands out from the main text.
+
+**Author:** Template
+
+&lt;/div&gt;</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Result (below or to the right):</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Rectangle Self="uec" ItemTransform="1 0 0 1 75 -50">
+      <Properties>
+        <PathGeometry>
+          <GeometryPathType PathOpen="false">
+            <PathPointArray>
+              <PathPointType Anchor="-75 -50" LeftDirection="-75 -50" RightDirection="-75 -50" />
+              <PathPointType Anchor="-75 50" LeftDirection="-75 50" RightDirection="-75 50" />
+              <PathPointType Anchor="75 50" LeftDirection="75 50" RightDirection="75 50" />
+              <PathPointType Anchor="75 -50" LeftDirection="75 -50" RightDirection="75 -50" />
+            </PathPointArray>
+          </GeometryPathType>
+        </PathGeometry>
+      </Properties>
+      <Image Self="ue6" ItemTransform="1.0 0 0 1.0 -75 -50">
+        <Properties>
+          <Profile type="string">
+            $ID/Embedded
+            <GraphicBounds Left="0" Top="0" Right="150" Bottom="100" />
+          </Profile>
+        </Properties>
+        <Link Self="ueb" LinkResourceURI="file:./lib/placeholder.png" />
+      </Image>
+    </Rectangle>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header3">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>For 'infoboxes' that stands out from the main text.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>Author:</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> Template</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header2">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Linkboxes</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/CodeBlock">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>&lt;div class=&quot;linkbox&quot;&gt;
+
+### For all Your Links/ Resourcers
+
+**Author:** Template
+
+&lt;/div&gt;</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Result (below or to the right):</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header3">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>For all Your Links/ Resourcers</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>Author:</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> Template</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header2">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Difficulty levels:</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Small wrappers to indicate difficulty level. The single div will automatically have a set text relating to the level (easy, moderate, expert), but you can supply more info in the div it self.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/CodeBlock">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>&lt;div class=&quot;difficulty-level easy&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;difficulty-level moderate&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;difficulty-level expert&quot;&gt;&lt;/div&gt;
+
+And expanded:
+
+&lt;div class=&quot;difficulty-level easy&quot;&gt;This difficulty level is &lt;/div&gt;</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Result:</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>This difficulty level is</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+
+  </Story>
+  
+</Document>
