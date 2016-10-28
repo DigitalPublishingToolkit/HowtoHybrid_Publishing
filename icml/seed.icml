@@ -1569,11 +1569,11 @@
       <Destination type="object">HyperlinkURLDestination/http%3a//en.flossmanuals.net/command-line/getting-started/</Destination>
     </Properties>
   </Hyperlink>
-  <HyperlinkURLDestination Self="HyperlinkURLDestination/https%3a//github.com/DigitalPublishingToolkit/workshop-going_hybrid/wiki" Name="link" DestinationURL="https://github.com/DigitalPublishingToolkit/workshop-going_hybrid/wiki" DestinationUniqueKey="1" />
-  <Hyperlink Self="uf-1" Name="https://github.com/DigitalPublishingToolkit/workshop-going_hybrid/wiki" Source="htss-1" Visible="true" DestinationUniqueKey="1">
+  <HyperlinkURLDestination Self="HyperlinkURLDestination/https%3a//github.com/DigitalPublishingToolkit/workshop-going-hybrid/wiki" Name="link" DestinationURL="https://github.com/DigitalPublishingToolkit/workshop-going-hybrid/wiki" DestinationUniqueKey="1" />
+  <Hyperlink Self="uf-1" Name="https://github.com/DigitalPublishingToolkit/workshop-going-hybrid/wiki" Source="htss-1" Visible="true" DestinationUniqueKey="1">
     <Properties>
       <BorderColor type="enumeration">Black</BorderColor>
-      <Destination type="object">HyperlinkURLDestination/https%3a//github.com/DigitalPublishingToolkit/workshop-going_hybrid/wiki</Destination>
+      <Destination type="object">HyperlinkURLDestination/https%3a//github.com/DigitalPublishingToolkit/workshop-going-hybrid/wiki</Destination>
     </Properties>
   </Hyperlink>
 </Document>
