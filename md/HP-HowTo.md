@@ -109,7 +109,7 @@ href="http://www.computerhope.com/issues/chusedos.htm">here</a>)
 
 Andre Castro prepared an excellent workshop, based on an updated version
 of the Hybrid Publishing Toolkit Workflow <a
-href="https://github.com/DigitalPublishingToolkit/workshop-going\_hybrid/wiki">here</a>.
+href="https://github.com/DigitalPublishingToolkit/workshop-going-hybrid/wiki">here</a>.
 
 Below are some simplified steps:
 
@@ -164,9 +164,9 @@ document into an ePub:
 
 </video>
 
-Using *the Sausage Machine\* platform 
+Using *the Sausage Machine\* platform
 
-Step 1 
+Step 1
 Drag and drop your text files <a href="http://hpt.publishinglab.org/">here</a>
 
 Step 2
@@ -201,7 +201,7 @@ A successful ePub has been visually styled (with css and a cover), correctly cla
 
 The epub folder typically has 3 important components:
 
-* the cover image (png or jpg) 
+* the cover image (png or jpg)
 * stylesheet
 * metadata file
 
@@ -512,10 +512,10 @@ Format: Web App
 
 ### Example 2:
 
-Navigating Theory on Demand: an online reading experience of TOD17 GrayZones 
+Navigating Theory on Demand: an online reading experience of TOD17 GrayZones
 
 PublishingLab collaborated with the Institute of Network Cultures to create a web platform for reading
-the latest Theory on Demand publication. 
+the latest Theory on Demand publication.
 The previous outputs for Theory on Demand has been print on demand and ePub formats, but the team saw an opportunity to improve the accessibility of the content and navigation design in html.
 
 Their site layout included a Table of Contents and expandable tools panel.
